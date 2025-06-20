@@ -7,6 +7,9 @@ use App\Http\Controllers\UserManagementController;
 
 use App\Http\Controllers\TrialReqOverviewController;
 use App\Http\Controllers\TrialReqListController;
+
+use App\Http\Controllers\GetInTouchController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +33,5 @@ Route::get('/admin/user-management', [UserManagementController::class, 'index'])
 
 Route::get('/admin/demo-trial/overview', [TrialReqOverviewController::class, 'index'])->name('overview');
 Route::get('/admin/demo-trial/list', [TrialReqListController::class, 'index'])->name('request-list');
+
+Route::get('/admin/get-in-touch', [GetInTouchController::class, 'index'])->name('get-in-touch');

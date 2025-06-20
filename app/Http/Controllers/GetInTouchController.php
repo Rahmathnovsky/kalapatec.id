@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class GetInTouchController extends Controller
 {
     public function index()
     {
-        return view('front-office.index');
+        return view('front-office.admin.get-in-touch');
     }
 }

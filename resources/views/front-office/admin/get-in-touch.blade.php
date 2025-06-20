@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Demo/Trial | Overview</title>
+    <title>Admin | Get in Touch</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
     />
     <link
       rel="icon"
-      href="../../assets/img/logo/logo-kalapatec.png"
+      href="../../assets//img/logo/logo-kalapatec.png"
       type="image/x-icon"
     />
 
     <!-- Fonts and icons -->
-    <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script src="../../assets//js/plugin/webfont/webfont.min.js"></script>
     <script>
       WebFont.load({
         google: { families: ["Public Sans:300,400,500,600,700"] },
@@ -25,7 +25,7 @@
             "Font Awesome 5 Brands",
             "simple-line-icons",
           ],
-          urls: ["../../assets/css/fonts.min.css"],
+          urls: ["../../assets//css/fonts.min.css"],
         },
         active: function () {
           sessionStorage.fonts = true;
@@ -34,23 +34,23 @@
     </script>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../assets/css/plugins.min.css" />
-    <link rel="stylesheet" href="../../assets/css/kaiadmin.min.css" />
+    <link rel="stylesheet" href="../../assets//css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets//css/plugins.min.css" />
+    <link rel="stylesheet" href="../../assets//css/kaiadmin.min.css" />
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="../../assets//css/demo.css" />
   </head>
   <body>
-    <div class="wrapper sidebar_minimize">
+    <div class="wrapper">
       <!-- Sidebar -->
       <div class="sidebar" data-background-color="dark">
         <div class="sidebar-logo">
           <!-- Logo Header -->
           <div class="logo-header" data-background-color="dark">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
               <img
-                src="../../assets/img/logo/logo-kalapatec.png"
+                src="../../assets//img/logo/logo-kalapatec.png"
                 alt="navbar brand"
                 class="navbar-brand"
                 height="50"
@@ -83,7 +83,7 @@
                   <p>Dashboard</p>
                 </a>
               </li>
-
+              
               <!-- Start Configuration Section -->
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
@@ -202,12 +202,12 @@
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
-              <a href="index.html" class="logo">
+              <a href="../index.html" class="logo">
                 <img
-                  src="../../assets/img/kaiadmin/logo_light.svg"
+                  src="../../assets//img/logo/logo-kalapatec.png"
                   alt="navbar brand"
                   class="navbar-brand"
-                  height="20"
+                  height="50"
                 />
               </a>
               <div class="nav-toggle">
@@ -302,7 +302,7 @@
                           <a href="#">
                             <div class="notif-img">
                               <img
-                                src="../../assets/img/jm_denis.jpg"
+                                src="../../assets//img/jm_denis.jpg"
                                 alt="Img Profile"
                               />
                             </div>
@@ -315,7 +315,7 @@
                           <a href="#">
                             <div class="notif-img">
                               <img
-                                src="../../assets/img/chadengle.jpg"
+                                src="../../assets//img/chadengle.jpg"
                                 alt="Img Profile"
                               />
                             </div>
@@ -328,7 +328,7 @@
                           <a href="#">
                             <div class="notif-img">
                               <img
-                                src="../../assets/img/mlane.jpg"
+                                src="../../assets//img/mlane.jpg"
                                 alt="Img Profile"
                               />
                             </div>
@@ -343,7 +343,7 @@
                           <a href="#">
                             <div class="notif-img">
                               <img
-                                src="../../assets/img/talha.jpg"
+                                src="../../assets//img/talha.jpg"
                                 alt="Img Profile"
                               />
                             </div>
@@ -411,7 +411,7 @@
                           <a href="#">
                             <div class="notif-img">
                               <img
-                                src="../../assets/img/profile2.jpg"
+                                src="../../assets//img/profile2.jpg"
                                 alt="Img Profile"
                               />
                             </div>
@@ -582,14 +582,6 @@
 
         <div class="container">
           <div class="page-inner">
-            {{-- <div
-              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
-            >
-              <div>
-                <h6 class="fw-bold mb-3">Demo/Trial</h6>
-                <h3 class="op-7 mb-2">Overview</h3>
-              </div>
-            </div> --}}
             <div class="page-header">
               {{-- <h3 class="fw-bold mb-3">All Request</h3> --}}
               <ul class="breadcrumbs mb-3">
@@ -608,216 +600,331 @@
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Overview</a>
+                  <a href="#">Request List</a>
                 </li>
               </ul>
             </div>
-            <div class="row row-card-no-pd">
-              <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h6><b>Visitor</b></h6>
-                        <p class="text-muted">Viewer Only</p>
-                      </div>
-                      <h4 class="text-info fw-bold">170</h4>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div
-                        class="progress-bar bg-info w-75"
-                        role="progressbar"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <p class="text-muted mb-0">Change</p>
-                      <p class="text-muted mb-0">75%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h6><b>BPO & MPO Services</b></h6>
-                        <p class="text-muted">Customer Interest</p>
-                      </div>
-                      <h4 class="text-success fw-bold">120</h4>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div
-                        class="progress-bar bg-success w-25"
-                        role="progressbar"
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <p class="text-muted mb-0">Change</p>
-                      <p class="text-muted mb-0">25%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h6><b>WABA API Services</b></h6>
-                        <p class="text-muted">Customer Interest</p>
-                      </div>
-                      <h4 class="text-danger fw-bold">15</h4>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div
-                        class="progress-bar bg-danger w-50"
-                        role="progressbar"
-                        aria-valuenow="50"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <p class="text-muted mb-0">Change</p>
-                      <p class="text-muted mb-0">50%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h6><b>Omnichannels</b></h6>
-                        <p class="text-muted">Customer Interest</p>
-                      </div>
-                      <h4 class="text-secondary fw-bold">12</h4>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div
-                        class="progress-bar bg-secondary w-25"
-                        role="progressbar"
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <p class="text-muted mb-0">Change</p>
-                      <p class="text-muted mb-0">25%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="row">
-              <div class="col-md-8">
+
+              <div class="col-md-12">
                 <div class="card">
                   <div class="card-header">
-                    <div class="card-head-row">
-                      <div class="card-title">User Statistics</div>
-                      <div class="card-tools">
-                        <a
-                          href="#"
-                          class="btn btn-label-success btn-round btn-sm me-2"
-                        >
-                          <span class="btn-label">
-                            <i class="fa fa-pencil"></i>
-                          </span>
-                          Export
-                        </a>
-                        <a href="#" class="btn btn-label-info btn-round btn-sm">
-                          <span class="btn-label">
-                            <i class="fa fa-print"></i>
-                          </span>
-                          Print
-                        </a>
-                      </div>
-                    </div>
+                    <h4 class="card-title">Datatables</h4>
                   </div>
                   <div class="card-body">
-                    <div class="chart-container" style="min-height: 375px">
-                      <canvas id="statisticsChart"></canvas>
-                    </div>
-                    <div id="myChartLegend"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title">Top Products</div>
-                  </div>
-                  <div class="card-body pb-0">
-                    <div class="d-flex">
-                      <div class="avatar">
-                        <img
-                          src="https://staging-kalapatec.vercel.app/assets/New-Logo-Kalista-removebg-CfAQMg1Q.png"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="flex-1 pt-1 ms-2">
-                        <h6 class="fw-bold mb-1">WABA API Services</h6>
-                        <small class="text-muted">Kalista Pulse</small>
-                      </div>
-                      <div class="d-flex ms-auto align-items-center">
-                        <h4 class="text-info fw-bold">37</h4>
-                      </div>
-                    </div>
-                    <div class="separator-dashed"></div>
-                    <div class="d-flex">
-                      <div class="avatar">
-                        <img
-                          src="https://cdn-icons-png.flaticon.com/512/11672/11672928.png"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="flex-1 pt-1 ms-2">
-                        <h6 class="fw-bold mb-1">Telesystem</h6>
-                        <small class="text-muted">Outbound</small>
-                      </div>
-                      <div class="d-flex ms-auto align-items-center">
-                        <h4 class="text-info fw-bold">23</h4>
-                      </div>
-                    </div>
-                    <div class="separator-dashed"></div>
-                    <div class="d-flex">
-                      <div class="avatar">
-                        <img
-                          src="https://pcxcom.com/wp-content/uploads/2015/12/omnichannel_cluster_flat_03.png"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="flex-1 pt-1 ms-2">
-                        <h6 class="fw-bold mb-1">Omnichannels</h6>
-                        <small class="text-muted"
-                          >Inbound</small
-                        >
-                      </div>
-                      <div class="d-flex ms-auto align-items-center">
-                        <h4 class="text-info fw-bold">15</h4>
-                      </div>
-                    </div>
-                    <div class="separator-dashed"></div>
-                    <div class="pull-in">
-                      <canvas id="topProductsChart"></canvas>
+                    <div class="table-responsive">
+                      <table
+                        id="multi-filter-select"
+                        class="display table table-striped table-hover"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Client Name</th>
+                            <th>Company Name</th>
+                            <th>Product Request</th>
+                            <th>Head Count</th>
+                            <th>Request Date</th>
+                            <th>Detail</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <th>Client Name</th>
+                            <th>Company Name</th>
+                            <th>Product Request</th>
+                            <th>Head Count</th>
+                            <th>Request Date</th>
+                            <th>Detail</th>
+                          </tr>
+                        </tfoot>
+                        <tbody>
+                          <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                          </tr>
+                          <tr>
+                            <td>Airi Satou</td>
+                            <td>Kaisar Besar Lautan China</td>
+                            <td>WABA API Services</td>
+                            <td>5</td>
+                            <td>2025/06/23</td>
+                            <td>Whatsapp Blast</td>
+                          </tr>
+                          <tr>
+                            <td>Rhona Davidson</td>
+                            <td>Integration Specialist</td>
+                            <td>Tokyo</td>
+                            <td>55</td>
+                            <td>2010/10/14</td>
+                            <td>$327,900</td>
+                          </tr>
+                          <tr>
+                            <td>Sonya Frost</td>
+                            <td>Software Engineer</td>
+                            <td>Edinburgh</td>
+                            <td>23</td>
+                            <td>2008/12/13</td>
+                            <td>$103,600</td>
+                          </tr>
+                          <tr>
+                            <td>Jena Gaines</td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>30</td>
+                            <td>2008/12/19</td>
+                            <td>$90,560</td>
+                          </tr>
+                          <tr>
+                            <td>Quinn Flynn</td>
+                            <td>Support Lead</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2013/03/03</td>
+                            <td>$342,000</td>
+                          </tr>
+                          <tr>
+                            <td>Tatyana Fitzpatrick</td>
+                            <td>Regional Director</td>
+                            <td>London</td>
+                            <td>19</td>
+                            <td>2010/03/17</td>
+                            <td>$385,750</td>
+                          </tr>
+                          <tr>
+                            <td>Michael Silva</td>
+                            <td>Marketing Designer</td>
+                            <td>London</td>
+                            <td>66</td>
+                            <td>2012/11/27</td>
+                            <td>$198,500</td>
+                          </tr>
+                          <tr>
+                            <td>Paul Byrd</td>
+                            <td>Chief Financial Officer (CFO)</td>
+                            <td>New York</td>
+                            <td>64</td>
+                            <td>2010/06/09</td>
+                            <td>$725,000</td>
+                          </tr>
+                          <tr>
+                            <td>Jenette Caldwell</td>
+                            <td>Development Lead</td>
+                            <td>New York</td>
+                            <td>30</td>
+                            <td>2011/09/03</td>
+                            <td>$345,000</td>
+                          </tr>
+                          <tr>
+                            <td>Yuri Berry</td>
+                            <td>Chief Marketing Officer (CMO)</td>
+                            <td>New York</td>
+                            <td>40</td>
+                            <td>2009/06/25</td>
+                            <td>$675,000</td>
+                          </tr>
+                          <tr>
+                            <td>Jennifer Chang</td>
+                            <td>Regional Director</td>
+                            <td>Singapore</td>
+                            <td>28</td>
+                            <td>2010/11/14</td>
+                            <td>$357,650</td>
+                          </tr>
+                          <tr>
+                            <td>Elon Musk</td>
+                            <td>Tesla Group</td>
+                            <td>Digital Marketing</td>
+                            <td>1</td>
+                            <td>2025/06/07</td>
+                            <td>Social Media Management</td>
+                          </tr>
+                          <tr>
+                            <td>Shou Itou</td>
+                            <td>Regional Marketing</td>
+                            <td>Tokyo</td>
+                            <td>20</td>
+                            <td>2011/08/14</td>
+                            <td>$163,000</td>
+                          </tr>
+                          <tr>
+                            <td>Michelle House</td>
+                            <td>Integration Specialist</td>
+                            <td>Sidney</td>
+                            <td>37</td>
+                            <td>2011/06/02</td>
+                            <td>$95,400</td>
+                          </tr>
+                          <tr>
+                            <td>Suki Burks</td>
+                            <td>Developer</td>
+                            <td>London</td>
+                            <td>53</td>
+                            <td>2009/10/22</td>
+                            <td>$114,500</td>
+                          </tr>
+                          <tr>
+                            <td>Prescott Bartlett</td>
+                            <td>Technical Author</td>
+                            <td>London</td>
+                            <td>27</td>
+                            <td>2011/05/07</td>
+                            <td>$145,000</td>
+                          </tr>
+                          <tr>
+                            <td>Martena Mccray</td>
+                            <td>Post-Sales support</td>
+                            <td>Edinburgh</td>
+                            <td>46</td>
+                            <td>2011/03/09</td>
+                            <td>$324,050</td>
+                          </tr>
+                          <tr>
+                            <td>Unity Butler</td>
+                            <td>Marketing Designer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/12/09</td>
+                            <td>$85,675</td>
+                          </tr>
+                          <tr>
+                            <td>Howard Hatfield</td>
+                            <td>Kementerian</td>
+                            <td>WABA API Services</td>
+                            <td>1</td>
+                            <td>2025/05/26</td>
+                            <td>WABA Verified</td>
+                          </tr>
+                          <tr>
+                            <td>Hope Fuentes</td>
+                            <td>Eka Hospital</td>
+                            <td>Omnichannels</td>
+                            <td>41</td>
+                            <td>2025/05/28</td>
+                            <td>Handle pesan masuk</td>
+                          </tr>
+                          <tr>
+                            <td>Vivian Harrell</td>
+                            <td>Financial Controller</td>
+                            <td>San Francisco</td>
+                            <td>62</td>
+                            <td>2009/02/14</td>
+                            <td>$452,500</td>
+                          </tr>
+                          <tr>
+                            <td>Timothy Mooney</td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>37</td>
+                            <td>2008/12/11</td>
+                            <td>$136,200</td>
+                          </tr>
+                          <tr>
+                            <td>Jackson Bradshaw</td>
+                            <td>Indofood</td>
+                            <td>BPO & MPO Manage Services</td>
+                            <td>65</td>
+                            <td>2025/05/20</td>
+                            <td>Setup Contact Center</td>
+                          </tr>
+                          <tr>
+                            <td>Olivia Liang</td>
+                            <td>Support Engineer</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2011/02/03</td>
+                            <td>$234,500</td>
+                          </tr>
+                          <tr>
+                            <td>Sakura Yamamoto</td>
+                            <td>Support Engineer</td>
+                            <td>Tokyo</td>
+                            <td>37</td>
+                            <td>2009/08/19</td>
+                            <td>$139,575</td>
+                          </tr>
+                          <tr>
+                            <td>Thor Walton</td>
+                            <td>Developer</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>2013/08/11</td>
+                            <td>$98,540</td>
+                          </tr>
+                          <tr>
+                            <td>Serge Baldwin</td>
+                            <td>Data Coordinator</td>
+                            <td>Singapore</td>
+                            <td>64</td>
+                            <td>2012/04/09</td>
+                            <td>$138,575</td>
+                          </tr>
+                          <tr>
+                            <td>Zenaida Frank</td>
+                            <td>Software Engineer</td>
+                            <td>New York</td>
+                            <td>63</td>
+                            <td>2010/01/04</td>
+                            <td>$125,250</td>
+                          </tr>
+                          <tr>
+                            <td>Zorita Serrano</td>
+                            <td>Software Engineer</td>
+                            <td>San Francisco</td>
+                            <td>56</td>
+                            <td>2012/06/01</td>
+                            <td>$115,000</td>
+                          </tr>
+                          <tr>
+                            <td>Jennifer Acosta</td>
+                            <td>Junior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>43</td>
+                            <td>2013/02/01</td>
+                            <td>$75,650</td>
+                          </tr>
+                          <tr>
+                            <td>Lael Greer</td>
+                            <td>Systems Administrator</td>
+                            <td>London</td>
+                            <td>21</td>
+                            <td>2009/02/27</td>
+                            <td>$103,500</td>
+                          </tr>
+                          <tr>
+                            <td>Jonas Alexander</td>
+                            <td>Developer</td>
+                            <td>San Francisco</td>
+                            <td>30</td>
+                            <td>2010/07/14</td>
+                            <td>$86,500</td>
+                          </tr>
+                          <tr>
+                            <td>Shad Decker</td>
+                            <td>Regional Director</td>
+                            <td>Edinburgh</td>
+                            <td>51</td>
+                            <td>2008/11/13</td>
+                            <td>$183,000</td>
+                          </tr>
+                          <tr>
+                            <td>Michael Bruce</td>
+                            <td>Javascript Developer</td>
+                            <td>Singapore</td>
+                            <td>29</td>
+                            <td>2011/06/27</td>
+                            <td>$183,000</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
 
@@ -865,7 +972,7 @@
                 ></button>
                 <button
                   type="button"
-                  class="changeLogoHeaderColor"
+                  class="selected changeLogoHeaderColor"
                   data-color="blue"
                 ></button>
                 <button
@@ -976,7 +1083,7 @@
                 ></button>
                 <button
                   type="button"
-                  class="selected changeTopBarColor"
+                  class="changeTopBarColor"
                   data-color="white"
                 ></button>
                 <br />
@@ -987,7 +1094,7 @@
                 ></button>
                 <button
                   type="button"
-                  class="changeTopBarColor"
+                  class="selected changeTopBarColor"
                   data-color="blue2"
                 ></button>
                 <button
@@ -1022,12 +1129,12 @@
               <div class="btnSwitch">
                 <button
                   type="button"
-                  class="changeSideBarColor"
+                  class="selected changeSideBarColor"
                   data-color="white"
                 ></button>
                 <button
                   type="button"
-                  class="selected changeSideBarColor"
+                  class="changeSideBarColor"
                   data-color="dark"
                 ></button>
                 <button
@@ -1046,67 +1153,73 @@
       <!-- End Custom template -->
     </div>
     <!--   Core JS Files   -->
-    <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
-    <script src="../../assets/js/core/popper.min.js"></script>
-    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets//js/core/jquery-3.7.1.min.js"></script>
+    <script src="../../assets//js/core/popper.min.js"></script>
+    <script src="../../assets//js/core/bootstrap.min.js"></script>
 
     <!-- jQuery Scrollbar -->
-    <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-    <!-- Chart JS -->
-    <script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
-
-    <!-- jQuery Sparkline -->
-    <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- Chart Circle -->
-    <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
-
+    <script src="../../assets//js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
     <!-- Datatables -->
-    <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
-
-    <!-- Bootstrap Notify -->
-    <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-    <!-- jQuery Vector Maps -->
-    <script src="../../assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-    <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
-
-    <!-- Sweet Alert -->
-    <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
+    <script src="../../assets//js/plugin/datatables/datatables.min.js"></script>
     <!-- Kaiadmin JS -->
-    <script src="../../assets/js/kaiadmin.min.js"></script>
-
+    <script src="../../assets//js/kaiadmin.min.js"></script>
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="../../assets/js/setting-demo.js"></script>
-    <script src="../../assets/js/demo.js"></script>
+    <script src="../../assets//js/setting-demo2.js"></script>
     <script>
-      $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#177dff",
-        fillColor: "rgba(23, 125, 255, 0.14)",
-      });
+      $(document).ready(function () {
+        $("#basic-datatables").DataTable({});
 
-      $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#f3545d",
-        fillColor: "rgba(243, 84, 93, .14)",
-      });
+        $("#multi-filter-select").DataTable({
+          pageLength: 5,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var select = $(
+                  '<select class="form-select"><option value=""></option></select>'
+                )
+                  .appendTo($(column.footer()).empty())
+                  .on("change", function () {
+                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
 
-      $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#ffa534",
-        fillColor: "rgba(255, 165, 52, .14)",
+                    column
+                      .search(val ? "^" + val + "$" : "", true, false)
+                      .draw();
+                  });
+
+                column
+                  .data()
+                  .unique()
+                  .sort()
+                  .each(function (d, j) {
+                    select.append(
+                      '<option value="' + d + '">' + d + "</option>"
+                    );
+                  });
+              });
+          },
+        });
+
+        // Add Row
+        $("#add-row").DataTable({
+          pageLength: 5,
+        });
+
+        var action =
+          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+
+        $("#addRowButton").click(function () {
+          $("#add-row")
+            .dataTable()
+            .fnAddData([
+              $("#addName").val(),
+              $("#addPosition").val(),
+              $("#addOffice").val(),
+              action,
+            ]);
+          $("#addRowModal").modal("hide");
+        });
       });
     </script>
   </body>

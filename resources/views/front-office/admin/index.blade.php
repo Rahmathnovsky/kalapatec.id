@@ -75,24 +75,13 @@
             <ul class="nav nav-secondary">
               <li class="nav-item active">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route(name: 'admin') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
                   <i class="fas fa-home"></i>
                   <p>Dashboard</p>
-                  <span class="caret"></span>
                 </a>
-                <div class="collapse" id="dashboard">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="../demo1/index.html">
-                        <span class="sub-item">Dashboard 1</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </li>
 
               <!-- Start Configuration Section -->
@@ -142,25 +131,16 @@
               </li>
 
               <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#git">
+                <a href="{{ route(name: 'get-in-touch') }}">
                   <i class="fas fa-envelope"></i>
                   <p>Get in Touch</p>
-                  <span class="caret"></span>
                 </a>
-                <div class="collapse" id="git">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="tables/datatables.html">
-                        <span class="sub-item">All Page</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tables/tables.html">
-                        <span class="sub-item">Add Page</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route(name: 'user-management') }}">
+                  <i class="fas fa-user"></i>
+                  <p>User Management</p>
+                </a>
               </li>
               <!-- End Request Section -->
 
@@ -782,7 +762,7 @@
                   >
                     <div class="avatar-sm">
                       <img
-                        src="assets/img/firyal.jpeg"
+                        src="../../assets/img/firyal.jpeg"
                         alt="..."
                         class="avatar-img rounded-circle"
                       />
@@ -798,14 +778,14 @@
                         <div class="user-box">
                           <div class="avatar-lg">
                             <img
-                              src="assets/img/firyal.jpeg"
+                              src="../../assets/img/firyal.jpeg"
                               alt="image profile"
                               class="avatar-img rounded"
                             />
                           </div>
                           <div class="u-text">
                             <h4>Firyal Salsabila</h4>
-                            <p class="text-muted">hello@example.com</p>
+                            <p class="text-muted">firyal@kalapatec.id</p>
                             <a
                               href="profile.html"
                               class="btn btn-xs btn-secondary btn-sm"
