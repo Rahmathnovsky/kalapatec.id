@@ -25,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -68,10 +69,11 @@ class User extends Authenticatable
     {
         $payload['name']      = $request['name'];
         $payload['email']     = $request['email'];
-        if (Arr::hasAny($request, ['password'])) {
-            $payload['password']  = bcrypt($request['password']);
+        if ($request->filled('password')) {
+            $payload['password'] = bcrypt($request->password);
         }
         $payload['remember_token'] = Str::random(10);
+        $payload['role']      = $request['role'];
 
         return $payload;
     }
@@ -87,7 +89,8 @@ class User extends Authenticatable
         $validated = $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required'
+            'password' => 'required',
+            'role' => 'required'
         ]);
 
         return $validated;
@@ -101,5 +104,16 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    /**
+     * Check if user has any role that matches
+     *
+     * @param array $roles
+     * @return boolean
+     */
+    public function hasAnyRole(array $roles): bool
+    {
+        return in_array($this->role, $roles);
     }
 }

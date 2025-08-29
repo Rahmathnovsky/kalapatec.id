@@ -17,7 +17,16 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/admin';
+
+    /**
+     * The path to the "login" route for your application.
+     *
+     * Typically, users are redirected here after logout.
+     *
+     * @var string
+     */
+    public const LOGIN = '/login';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.

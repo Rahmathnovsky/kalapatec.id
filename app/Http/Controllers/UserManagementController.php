@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\UserRole;
 use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Http\Request;
@@ -18,7 +19,8 @@ class UserManagementController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('front-office.admin.user.index', compact('users'));
+        $roles = UserRole::all();
+        return view('front-office.admin.user.index', compact('users', 'roles'));
     }
 
     public function store(Request $request)

@@ -4,13 +4,11 @@
           <div class="col-12 order-first lg:col-4">
             <div class="w-full">
               <a href="." class="inline-block mb-5">
-                <img src="./assets/img/logo/logo-kalapatec.png" style="width: 20%;" alt="">
+                <img src="{{ asset('assets/img/logo/logo-kalapatec.png')}}" style="width: 20%;" alt="">
               </a>
 
               <p class="mb-8 text-body-dark-11">
-                Sistem layanan pelanggan terbaik dengan dukungan end-to-end integration, mencakup WhatsApp
-                Chat API (Bot, Blast, dan Customer Service), call center, media sosial, email, omni-channel,
-                serta CRM untuk otomatisasi layanan pelanggan secara menyeluruh.
+                @lang('home.footer.description')
               </p>
 
               <div class="-mx-3 flex items-center">
@@ -46,7 +44,7 @@
           </div>
           <div class="col-6 lg:col-2">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Layanan</h4>
+              <h4 class="mb-9 text-lg font-semibold text-inherit">@lang('home.footer.navigation.services')</h4>
               <ul>
                 <li>
                   <a
@@ -81,20 +79,20 @@
           </div>
           <div class="col-6 lg:col-2">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Bantuan</h4>
+              <h4 class="mb-9 text-lg font-semibold text-inherit">@lang('home.footer.navigation.support.title')</h4>
               <ul>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Biaya Layanan</a
+                    >@lang('home.footer.navigation.support.item.1')</a
                   >
                 </li>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Dokumentasi</a
+                    >@lang('home.footer.navigation.support.item.2')</a
                   >
                 </li>
                 <li>
@@ -109,10 +107,10 @@
           </div>
           <div class="col-12 -order-3 lg:col-4 lg:order-1">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Subscribe</h4>
+              <h4 class="mb-9 text-lg font-semibold text-inherit">@lang('home.footer.navigation.subscribe.title')</h4>
 
               <p class="text-body-dark-11">
-                Subscribe to our newsletter for the latest updates
+                @lang('home.footer.navigation.subscribe.description')
               </p>
 
               <form action="#" method="POST" target="_blank" class="mt-8 flex">

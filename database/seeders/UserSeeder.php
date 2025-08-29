@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Enums\UserRole;
 use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -26,15 +26,25 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
                 'created_at' => Carbon::now(),
+                'role' => UserRole::ADMINISTRATOR
 
             ],
             [
-                'name' => 'faker',
-                'email' => 'faker@faker.com',
+                'name' => 'User',
+                'email' => 'user@user.com',
                 'email_verified_at' => null,
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
                 'created_at' => Carbon::now(),
+                'role' => UserRole::USER
+            ],[
+                'name' => 'dm',
+                'email' => 'dm@dm.com',
+                'email_verified_at' => null,
+                'password' => Hash::make('password'),
+                'remember_token' => Str::random(10),
+                'created_at' => Carbon::now(),
+                'role' => UserRole::DM
             ]
         ];
         User::insert($users);

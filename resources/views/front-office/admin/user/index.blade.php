@@ -112,6 +112,16 @@
                                     />
                                   </div>
                                 </div>
+                                <div class="col-md-">
+                                  <div class="form-group form-group-default">
+                                    <label>Select</label>
+                                    <select class="form-select" id="addRole" name="role">
+                                      @foreach ($roles as $role)
+                                        <option value="{{$role}}">{{$role}}</option>
+                                      @endforeach
+                                    </select>
+                                  </div>
+                                </div>
                               </div>
                               <div class="modal-footer border-0">
                                 <button
@@ -147,6 +157,7 @@
                             <th>Name</th> {{-- Name --}}
                             <th>Email</th> {{-- Position --}}
                             <th>Verified</th> {{-- Privilege --}}
+                            <th>Role</th> {{-- Privilege --}}
                             <th style="width: 10%">Action</th>
                           </tr>
                         </thead>
@@ -155,6 +166,7 @@
                             <th>Name</th> {{-- Name --}}
                             <th>Email</th> {{-- Position --}}
                             <th>Verified</th> {{-- Privilege --}}
+                            <th>Role</th> {{-- Privilege --}}
                             <th>Action</th>
                           </tr>
                         </tfoot>
@@ -164,6 +176,10 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->email_verified_at ? $user->email_verified_at : 'Not Verified' }}</td>
+                            <td class="fw-bold {{ $user->role == 'administrator' ? 'text-danger' :
+                                         ($user->role == 'dm' ? 'text-primary' : 'text-success') }}" >
+                                         {{ $user->role }}
+                            </td>
                             <td>
                               <div class="form-button-action">
                                 <button
@@ -233,7 +249,7 @@
                                             class="form-control"
                                             placeholder="fill name"
                                             name="name"
-                                            value={{ $user->name }}
+                                            value="{{ old('name', $user->name) }}"
                                             required
                                           />
                                         </div>
@@ -247,7 +263,7 @@
                                             class="form-control"
                                             placeholder="fill email"
                                             name="email"
-                                            value={{ $user->email }}
+                                            value="{{ old('email', $user->email) }}"
                                             required
                                           />
                                         </div>
@@ -261,8 +277,20 @@
                                             class="form-control"
                                             placeholder="fill password"
                                             name="password"
-                                            required
                                           />
+                                        </div>
+                                      </div>
+                                      <div class="col-md-">
+                                        <div class="form-group form-group-default">
+                                          <label>Select</label>
+                                          <select class="form-select" id="addRole" name="role">
+                                            @foreach ($roles as $role)
+                                              <option value="{{ $role }}"
+                                                {{ old('role', $user->role ?? '') == $role ? 'selected' : '' }}>
+                                                {{ $role }}
+                                              </option>
+                                            @endforeach
+                                          </select>
                                         </div>
                                       </div>
                                     </div>
@@ -351,6 +379,7 @@
                     $("#addName").val(),
                     $("#addEmail").val(),
                     $("#addPassword").val(),
+                    $("#addRole").val(),
                     action,
                   ]);
                 $("#addRowModal").modal("hide");

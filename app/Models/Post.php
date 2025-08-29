@@ -34,13 +34,13 @@ class Post extends Model
      */
     public function rawPayload($request): array
     {
-        $payload['name']        = $request['name'];
+        $payload['title']        = $request['title'];
         $payload['slug']        = Str::slug($request->title, '-');
         $payload['category_id'] = $request['category_id'];
         $payload['user_id']     = '1';
         $payload['content']     = $request['content'];
-        $payload['image']       = $request->file('image')->hashName();
-        $payload['description'] = $request['description'];
+        $payload['image']       = $request->file('image') ? $request->file('image')->hashName() : '';
+        $payload['description'] = 'description';
 
         return $payload;
     }
@@ -54,7 +54,9 @@ class Post extends Model
     public function validate($request)
     {
         $validated = $request->validate([
-            'name' => 'required',
+            'title' => 'required',
+            'image' => 'nullable|file|mimes:png,jpg,jpeg,webp|max:1024',
+            'category_id' => 'required',
             'content' => 'required',
         ]);
 
@@ -122,7 +124,7 @@ class Post extends Model
     protected function createdAt(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::locale('id')->parse($value)->translatedFormat('l, d F Y'),
+            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
         );
     }
 
@@ -134,7 +136,7 @@ class Post extends Model
     protected function updatedAt(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::locale('id')->parse($value)->translatedFormat('l, d F Y'),
+            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
         );
     }
 }

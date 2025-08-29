@@ -206,7 +206,7 @@
                                 </div>
                                 <div class="modal-body">
                                   <p class="small">
-                                    Update user information using this form, make sure you
+                                    Update category information using this form, make sure you
                                     fill them all
                                   </p>
                                   <form method="POST" action="{{ route('category.update', $category->id) }}">
@@ -222,7 +222,7 @@
                                             class="form-control"
                                             placeholder="fill name"
                                             name="name"
-                                            value={{ $category->name }}
+                                            value="{{ old('name', $category->name) }}"
                                             required
                                           />
                                         </div>

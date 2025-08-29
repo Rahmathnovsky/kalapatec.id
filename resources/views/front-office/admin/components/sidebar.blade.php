@@ -2,7 +2,7 @@
         <div class="sidebar-logo">
           <!-- Logo Header -->
           <div class="logo-header" data-background-color="dark">
-            <a href="index.html" class="logo">
+            <a href="{{route('admin')}}" class="logo">
               <img
                 src="{{ asset('assets/img/logo/logo-kalapatec.png') }}"
                 alt="navbar brand"
@@ -45,13 +45,15 @@
                 </span>
                 <h4 class="text-section">Configuration</h4>
               </li>
-
+              
+              @if (Auth::user()->hasAnyRole(['administrator']))
               <li class="nav-item {{ request()->is('admin/user-management') ? 'active' : '' }}">
                 <a href="{{ route(name: 'user-management') }}">
                   <i class="fas fa-user"></i>
                   <p>User Management</p>
                 </a>
               </li>
+              @endif
 
               <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}">
                 <a href="{{ route(name: 'category.index') }}">

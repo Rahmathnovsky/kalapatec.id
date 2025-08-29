@@ -6,41 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Copyright" content="Kalapa Technology" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ranyeh" />
+    <meta name="author" content="{{ $post->user->name ?? 'Ranyeh'}}" />
     <meta name="rating" content="general" />
     <meta name="language" content="English" />
     <meta name="application-name" content="Kalapa Technology" />
     <meta
       name="description"
-      content="Digital Platform Business Engagement"
+      content="{{ $post->title ?? 'Digital Platform Business Engagement'}}"
     />
-    <meta name="keywords" content="company" />
+    <meta name="keywords" content="{{ $post->slug ?? 'company'}}" />
+    <link rel="canonical" href="{{ url()->full() }}" />
     <meta
       name="twitter:title"
-      content="Kalapa Technology | Home"
+      content="{{ $post->title ?? 'Kalapa Technology | Home'}}"
     />
     <meta
       name="twitter:description"
-      content="Digital Platform Business Engagement"
+      content="{{ $post->title ?? 'Digital Platform Business Engagement'}}"
     />
-    <meta name="twitter:image" content="./assets/img/logo/logo-kalapatec.png" />
+    <meta name="twitter:image" content="'{{ $post->image ?? asset('assets/img/logo/logo-kalapatec.png') }}'" />
     <meta
-      content="Kalapa Technology | Home"
+      content="{{ $post->title ?? 'Kalapa Technology | Home'}}"
       property="og:title"
     />
     <meta content="Kalapa Technology" property="og:site_name" />
     <meta
-      content="Digital Platform Business Engagement"
+      content="{{ $post->title ?? 'Digital Platform Business Engagement'}}"
       property="og:description"
     />
-    <meta content="./assets/img/logo/logo-kalapatec.png" property="og:image" />
-    <meta content="https://ranyeh24.github.io/inazuma-tailwind" property="og:url" />
+    <meta content="{{ $post->image ?? asset('assets/img/logo/logo-kalapatec.png')}}" property="og:image" />
+    <meta content="{{ url()->full() ?? 'https://ranyeh24.github.io/inazuma-tailwind'}}" property="og:url" />
     <meta content="website" property="og:type" />
 
     <meta name="msapplication-TileColor" content="#3d63dd" />
     <meta
       name="msapplication-TileImage"
-      content="./assets/favicon/logo-kalapatec.png"
+      content="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
     <meta name="theme-color" content="#3d63dd" />
 
@@ -54,36 +55,36 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicon/logo-kalapatec.png"
+      href="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon/logo-kalapatec.png"
+      href="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="194x194"
-      href="./assets/favicon/logo-kalapatec.png"
+      href="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="./assets/favicon/logo-kalapatec.png"
+      href="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/favicon/logo-kalapatec.png"
+      href="{{ asset('assets/favicon/logo-kalapatec.png')}}"
     />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest.json" />
+    <link rel="manifest" href="{{ asset('./assets/favicon/site.webmanifest.json')}}" />
     <link
       rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
+      href="{{ asset('assets/favicon/safari-pinned-tab.svg')}}"
       color="#3d63dd"
     />
 
@@ -98,7 +99,7 @@
     />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
 
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}" />
   </head>
   <body>
     <!-- Page loading -->
@@ -139,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="{{ asset('./assets/js/main.js')}}"></script>
     <script>
       // Scroll Reveal
       const sr = ScrollReveal({

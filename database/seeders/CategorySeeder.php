@@ -18,7 +18,7 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                'name' => 'telephony',
+                'name' => 'Telephony',
                 'slug' => Str::slug('telephony', '-'),
                 'created_at' => Carbon::now(),
 
@@ -26,6 +26,11 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Outbound Call',
                 'slug' => Str::slug('Outbound Call', '-'),
+                'created_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Inbound Call',
+                'slug' => Str::slug('Inbound Call', '-'),
                 'created_at' => Carbon::now(),
             ]
         ];

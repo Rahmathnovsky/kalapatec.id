@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\UserRole;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
@@ -12,7 +13,9 @@ use App\Http\Controllers\TrialReqListController;
 
 use App\Http\Controllers\GetInTouchController;
 use App\Http\Controllers\PostAdminController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,23 +31,36 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::resource('/article', ArticleController::class);
+Route::group(['middleware' => ['setLocale']], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::resource('/article', ArticleController::class)->except(['show']);
+    Route::get('/article/{id}/{slug}',[ ArticleController::class, 'show'])->name('article.show');
+});
 
-Route::group(['prefix' => 'admin'], function () {
+Route::get('/lang/{lang}', function($lang){
+    if(in_array($lang,['en','id'])){
+        session(['locale'=> $lang]);
+    }
+    return back();
+})->name('change-language');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/', [HomeAdminController::class, 'index'])->name('admin');
 
     // User
-    Route::get('/user-management', [UserManagementController::class, 'index'])->name('user-management');
-    Route::post('/user-management', [UserManagementController::class, 'store'])->name('user-management.store');
-    Route::put('/user-management/{id}', [UserManagementController::class, 'update'])->name('user-management.update');
-    Route::get('/user-management/{id}', [UserManagementController::class, 'destroy'])->name('user-management.destroy');
+    Route::middleware(['roles:' . UserRole::ADMINISTRATOR])->group(function() {
+        Route::get('/user-management', [UserManagementController::class, 'index'])->name('user-management');
+        Route::post('/user-management', [UserManagementController::class, 'store'])->name('user-management.store');
+        Route::put('/user-management/{id}', [UserManagementController::class, 'update'])->name('user-management.update');
+        Route::get('/user-management/{id}', [UserManagementController::class, 'destroy'])->name('user-management.destroy');
+    });
     
     // Category 
     Route::resource('category', CategoryController::class);
 
     // Post
-    Route::resource('post', PostAdminController::class);
+    Route::resource('post', PostAdminController::class)->except(['show']);
 
     Route::get('/demo-trial/overview', [TrialReqOverviewController::class, 'index'])->name('overview');
     Route::get('/demo-trial/list', [TrialReqListController::class, 'index'])->name('request-list');

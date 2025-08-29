@@ -22,7 +22,7 @@
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Post</a>
+                  <a href="#">Article</a>
                 </li>
               </ul>
             </div>
@@ -32,99 +32,17 @@
                 <div class="card">
                   <div class="card-header">
                     <div class="d-flex align-items-center">
-                      <h4 class="card-title">Post Management</h4>
-                      <button
+                      <h4 class="card-title">Article Management</h4>
+                      <a
+                        href="{{ route('post.create') }}"
                         class="btn btn-primary btn-round ms-auto"
-                        data-bs-toggle="modal"
-                        data-bs-target="#addRowModal"
                       >
                         <i class="fa fa-plus"></i>
-                        Add New Post
-                      </button>
+                        Add New Article
+                      </a>
                     </div>
                   </div>
                   <div class="card-body">
-                    <!-- Create Modal -->
-                    <div
-                      class="modal fade"
-                      id="addRowModal"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header border-0">
-                            <h5 class="modal-title">
-                              <span class="fw-mediumbold"> New</span>
-                              <span class="fw-light"> Post </span>
-                            </h5>
-                            <button
-                              type="button"
-                              class="close"
-                              data-bs-toggle="modal"
-                              data-bs-target="#addRowModal"
-                              aria-label="Close"
-                            >
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <p class="small">
-                              Create a new post using this form, make sure you
-                              fill them all
-                            </p>
-                            <form method="POST" action="{{ route('post.store') }}" enctype="multipart/form-data">
-                              @csrf
-                              <div class="row">
-                                <div class="col-sm-12">
-                                  <div class="form-group form-group-default">
-                                    <label>Title</label>
-                                    <input
-                                      id="addTitle"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="fill title"
-                                      name="title"
-                                    />
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group form-group-default">
-                                    <label>Image</label>
-                                    <input
-                                      id="addImage"
-                                      type="file"
-                                      class="form-control"
-                                      placeholder="fill image"
-                                      name="image"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="modal-footer border-0">
-                                <button
-                                  type="submit"
-                                  id="addRowButton"
-                                  class="btn btn-primary"
-                                >
-                                  Add
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-danger"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#addRowModal"
-                                >
-                                  Close
-                                </button>
-                              </div>
-                            </form>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
 
                     <div class="table-responsive">
                       <table
@@ -157,21 +75,20 @@
                           <tr>
                             <td>{{ substr($post->title, 0, 35) . '...' }}</td>
                             <td>{{ substr($post->slug, 0, 35) . '...' }}</td>
-                            <td>{{ substr($post->content, 0, 35) . '...'}}</td>
-                            <td>{{ $post->user_id }}</td>
-                            <td>{{ $post->image ? $post->image : 'Image not uploaded' }}</td>
+                            <td>{!! substr($post->content, 0, 50) . '...' !!}</td>
+                            <td>{{ $post->user->name }}</td>
+                            <td>{!! $post->image ? 
+                            '<img src="'.url($post->image).'" alt="' . $post->title . '" width="300" height="170">' : 
+                            'Image not uploaded' !!}</td>
+                            <td>{{ $post->created_at}}</td>
                             <td>
                               <div class="form-button-action">
-                                <button
-                                  type="button"
-                                  title=""
+                                <a
                                   class="btn btn-link btn-primary btn-lg"
-                                  data-original-title="Edit Task"
-                                  data-bs-toggle="modal"
-                                  data-bs-target={{ "#updateRowModal" . $post->id }}
+                                  href="{{ route('post.edit', $post->id) }}"
                                 >
                                   <i class="fa fa-edit"></i>
-                                </button>
+                                </a>
                                 <button
                                   type="button"
                                   data-bs-toggle="tooltip"
@@ -185,79 +102,6 @@
                               </div>
                             </td>
                           </tr>
-                          
-                          <!-- Update Modal -->
-                          <div
-                            class="modal fade"
-                            id={{ "updateRowModal" . $post->id }}
-                            tabindex="-1"
-                            role="dialog"
-                            aria-hidden="true"
-                          >
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header border-0">
-                                  <h5 class="modal-title">
-                                    <span class="fw-mediumbold"> Update</span>
-                                    <span class="fw-light"> Post </span>
-                                  </h5>
-                                  <button
-                                    type="button"
-                                    class="close"
-                                    data-bs-toggle="modal"
-                                    data-bs-target={{ "#updateRowModal" . $post->id }}
-                                    aria-label="Close"
-                                  >
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <p class="small">
-                                    Update post information using this form, make sure you
-                                    fill them all
-                                  </p>
-                                  <form method="POST" action="{{ route('post.update', $post->id) }}">
-                                    @csrf
-                                    <input type="hidden" name="_method" value="PUT">
-                                    <div class="row">
-                                      <div class="col-sm-12">
-                                        <div class="form-group form-group-default">
-                                          <label>Name</label>
-                                          <input
-                                            id="addName"
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="fill name"
-                                            name="name"
-                                            value={{ $post->name }}
-                                            required
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer border-0">
-                                      <button
-                                        type="submit"
-                                        id={{ "updateRowButton" . $post->id }}
-                                        class="btn btn-primary"
-                                      >
-                                        Update
-                                      </button>
-                                      <button
-                                        type="button"
-                                        class="btn btn-danger"
-                                        data-bs-toggle="modal"
-                                        data-bs-target={{ "#updateRowModal" . $post->id }}
-                                      >
-                                        Close
-                                      </button>
-                                    </div>
-                                  </form>
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
                           @endforeach
                         </tbody>
                       </table>
@@ -347,6 +191,9 @@
                 $.ajax({
                     url: "/admin/post/" + id,
                     method: "DELETE",
+                    headers: {
+                       "X-CSRF-TOKEN": csrfToken
+                    },
                     success:function(){
                       $('#add-row').DataTable().ajax.reload();
                     }

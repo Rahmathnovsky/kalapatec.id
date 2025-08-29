@@ -13,15 +13,13 @@
                 <h1
                   class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
                 >
-                  Digital Platform Business Engagement
+                  @lang('home.title')
                 </h1>
 
                 <p
                   class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
                 >
-                  Sistem layanan pelanggan terbaik yang telah mencakup sistem end to end di dalamnya melalui
-                  integrasi seperti whatsapp chat api (Bot, Blast, dan CS), call center, sosial media, email
-                  dan omni channel serta CRM untuk otomatisasi layanan pelanggan.
+                  @lang('home.description')
                 </p>
 
                 <ul
@@ -32,7 +30,7 @@
                       href="javascript:void(0)"
                       class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
                       role="button"
-                      >Get Started</a
+                      >@lang('home.get_started')</a
                     >
                   </li>
 
@@ -41,13 +39,13 @@
                       href="javascript:boid(0)"
                       class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
                       role="button"
-                      ><i class="lni lni-play text-lg/none"></i> Watch Intro</a
+                      ><i class="lni lni-play text-lg/none"></i> @lang('home.watch_intro')</a
                     >
                   </li>
                 </ul>
 
                 <div>
-                  <p class="mb-4 text-center text-primary-color">Powered by</p>
+                  <p class="mb-4 text-center text-primary-color">@lang('home.powered_by')</p>
 
                   <div
                     class="scroll-revealed flex items-center justify-center gap-4 text-center"
@@ -124,12 +122,10 @@
             <div class="w-full">
               <div class="scroll-revealed">
                 <h6 class="mb-2 block text-lg font-semibold text-primary">
-                  PERUSAHAAN KAMI
+                  @lang('home.our_company')
                 </h6>
                 <h2 class="mb-6">
-                  Didirikan pada tahun 2016
-                  Kalapa membantu mengubah
-                  bisnis menjadi digital.
+                  @lang('home.founded_since')
                 </h2>
               </div>
 
@@ -184,9 +180,7 @@
                   aria-labelledby="tabs-list-profile"
                 >
                   <p>
-                    Kalapa Technology hadir sebagai mitra transformasi digital, membantu bisnis konvensional
-                    beralih ke sistem digital yang lebih cepat, tepat, dan efektif melalui dukungan teknologi
-                    strategis, perencanaan, desain, dan operasional berbasis digital.
+                    @lang('home.our_profile')
                   </p>
                 </div>
 
@@ -197,14 +191,11 @@
                   role="tabpanel"
                   aria-labelledby="tabs-list-vision"
                 >
-                  <p><strong>MISI KAMI</strong> <br>
-                    Memberikan service yang Prima, Mudah dan Cepat, dengan cara yang sudah
-                    terstandarisasi dengan tujuan kepada kepuasan pelanggan dan Klien.
+                  <p><strong>@lang('home.our_mission.title')</strong> <br>
+                    @lang('home.our_mission.description')
                   </p>
-                  <p><strong>VISI KAMI</strong> <br>
-                    Menjadi perusahaan yang bergerak di bidang Service pelayanan
-                    terkemukadi Indonesia dengan menerapkan kemajuan technology
-                    sebagai dukungan utama dalam pengembangan segela aspek.
+                  <p><strong>@lang('home.our_vision.title')</strong> <br>
+                    @lang('home.our_vision.description')
                   </p>
                 </div>
 
@@ -238,12 +229,10 @@
       <section id="certification" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">Certification</h6>
+            <h6 class="mb-2 block text-lg font-semibold text-primary">@lang('home.certification.title')</h6>
             <h2 class="mb-6">Kalapa Technology</h2>
             <p>
-              Sebagai bentuk komitmen terhadap standar kualitas dan keamanan, Kalapa Technology
-              telah tersertifikasi secara internasional untuk memastikan layanan yang kami berikan
-              selalu profesional, terpercaya, dan sesuai dengan kebutuhan bisnis Anda.
+              @lang('home.certification.description')
             </p>
           </div>
 
@@ -412,11 +401,11 @@
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
             <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Services
+              @lang('home.services.title')
             </h6>
-            <h2 class="mb-6">Solusi Terbaik Kami</h2>
+            <h2 class="mb-6">@lang('home.services.sub_title')</h2>
             <p>
-              Layanan terbaik kami hadir untuk mendukung pertumbuhan dan efisiensi bisnis Anda di era digital.
+              @lang('home.services.description')
             </p>
           </div>
 
@@ -434,7 +423,7 @@
                     BPO & MPO Manage Services
                   </h4>
                   <p>
-                    Layanan operasional berbasis tenaga profesional untuk mendukung efisiensi bisnis Anda, mulai dari proses back office hingga manajemen proyek.
+                    @lang('home.solutions.bpo_&_mpo') 
                   </p>
                 </div>
               </div>
@@ -453,7 +442,7 @@
                     Telesystem
                   </h4>
                   <p>
-                    Solusi sistem komunikasi terpadu untuk mendukung layanan pelanggan melalui telepon, call center, dan integrasi sistem lainnya.
+                    @lang('home.solutions.telesystem')
                   </p>
                 </div>
               </div>
@@ -472,7 +461,7 @@
                     Omnichannels
                   </h4>
                   <p>
-                    Layanan terintegrasi lintas platform—seperti media sosial, email, dan chat untuk menghadirkan pengalaman pelanggan yang konsisten dan optimal.
+                    @lang('home.solutions.omnichannels')
                   </p>
                 </div>
               </div>
@@ -491,7 +480,7 @@
                     WABA API Services
                   </h4>
                   <p>
-                    Integrasi WhatsApp Business API untuk komunikasi pelanggan yang cepat, aman, dan otomatis, sesuai kebutuhan bisnis Anda.
+                    @lang('home.solutions.waba')
                   </p>
                 </div>
               </div>
@@ -510,7 +499,7 @@
                     Chatbot & Voice AI
                   </h4>
                   <p>
-                    Automasi layanan pelanggan dengan teknologi chatbot dan voice AI yang cerdas, responsif, dan tersedia 24/7.
+                    @lang('home.solutions.chatbot')
                   </p>
                 </div>
               </div>
@@ -529,7 +518,7 @@
                     Premise & Infrastructure
                   </h4>
                   <p>
-                    Dukungan infrastruktur teknologi informasi yang andal, mulai dari instalasi hingga pemeliharaan sistem untuk kebutuhan operasional bisnis Anda.
+                    @lang('home.solutions.premise_&_infrastructure')
                   </p>
                 </div>
               </div>
@@ -575,9 +564,9 @@
             <h6 class="mb-2 block text-lg font-semibold text-primary">
               Demo / Trial
             </h6>
-            <h2 class="mb-6">Kirim Permintaan Demo</h2>
+            <h2 class="mb-6">@lang('home.demo.title')</h2>
             <p>
-              Jelajahi bagaimana solusi dari Kalapa Technology dapat membantu transformasi digital bisnis Anda. Ajukan permintaan demo dan tim kami akan segera menghubungi Anda.
+              @lang('home.demo.description')
             </p>
           </div>
 
@@ -593,7 +582,7 @@
                     Outbound Telesystem
                   </h6>
                   <p>
-                    Solusi komunikasi suara outbound berbasis sistem VoIP untuk mendukung efisiensi layanan pelanggan dan pemasaran.
+                    @lang('home.products.outbound.description')
                   </p>
                   <div class="pt-8">
                     <center>
@@ -616,7 +605,7 @@
                   <a
                     href="javascript:void(0)"
                     class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >Kirim Permintaan</a
+                    >@lang('home.products.buttons.send_request')</a
                   >
                 </div>
                 <div>
@@ -627,7 +616,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Dukungan call center professional</span>
+                      <span>@lang('home.products.outbound.benefits.1')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -635,7 +624,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Integrasi dengan CRM & dashboard laporan</span>
+                      <span>@lang('home.products.outbound.benefits.2')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -643,7 +632,7 @@
                       <i
                         class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
                       ></i>
-                      <span>Efisiensi biaya operasional</span>
+                      <span>@lang('home.products.outbound.benefits.3')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -651,7 +640,7 @@
                       <i
                         class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
                       ></i>
-                      <span>Skalabilitas sesuai kebutuhan bisnis</span>
+                      <span>@lang('home.products.outbound.benefits.4')</span>
                     </li>
                   </ul>
                 </div>
@@ -669,7 +658,7 @@
                     Whatsapp Blast
                   </h6>
                   <p>
-                    Layanan pengiriman pesan massal melalui WhatsApp resmi untuk menjangkau pelanggan secara cepat dan tepat sasaran.
+                    @lang('home.products.whatsapp_blast.description')
                   </p>
                   <div class="pt-8">
                     <center>
@@ -692,7 +681,7 @@
                   <a
                     href="javascript:void(0)"
                     class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >Kirim Permintaan</a
+                    >@lang('home.products.buttons.send_request')</a
                   >
                 </div>
                 <div>
@@ -703,7 +692,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Terverifikasi WhatsApp Business API</span>
+                      <span>@lang('home.products.whatsapp_blast.benefits.1')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -711,7 +700,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Kirim pesan ke ribuan kontak sekaligus</span>
+                      <span>@lang('home.products.whatsapp_blast.benefits.2')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -719,7 +708,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Statistik dan laporan pengiriman</span>
+                      <span>@lang('home.products.whatsapp_blast.benefits.3')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -727,7 +716,7 @@
                       <i
                         class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
                       ></i>
-                      <span>Aman dan sesuai regulasi</span>
+                      <span>@lang('home.products.whatsapp_blast.benefits.4')</span>
                     </li>
                   </ul>
                 </div>
@@ -745,7 +734,7 @@
                     Omnichannels
                   </h6>
                   <p>
-                    Satu sistem terintegrasi untuk mengelola interaksi pelanggan dari berbagai kanal seperti WhatsApp, Instagram, email, dan lainnya.
+                    @lang('home.products.omnichannels.description')
                   </p>
                   <div class="pt-8">
                     <center>
@@ -768,7 +757,7 @@
                   <a
                     href="javascript:void(0)"
                     class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >Kirim Permintaan</a
+                    >@lang('home.products.buttons.send_request')</a
                   >
                 </div>
                 <div>
@@ -779,7 +768,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Satu dashboard untuk semua kanal</span>
+                      <span>@lang('home.products.omnichannels.benefits.1')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -787,7 +776,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Riwayat percakapan tersimpan rapi</span>
+                      <span>@lang('home.products.omnichannels.benefits.2')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -795,7 +784,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Dukungan tim customer service multi-kanal</span>
+                      <span>@lang('home.products.omnichannels.benefits.3')</span>
                     </li>
                     <li
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
@@ -803,7 +792,7 @@
                       <i
                         class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
-                      <span>Meningkatkan kepuasan pelanggan</span>
+                      <span>@lang('home.products.omnichannels.benefits.4')</span>
                     </li>
                   </ul>
                 </div>
@@ -818,10 +807,9 @@
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
             <h6 class="mb-2 block text-lg font-semibold text-primary">FAQ</h6>
-            <h2 class="mb-6">Pertanyaan Umum</h2>
+            <h2 class="mb-6">@lang('home.faq.title')</h2>
             <p>
-              Kalapa merupakan perusahaan teknologi yang fokus pada pengembangan solusi digital,khususnya layanan
-              contact center modern yang terintegrasi dan dapat disesuaikan dengan kebutuhan bisnis masa kini.
+              @lang('home.faq.description')
             </p>
           </div>
 
@@ -836,11 +824,10 @@
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Apa yang bisa kami bantu dalam bisnis anda?
+                  @lang('home.faq.questions.1.question')
                 </h3>
                 <p class="text-body-light-11 dark:text-body-dark-11">
-                  Kami membantu perusahaan Anda membangun sistem contact center yang fleksibel dan dapat disesuaikan,
-                  untuk mendukung otomatisasi proses layanan pelanggan secara menyeluruh melalui sistem end-to-end.
+                  @lang('home.faq.questions.1.answer')
                 </p>
               </div>
             </div>
@@ -855,20 +842,10 @@
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Apa kelebihan Kalapa dengan yang lain?
+                  @lang('home.faq.questions.2.question')
                 </h3>
                 <p class="text-body-light-11 dark:text-body-dark-11">
-                  Kalapa memiliki keunggulan pada infrastruktur dan sistem yang dikembangkan secara mandiri,
-                  tanpa ketergantungan vendor eksternal. Ini menjamin keamanan data dan kontrol penuh atas sistem.
-                  Kami juga menyediakan:
-                  <ul>
-                    <li>CRM yang dapat dikustomisasi</li>
-                    <li>WhatsApp Business resmi dengan centang biru</li>
-                    <li>Dukungan multi-agent</li>
-                    <li>Laporan dan analisis yang detail</li>
-                    <li>Fleksibilitas jumlah seat</li>
-                    <li>Sistem chatbot terintegrasi</li>
-                  </ul>
+                  @lang('home.faq.questions.2.answer')
                 </p>
               </div>
             </div>
@@ -883,11 +860,10 @@
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Bagaimana dengan biayanya?
+                  @lang('home.faq.questions.3.question')
                 </h3>
                 <p class="text-body-light-11 dark:text-body-dark-11">
-                  Dengan sistem dan infrastruktur yang dikembangkan sendiri, Kalapa mampu menawarkan
-                  layanan berkualitas tinggi dengan biaya yang lebih efisien dan kompetitif.
+                  @lang('home.faq.questions.3.answer')
                 </p>
               </div>
             </div>
@@ -902,12 +878,10 @@
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Kenapa memilih Kalapa?
+                  @lang('home.faq.questions.4.question')
                 </h3>
                 <p class="text-body-light-11 dark:text-body-dark-11">
-                  Dengan pengalaman lebih dari 8 tahun di bidang contact center, Kalapa telah dipercaya
-                  oleh lebih dari 120 perusahaan dari berbagai industri dan terus berkembang untuk
-                  memberikan solusi terbaik bagi mitra bisnis kami.
+                  @lang('home.faq.questions.4.answer')
                 </p>
               </div>
             </div>
@@ -1761,112 +1735,54 @@
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
             <h6 class="mb-2 block text-lg font-semibold text-primary">Blog</h6>
-            <h2 class="mb-6">Latest News & Blog</h2>
+            <h2 class="mb-6">@lang('home.blog.title')</h2>
             <p>
-              There are many variations of passages of Lorem Ipsum available but
-              the majority have suffered alteration in some form.
+              @lang('home.blog.description')
             </p>
           </div>
 
-          <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
+          <!-- Articles section -->
+          <div class="row mb-10">
+            @foreach ($posts as $post)
+              <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+                <article class="group">
+                  <div class="relative">
+                    <a
+                      href="{{ route('article.show', [$post->id, $post->slug]) }}"
+                      class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
+                    >
+                      <img
+                        src="{{ url($post->image) }}"
+                        alt="{{ $post->title }}"
+                        class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
+                      />
+                    </a>
+                  </div>
+                  <span
+                    class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
+                    >{{$post->user->name . ' - ' . $post->created_at}}</span
                   >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-1.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >Joe Russell - 17 Agt 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >Make your team a Design driven company</a
-                  >
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
-                </p>
-              </article>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
-                  >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-2.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >Joe Russell - 17 Agt 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >The newest web framework that changed the world</a
-                  >
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
-                </p>
-              </article>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
-                  >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-3.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >Joe Russell - 17 Agt 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >5 ways to improve user retention for your startup</a
-                  >
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard.
-                </p>
-              </article>
-            </div>
+                  <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
+                    <a
+                      href="{{ route('article.show', [$post->id, $post->slug]) }}"
+                      class="text-body-light-12 dark:text-body-dark-12"
+                      >{{ substr($post->title, 0, 50) . '...' }}</a
+                    >
+                  </h4>
+                  <p>
+                    {!! substr($post->content, 0, 290) . '...' !!}
+                  </p>
+                </article>
+              </div>
+            @endforeach
+          </div>
+          <div class="text-center mt-5">
+            <a
+              href="{{ route('article.index') }}"
+              class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary text-base font-medium text-primary-color"
+              role="button"
+              >@lang('home.see_more')
+            </a>
           </div>
         </div>
       </section>
@@ -1876,11 +1792,11 @@
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
             <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Clients
+              @lang('home.clients.title')
             </h6>
-            <h2 class="mb-6">Rekan Hebat Kami</h2>
+            <h2 class="mb-6">@lang('home.clients.sub_title')</h2>
             <p>
-              Kepercayaan lebih dari 120 perusahaan dari berbagai industri menjadi bukti komitmen Kalapa dalam memberikan solusi digital terbaik.
+              @lang('home.clients.description')
             </p>
           </div>
 
@@ -2087,7 +2003,7 @@
                       ></i>
                     </div>
                     <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Contact</h4>
+                      <h4 class="text-[1.25rem] text-primary mb-3">@lang('home.contacts.contact')</h4>
                       <p class="m-0">+62 812-9999-5925</p>
                       <p class="m-0">bd.team@kalapatec.id</p>
                     </div>
@@ -2104,9 +2020,8 @@
                       ></i>
                     </div>
                     <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Address</h4>
-                      <p class="m-0">Menara Rajawali Lt.10 <br>
-                                     Jakarta Selatan, DKI Jakarta, Indonesia.</p>
+                      <h4 class="text-[1.25rem] text-primary mb-3">@lang('home.contacts.address.title')</h4>
+                      <p class="m-0">@lang('home.contacts.address.description')</p>
                     </div>
                   </div>
                 </div>
@@ -2121,9 +2036,9 @@
                       ></i>
                     </div>
                     <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Schedule</h4>
-                      <p class="m-0">9 Hours / 5 Weekdays Open</p>
-                      <p class="m-0">Operational Hours: 09:00 AM - 06:00 PM</p>
+                      <h4 class="text-[1.25rem] text-primary mb-3">@lang('home.contacts.schedule.title')</h4>
+                      <p class="m-0">@lang('home.contacts.schedule.description.day')</p>
+                      <p class="m-0">@lang('home.contacts.schedule.description.hour')</p>
                     </div>
                   </div>
                 </div>
@@ -2136,12 +2051,11 @@
               >
                 <div class="text-center max-w-[550px] mx-auto mb-12">
                   <h6 class="mb-2 block text-lg font-semibold text-primary">
-                    Get in Touch
+                    @lang('home.get_in_touch.title')
                   </h6>
-                  <h2 class="mb-3">Ready to Get Started</h2>
+                  <h2 class="mb-3">@lang('home.get_in_touch.get_started')</h2>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    quiblanditiis praesentium
+                    @lang('home.get_in_touch.description')
                   </p>
                 </div>
 
@@ -2203,7 +2117,7 @@
                           type="submit"
                           class="inline-block px-5 py-3 rounded-md text-base bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
                         >
-                          Send Message
+                          @lang('home.get_in_touch.send_message')
                         </button>
                       </div>
                     </div>

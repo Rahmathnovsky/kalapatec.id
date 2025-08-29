@@ -9,10 +9,10 @@
         >
           <div class="w-60 lg:w-56 max-w-full px-5">
             <a
-              href="."
+              href="{{ route('home') }}"
               class="ic-navbar-logo block w-full py-5 text-primary-color"
             >
-              <img src="./assets/img/logo/logo-kalapatec.png" style="width: 80px;" alt="">
+              <img src="{{ asset('assets/img/logo/logo-kalapatec.png')}}" style="width: 80px;" alt="">
               <!-- <svg
                 class="w-full fill-current"
                 id="NavbarBrand"
@@ -47,7 +47,7 @@
             <div>
               <button
                 type="button"
-                class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
+                class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none {{ $text_color ?? 'text-primary-color'}} ring-primary focus:ring-2 lg:hidden"
                 data-web-toggle="navbar-collapse"
                 data-web-target="navbarMenu"
                 aria-expanded="false"
@@ -68,34 +68,43 @@
                   <li class="group relative">
                     <a
                       href="#home"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70 active"
                       role="menuitem"
-                      >Home</a
+                      >@lang('home.navbar.home')</a
                     >
                   </li>
 
                   <li class="group relative">
                     <a
                       href="#certification"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
-                      >Certification</a
+                      >@lang('home.navbar.certification')</a
                     >
                   </li>
 
                   <li class="group relative">
                     <a
                       href="#services"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
-                      >Services</a
+                      >@lang('home.navbar.services')</a
+                    >
+                  </li>
+
+                  <li class="group relative">
+                    <a
+                      href="#faq"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
+                      role="menuitem"
+                      >FAQ</a
                     >
                   </li>
 
                   <li class="group relative">
                     <a
                       href="#blog"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
                       >Blog</a
                     >
@@ -104,36 +113,38 @@
                   <li class="group relative">
                     <a
                       href="#career"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
-                      >Career</a
+                      >@lang('home.navbar.career')</a
                     >
                   </li>
 
                   <li class="group relative">
                     <a
                       href="#demo"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
                       >Demo/Trial</a
                     >
                   </li>
+
                 </ul>
               </nav>
             </div>
             <div class="flex items-center justify-end pr-[52px] lg:pr-0">
+              @include('front-office.user.components.lang-button-dropdown')
               <button
                 type="button"
-                class="inline-flex items-center text-primary-color text-[24px]/none"
+                class="inline-flex items-center {{ $text_color ?? 'text-primary-color'}} text-[24px]/none"
                 aria-label="Switch theme"
                 data-web-trigger="web-theme"
               ></button>
               <div class="hidden sm:flex">
                 <a
                   href="javascript:void(0)"
-                  class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
+                  class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary bg-opacity-70 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
                   role="button"
-                  >Contact Us</a
+                  >@lang('home.navbar.contact_us')</a
                 >
               </div>
             </div>

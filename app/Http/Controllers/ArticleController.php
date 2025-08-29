@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->get();
         return view('front-office.user.article.index', compact(['posts']));
     }
 
@@ -24,8 +24,10 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $slug)
     {
-        
+        $post = Post::with(['user'])->find($id);
+        $text_color = 'text-dark-color';
+        return view('front-office.user.article.show', compact(['post', 'text_color']));
     }
 }

@@ -17,10 +17,10 @@ class PostService {
 
     public function store($request)
     {
-        $validated = $this->modelPost->validate($request);
-        DB::beginTransaction();
-        try {
-            $payload = $this->modelPost->rawPayload($validated);
+        // $validated = $this->modelPost->validate($request);
+        // DB::beginTransaction();
+        // try {
+            $payload = $this->modelPost->rawPayload($request);
             if ($request->file('image')) {
                 $image = $request->file('image');
                 $image->storeAs('posts', $image->hashName(), 'public');
@@ -28,10 +28,10 @@ class PostService {
 
             $this->modelPost->create($payload);
             
-            DB::commit();
-        } catch (\Throwable $th) {
-            DB::rollBack();
-        }
+        //     DB::commit();
+        // } catch (\Throwable $th) {
+        //     DB::rollBack();
+        // }
     }
 
     public function update($request, $id)
@@ -41,20 +41,18 @@ class PostService {
             $payload = $this->modelPost->rawPayload($request);
             $post = $this->modelPost->find($id);
 
-            //check image update
-            if ($request->file('image')) {
+            if ($request->hasFile('image')) {
+                if ($post->image) {
+                    Storage::disk('public')->delete('posts/' . $post->getRawOriginal('image'));
+                }
 
-                //remove old image
-                Storage::disk('public')->delete('categories/'.basename($post->image));
-            
-                //upload new image
                 $image = $request->file('image');
-                $image->storeAs('categories', $image->hashName(), 'public');
-
-                //update post with new image
-                $post->update($request->all());
-
+                $image->storeAs('posts', $image->hashName(), 'public');
+                $payload['image'] = $image->hashName();
+            } else {
+                $payload['image'] = $post->getRawOriginal('image');
             }
+
             $post->update($payload);
             
             DB::commit();
