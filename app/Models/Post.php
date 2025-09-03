@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class Post extends Model
@@ -34,10 +35,10 @@ class Post extends Model
      */
     public function rawPayload($request): array
     {
-        $payload['title']        = $request['title'];
+        $payload['title']       = $request['title'];
         $payload['slug']        = Str::slug($request->title, '-');
         $payload['category_id'] = $request['category_id'];
-        $payload['user_id']     = '1';
+        $payload['user_id']     = Auth::user()->id;
         $payload['content']     = $request['content'];
         $payload['image']       = $request->file('image') ? $request->file('image')->hashName() : '';
         $payload['description'] = 'description';

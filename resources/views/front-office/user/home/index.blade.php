@@ -602,11 +602,11 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                  <a
-                    href="javascript:void(0)"
-                    class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >@lang('home.products.buttons.send_request')</a
-                  >
+                <button
+                  onclick="openModal('Outbound Telesystem')"
+                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
+                    @lang('home.products.buttons.send_request')
+                </button>
                 </div>
                 <div>
                   <ul>
@@ -678,11 +678,11 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                  <a
-                    href="javascript:void(0)"
-                    class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >@lang('home.products.buttons.send_request')</a
-                  >
+                <button
+                  onclick="openModal('Whatsapp Blast')"
+                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
+                    @lang('home.products.buttons.send_request')
+                </button>
                 </div>
                 <div>
                   <ul>
@@ -754,11 +754,11 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                  <a
-                    href="javascript:void(0)"
-                    class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    >@lang('home.products.buttons.send_request')</a
-                  >
+                <button
+                  onclick="openModal('Omnichannels')"
+                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
+                    @lang('home.products.buttons.send_request')
+                </button>
                 </div>
                 <div>
                   <ul>
@@ -801,6 +801,47 @@
           </div>
         </div>
       </section>
+      <!-- Modal Request -->
+      <div id="requestModal"
+          style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:99999; justify-content:center; align-items:center;">
+        <div style="background:white; padding:20px; border-radius:10px; width:400px; max-width:90%; color:black;">
+          <h2 style="font-size:18px; margin-bottom:15px;">Kirim Pesan</h2>
+
+          <form action="{{ route('demo-trial.store') }}" method="POST">
+            @csrf
+            <div style="margin-bottom:10px;">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" id="phone" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <label for="company_name">Company Name</label>
+              <input type="text" name="company_name" id="company_name" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <label for="product_request">Product Request</label>
+              <input disable readonly type="text" name="product_request" id="product_request" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            </div>
+
+            <input disable readonly type="hidden" name="request_type" id="request_type" value="demo">
+            <div style="text-align:right;">
+              <button type="submit" class="btn bg-primary text-white px-3 py-2 rounded">Kirim</button>
+              <button type="button" onclick="closeModal()" class="btn bg-danger-color text-white px-3 py-2 rounded">Batal</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
       <!-- FAQ section -->
       <section id="faq" class="section-area relative">
@@ -2138,3 +2179,17 @@
         ></object>
       </section>
 @endsection
+
+@push('js')
+<script>
+  function openModal(productName) {
+    console.log(productName)
+    document.getElementById('product_name').value = productName;
+    document.getElementById('requestModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('requestModal').style.display = 'none';
+  }
+</script>
+@endpush

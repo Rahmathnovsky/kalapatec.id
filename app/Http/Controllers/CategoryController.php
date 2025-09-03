@@ -60,7 +60,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $this->destroy($id);
+        $this->categoryService->destroy($id);
         return redirect()->route('category.index');
     }
 }

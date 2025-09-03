@@ -6,7 +6,7 @@
       <section id="blog" class="section-area">
         <div class="container">
           <div class="row">
-              <div class="scroll-revealed col-6">
+              <div class="scroll-revealed col-7">
                 <article class="group">
                     <h3 class="mb-6 mt-3 font-semibold text-[1.5rem]">
                         <a
@@ -16,10 +16,10 @@
                         >
                     </h3>
                     <span
-                    class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                    >{{$post->user->name . ' - ' . $post->created_at}}</span
+                    class="block mt-6 mb-2 w-full text-sm text-body-light-10 dark:text-body-dark-10"
+                    >{!! $post->created_at . ' <br> ' . $post->user->name !!}</span
                     >
-                    <div class="relative">
+                    <div class="relative" style="margin-bottom: 5%">
                       <a
                         href="{{ route('article.show', [$post->id, $post->slug]) }}"
                         class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
@@ -31,9 +31,9 @@
                         />
                       </a>
                     </div>
-                  <p>
+                  <div class="post-content">
                     {!! $post->content !!}
-                  </p>
+                  </div>
                 </article>
               </div>
           </div>

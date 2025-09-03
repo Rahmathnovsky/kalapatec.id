@@ -1,5 +1,5 @@
 @extends('front-office.admin.index', [
-  'title' => 'Post Management'
+    'title' => 'Demo/Trial Request'
 ])
 
 @section('content')
@@ -8,7 +8,7 @@
               {{-- <h3 class="fw-bold mb-3">DataTables.Net</h3> --}}
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
-                  <a href="#">
+                  <a href="{{ route('admin') }}">
                     <i class="icon-home"></i>
                   </a>
                 </li>
@@ -22,24 +22,47 @@
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Article</a>
+                  <a href="#">Demo/Trial</a>
                 </li>
               </ul>
             </div>
             <div class="row">
-
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header">
                     <div class="d-flex align-items-center">
-                      <h4 class="card-title">Article Management</h4>
-                      <a
-                        href="{{ route('post.create') }}"
-                        class="btn btn-primary btn-round ms-auto"
-                      >
-                        <i class="fa fa-plus"></i>
-                        Add New Article
-                      </a>
+                      <h4 class="card-title">Demo/Trial</h4>
+                    </div>
+                    <button class="btn btn-primary mt-3 mb-3 d-flex align-items-center gap-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#exportFormCollapse"
+                            aria-expanded="false">
+                        Export Data
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div id="exportFormCollapse" class="collapse">
+                        <form action="{{ route('export') }}" method="GET" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="start_date" class="form-label fw-bold">Start Date</label>
+                                <input type="date" name="start_date" id="start_date" class="form-control">
+                                <small class="text-muted">Select start date</small>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="end_date" class="form-label fw-bold">End Date</label>
+                                <input type="date" name="end_date" id="end_date" class="form-control">
+                                <small class="text-muted">Select end date</small>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="text-danger mb-2">
+                                    <small>
+                                        *Leave start date and end date blank if you want to export all data
+                                    </small>
+                                </div>
+                                <button type="submit" class="btn btn-success">Export to Excel</button>
+                            </div>
+                        </form>
                     </div>
                   </div>
                   <div class="card-body">
@@ -51,43 +74,42 @@
                       >
                         <thead>
                           <tr>
-                            <th>Title</th>
-                            <th>Slug</th> 
-                            <th>Content</th>
-                            <th>Author</th>
-                            <th>Image</th>
-                            <th>Created at</th> 
+                            <th>Name</th>
+                            <th>Phone</th> 
+                            <th>Company Name</th>
+                            <th>Product Request</th>
+                            <th>Description</th>
+                            <th>Requested at</th> 
                             <th style="width: 10%">Action</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
-                            <th>Title</th>
-                            <th>Slug</th> 
-                            <th>Content</th>
-                            <th>Author</th>
-                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Phone</th> 
+                            <th>Company Name</th>
+                            <th>Product Request</th>
+                            <th>Description</th>
+                            <th>Requested at</th> 
                             <th>Action</th>
                           </tr>
                         </tfoot>
                         <tbody>
-                          @foreach ($posts as $post)
+                          @foreach ($requests as $request)
                           <tr>
-                            <td>{{ substr($post->title, 0, 35) . '...' }}</td>
-                            <td>{{ substr($post->slug, 0, 35) . '...' }}</td>
-                            <td>{!! substr($post->content, 0, 50) . '...' !!}</td>
-                            <td>{{ $post->user->name }}</td>
-                            <td>{!! $post->image ? 
-                            '<img src="'.url($post->image).'" alt="' . $post->title . '" width="300" height="170">' : 
-                            'Image not uploaded' !!}</td>
-                            <td>{{ $post->created_at}}</td>
+                            <td>{{ $request->name }}</td>
+                            <td>{{ $request->phone }}</td>
+                            <td>{{ $request->company_name }}</td>
+                            <td>{{ $request->product_request }}</td>
+                            <td>{!! substr($request->description, 0, 50) . '...' !!}</td>
+                            <td>{{ $request->created_at}}</td>
                             <td>
                               <div class="form-button-action">
                                 <a
                                   class="btn btn-link btn-primary btn-lg"
-                                  href="{{ route('post.edit', $post->id) }}"
+                                  href="{{ route('demo-trial.show', $request->id) }}"
                                 >
-                                  <i class="fa fa-edit"></i>
+                                  <i class="fa fa-eye"></i>
                                 </a>
                                 <button
                                   type="button"
@@ -95,7 +117,7 @@
                                   title=""
                                   class="btn btn-link btn-danger"
                                   data-original-title="Remove"
-                                  onclick="initDemos({{ $post->id }})"
+                                  onclick="initDemos({{ $request->id }})"
                                 >
                                   <i class="fa fa-times"></i>
                               </button>
@@ -112,6 +134,7 @@
             </div>
           </div>
 @endsection
+
 @push('js')
     <script type="text/javascript">
       $(document).ready(function () {
@@ -190,13 +213,13 @@
             }).then((willDelete) => {
               if (willDelete) {
                 $.ajax({
-                    url: "/admin/post/" + id,
+                    url: "/admin/demo-trial/" + id,
                     method: "DELETE",
                     headers: {
                        "X-CSRF-TOKEN": csrfToken
                     }
                 });
-                swal("Post has been deleted", {
+                swal("Demo/trial request has been deleted", {
                   icon: "success",
                   buttons: {
                     confirm: {
@@ -211,4 +234,3 @@
         };
     </script>
 @endpush
-

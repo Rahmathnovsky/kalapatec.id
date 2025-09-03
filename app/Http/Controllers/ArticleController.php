@@ -15,7 +15,8 @@ class ArticleController extends Controller
     public function index()
     {
         $posts = Post::latest()->get();
-        return view('front-office.user.article.index', compact(['posts']));
+        $text_color = 'text-dark-color';
+        return view('front-office.user.article.index', compact(['posts', 'text_color']));
     }
 
     /**

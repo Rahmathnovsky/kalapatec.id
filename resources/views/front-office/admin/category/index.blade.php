@@ -89,18 +89,6 @@
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="form-group form-group-default">
-                                    <label>Image</label>
-                                    <input
-                                      id="addImage"
-                                      type="file"
-                                      class="form-control"
-                                      placeholder="fill image"
-                                      name="image"
-                                    />
-                                  </div>
-                                </div>
                               </div>
                               <div class="modal-footer border-0">
                                 <button
@@ -135,7 +123,6 @@
                           <tr>
                             <th>Name</th> {{-- Name --}}
                             <th>Slug</th> {{-- Position --}}
-                            <th>Image</th> {{-- Privilege --}}
                             <th style="width: 10%">Action</th>
                           </tr>
                         </thead>
@@ -143,7 +130,6 @@
                           <tr>
                             <th>Name</th> {{-- Name --}}
                             <th>Slug</th> {{-- Position --}}
-                            <th>Image</th> {{-- Privilege --}}
                             <th>Action</th>
                           </tr>
                         </tfoot>
@@ -152,7 +138,6 @@
                           <tr>
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->slug }}</td>
-                            <td>{{ $category->image ? $category->image : 'Image not uploaded' }}</td>
                             <td>
                               <div class="form-button-action">
                                 <button
@@ -320,6 +305,7 @@
       });
       
         var initDemos = function (id) {
+          const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             swal({
               title: "Are you sure?",
               text: "You won't be able to revert this!",
@@ -339,9 +325,9 @@
               if (willDelete) {
                 $.ajax({
                     url: "/admin/category/" + id,
-                    method: "DELETE",
-                    success:function(){
-                      $('#add-row').DataTable().ajax.reload();
+                    method: "DELETE",                   
+                    headers: {
+                       "X-CSRF-TOKEN": csrfToken
                     }
                 });
                 swal("Category has been deleted", {
@@ -351,7 +337,7 @@
                       className: "btn btn-success",
                     },
                   },
-                });
+                })
               }
             });
         };

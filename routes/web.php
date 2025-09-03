@@ -13,6 +13,7 @@ use App\Http\Controllers\TrialReqListController;
 
 use App\Http\Controllers\GetInTouchController;
 use App\Http\Controllers\PostAdminController;
+use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -35,6 +36,7 @@ Route::group(['middleware' => ['setLocale']], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::resource('/article', ArticleController::class)->except(['show']);
     Route::get('/article/{id}/{slug}',[ ArticleController::class, 'show'])->name('article.show');
+    Route::post('/demo-trial', [RequestController::class, 'store'])->name('demo-trial.store');
 });
 
 Route::get('/lang/{lang}', function($lang){
@@ -62,8 +64,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     // Post
     Route::resource('post', PostAdminController::class)->except(['show']);
 
+    // Demo/Trial
+    Route::resource('demo-trial', RequestController::class)->except(['store', 'create', 'edit']);
     Route::get('/demo-trial/overview', [TrialReqOverviewController::class, 'index'])->name('overview');
     Route::get('/demo-trial/list', [TrialReqListController::class, 'index'])->name('request-list');
+
+    // Excel export
+    Route::get('/export', [RequestController::class, 'export'])->name('export');
 
     Route::get('/get-in-touch', [GetInTouchController::class, 'index'])->name('get-in-touch');
 });
