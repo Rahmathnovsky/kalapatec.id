@@ -105,12 +105,16 @@
                             <td>{{ $request->created_at}}</td>
                             <td>
                               <div class="form-button-action">
-                                <a
+                                <button
+                                  type="button"
+                                  title=""
                                   class="btn btn-link btn-primary btn-lg"
-                                  href="{{ route('demo-trial.show', $request->id) }}"
+                                  data-original-title="View Request"
+                                  data-bs-toggle="modal"
+                                  data-bs-target={{ "#viewRowModal" . $request->id }}
                                 >
                                   <i class="fa fa-eye"></i>
-                                </a>
+                                </button>
                                 <button
                                   type="button"
                                   data-bs-toggle="tooltip"
@@ -124,6 +128,136 @@
                               </div>
                             </td>
                           </tr>
+                          
+                          <!-- Update Modal -->
+                          <div
+                            class="modal fade"
+                            id={{ "viewRowModal" . $request->id }}
+                            tabindex="-1"
+                            role="dialog"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header border-0">
+                                  <h5 class="modal-title">
+                                    <span class="fw-mediumbold"> View</span>
+                                    <span class="fw-light"> Demo/Trial Detail </span>
+                                  </h5>
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-bs-toggle="modal"
+                                    data-bs-target={{ "#viewRowModal" . $request->id }}
+                                    aria-label="Close"
+                                  >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="small">
+                                    View all Demo/Trial detail request
+                                  </p>
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Name</label>
+                                          <input
+                                            id="addName"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill name"
+                                            name="name"
+                                            value="{{ old('name', $request->name) }}"
+                                            required
+                                          />
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Phone</label>
+                                          <input
+                                            id="addPhone"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill phone"
+                                            name="phone"
+                                            value="{{ old('phone', $request->phone) }}"
+                                            required
+                                          />
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Company Name</label>
+                                          <input
+                                            id="addCompanyName"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill company_name"
+                                            name="company_name"
+                                            value="{{ old('company_name', $request->company_name) }}"
+                                            required
+                                          />
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Product Request</label>
+                                          <input
+                                            id="addProductRequest"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill product_request"
+                                            name="product_request"
+                                            value="{{ old('product_request', $request->product_request) }}"
+                                            required
+                                          />
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Description</label>
+                                          <textarea
+                                            id="addDescription"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill description"
+                                            name="description"
+                                            required
+                                          >{{ old('description', $request->description) }}</textarea>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                        <div class="form-group form-group-default">
+                                          <label>Reqeusted At</label>
+                                          <input
+                                            id="addRequestedAt"
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="fill descripcreated_attion"
+                                            name="created_at"
+                                            value="{{ old('created_at', $request->created_at) }}"
+                                            required
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                      <button
+                                        type="button"
+                                        class="btn btn-danger"
+                                        data-bs-toggle="modal"
+                                        data-bs-target={{ "#viewRowModal" . $request->id }}
+                                      >
+                                        Close
+                                      </button>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           @endforeach
                         </tbody>
                       </table>

@@ -1,11 +1,11 @@
 @extends('front-office.admin.index', [
-    'title' => 'Update Article'
+    'title' => 'Update Career'
 ])
 
 @section('content')
           <div class="page-inner">
             <div class="page-header">
-              <h3 class="fw-bold mb-3">Article</h3>
+              <h3 class="fw-bold mb-3">Career</h3>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
                   <a href="{{ route('admin') }}">
@@ -22,13 +22,13 @@
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('post.index') }}">Article</a>
+                  <a href="{{ route('career.index') }}">Career</a>
                 </li>
                 <li class="separator">
                   <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('post.edit', $post->id) }}">Update</a>
+                  <a href="{{ route('career.create') }}">Update</a>
                 </li>
               </ul>
             </div>
@@ -37,9 +37,9 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header">
-                    <div class="card-title">Update Article</div>
+                    <div class="card-title">Update Career</div>
                   </div>
-                  <form action="{{ route('post.update', $post->id) }}" method="post" enctype="multipart/form-data">
+                  <form action="{{ route('career.update', $career->id) }}" method="career" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     @if ($errors->any())
@@ -61,8 +61,8 @@
                               class="form-control"
                               id="title"
                               name="title"
-                              placeholder="Fill article title here..."
-                              value="{{ $post->title }}"
+                              placeholder="Fill Career title here..."
+                              value="{{ $career->title }}"
                             />
                           </div>
   
@@ -75,7 +75,7 @@
                             >
                               @foreach ($categories as $category)
                                   <option value="{{ $category->id }}"
-                                  {{ old('category_id', $post->category_id ?? '') == $category->id ? 'selected' : '' }}>
+                                  {{ old('category_id', $career->category_id ?? '') == $category->id ? 'selected' : '' }}>
                                   {{ $category->name }}
                                   </option>
                               @endforeach
@@ -84,33 +84,15 @@
                           
                           <div class="form-group">
                             <label for="myeditorinstance" class="fw-bold"><h5 class="mb-1">Content</h5></label>
-                            <x-forms.tinymce-editor value="{{ $post->content }}"/>
+                            <x-forms.tinymce-editor value="{{ $career->content }}"/>
                           </div>
-  
-                          <div class="form-group">
-                          <label for="image" class="fw-bold"><h5 class="mb-1">Cover</h5></label>
-                            <div class="input-group">
-                              <input
-                                type="file"
-                                class="form-control"
-                                name="image"
-                                id="image"
-                                capture='user' 
-                                accept='image/*'
-                                onchange="document.getElementById('myImg').src = window.URL.createObjectURL(this.files[0])"
-                              />
-                            </div>
-                            <div class="mt-3">
-                              <label for="myImg" class="text-muted small">*Current cover image</label>
-                              <p><img src="{{ url($post->image) }}" width="300" height="170" id="myImg" alt="{{ $post->title }}"></p> 
-                            </div>
-                          </div>
+
                         </div>
                       </div>
                     </div>
                     <div class="card-action">
                       <button type="submit" class="btn btn-success">Submit</button>
-                      <a href="{{ route('post.index') }}" class="btn btn-danger">Cancel</a>
+                      <a href="{{ route('career.index') }}" class="btn btn-danger">Cancel</a>
                     </div>
                   </form>
                 </div>

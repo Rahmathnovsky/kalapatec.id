@@ -2184,7 +2184,7 @@
 <script>
   function openModal(productName) {
     console.log(productName)
-    document.getElementById('product_name').value = productName;
+    document.getElementById('product_request').value = productName;
     document.getElementById('requestModal').style.display = 'flex';
   }
 

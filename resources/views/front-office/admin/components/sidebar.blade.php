@@ -82,27 +82,12 @@
               <!-- End Request Section -->
 
               <!-- Start Pages Kalapatec Section -->
-              <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#career">
+              <li class="nav-item {{ request()->is('admin/career') ? 'active' : '' }}">
+                <a href="{{ route(name: 'career.index') }}">
                   <i class="fas fa-briefcase"></i>
                   <p>Career</p>
-                  <span class="caret"></span>
                 </a>
-                <div class="collapse" id="career">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="tables/datatables.html">
-                        <span class="sub-item">All Page</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tables/tables.html">
-                        <span class="sub-item">Add Page</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+              </li> 
 
               <li class="nav-item {{ request()->is('admin/post') ? 'active' : '' }}">
                 <a href="{{ route(name: 'post.index') }}">

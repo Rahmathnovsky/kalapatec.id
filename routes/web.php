@@ -2,6 +2,7 @@
 
 use App\Enums\UserRole;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 
@@ -71,6 +72,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     // Excel export
     Route::get('/export', [RequestController::class, 'export'])->name('export');
+    
+    // Career
+    Route::resource('/career', CareerController::class);
 
     Route::get('/get-in-touch', [GetInTouchController::class, 'index'])->name('get-in-touch');
 });
