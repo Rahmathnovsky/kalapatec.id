@@ -2,8 +2,11 @@
 
 namespace App\Services;
 
+use App\Mail\RequestNotification;
 use App\Models\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class RequestService {
     
@@ -16,15 +19,18 @@ class RequestService {
 
     public function store($request)
     {
-        DB::beginTransaction();
-        try {
+        // DB::beginTransaction();
+        // try {
             $payload = $this->modelRequest->rawPayload($request);
-            $this->modelRequest->create($payload);
+            $notificationPayload = $this->modelRequest->create($payload);
             
-            DB::commit();
-        } catch (\Throwable $th) {
-            DB::rollBack();
-        }
+            $recipients = User::pluck('email')->toArray();
+            Mail::to($recipients)->send(new RequestNotification($notificationPayload));
+            
+        //     DB::commit();
+        // } catch (\Throwable $th) {
+        //     DB::rollBack();
+        // }
     }
 
     public function destroy($id)

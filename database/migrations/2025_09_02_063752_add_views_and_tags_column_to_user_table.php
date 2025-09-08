@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             $table->integer('views')->default(0);
             $table->json('tags')->nullable();
         });
@@ -27,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('user', function (Blueprint $table) {
-            //
+            $table->dropColumn('views');
+            $table->dropColumn('tags');
         });
     }
 };

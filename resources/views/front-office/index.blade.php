@@ -140,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-    <script src="{{ asset('./assets/js/main.js')}}"></script>
+    <script src="{{ asset('assets/js/main.js')}}"></script>
     <script>
       // Scroll Reveal
       const sr = ScrollReveal({

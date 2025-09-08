@@ -82,18 +82,28 @@ class User extends Authenticatable
      * validated
      *
      * @param Request $request
-     * @return Request
+     * @return void
      */
     public function validate($request)
     {
-        $validated = $request->validate([
-            'name' => 'required',
+        $request->validate([
+            'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required',
+            'password' => 'required|min:8',
             'role' => 'required'
-        ]);
+        ], [
+            'name.required' => 'Name must be filled',
+            'name.max' => 'Name cannot exceed 255 characters',
 
-        return $validated;
+            'email.required' => 'Email must be filled',
+            'email.email' => 'Email format is invalid',
+            'email.unique' => 'Email is already registered',
+
+            'password.required' => 'Password must be filled',
+            'password.min' => 'Password must be at least 8 characters',
+
+            'role.required' => 'Role must be selected',
+        ]);
     }
 
     /**

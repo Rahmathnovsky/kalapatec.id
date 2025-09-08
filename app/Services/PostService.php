@@ -17,9 +17,9 @@ class PostService {
 
     public function store($request)
     {
-        // $validated = $this->modelPost->validate($request);
-        // DB::beginTransaction();
-        // try {
+        $this->modelPost->validate($request);
+        DB::beginTransaction();
+        try {
             $payload = $this->modelPost->rawPayload($request);
             if ($request->file('image')) {
                 $image = $request->file('image');
@@ -28,14 +28,15 @@ class PostService {
 
             $this->modelPost->create($payload);
             
-        //     DB::commit();
-        // } catch (\Throwable $th) {
-        //     DB::rollBack();
-        // }
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+        }
     }
 
     public function update($request, $id)
     {
+        $this->modelPost->validate($request);
         DB::beginTransaction();
         try {
             $payload = $this->modelPost->rawPayload($request);

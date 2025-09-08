@@ -16,10 +16,10 @@ class UserService {
 
     public function store($request)
     {
-        $validated = $this->modelUser->validate($request);
+        $this->modelUser->validate($request);
         DB::beginTransaction();
         try {
-            $payload = $this->modelUser->rawPayload($validated);
+            $payload = $this->modelUser->rawPayload($request);
             $this->modelUser->create($payload);
             
             DB::commit();

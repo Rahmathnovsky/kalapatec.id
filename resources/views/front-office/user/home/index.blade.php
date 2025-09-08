@@ -225,6 +225,325 @@
         </div>
       </section>
 
+      {{-- <section class="section-area bg-gray-50 dark:bg-gray-900">
+        <div class="container">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Customer Journey Map
+            </h2>
+          </div>
+          
+          <div class="relative">
+            <!-- Journey Steps -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+              
+              <!-- Step 1 -->
+              <div class="flex flex-col items-center text-center group">
+                <!-- Icon -->
+                <div class="mb-4">
+                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                
+                <!-- Circle with Number -->
+                <div class="relative mb-6">
+                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-900 to-red-800 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
+                    01
+                  </div>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-xl font-bold text-red-900 mb-2">Discovery</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
+                  Customer discovers our services through various channels and begins their journey with us
+                </p>
+              </div>
+
+              <!-- Connector Line -->
+              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex flex-col items-center text-center group">
+                <!-- Icon -->
+                <div class="mb-4">
+                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                
+                <!-- Circle with Number -->
+                <div class="relative mb-6">
+                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-700 to-red-600 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
+                    02
+                  </div>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-xl font-bold text-red-700 mb-2">Evaluation</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
+                  Customer evaluates our offerings and compares with alternatives to make informed decisions
+                </p>
+              </div>
+
+              <!-- Connector Line -->
+              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex flex-col items-center text-center group">
+                <!-- Icon -->
+                <div class="mb-4">
+                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H18V0h-2v2H8V0H6v2H3.5C2.67 2 2 2.67 2 3.5v15C2 19.33 2.67 20 3.5 20h17c.83 0 1.5-.67 1.5-1.5v-15C22 2.67 21.33 2 20.5 2z"/>
+                  </svg>
+                </div>
+                
+                <!-- Circle with Number -->
+                <div class="relative mb-6">
+                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-500 to-red-400 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
+                    03
+                  </div>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-xl font-bold text-red-500 mb-2">Purchase</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
+                  Customer makes the purchase decision and completes the transaction with our team
+                </p>
+              </div>
+
+              <!-- Connector Line -->
+              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex flex-col items-center text-center group">
+                <!-- Icon -->
+                <div class="mb-4">
+                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                
+                <!-- Circle with Number -->
+                <div class="relative mb-6">
+                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
+                    04
+                  </div>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-xl font-bold text-orange-500 mb-2">Support</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
+                  Ongoing support and relationship building to ensure customer satisfaction and loyalty
+                </p>
+              </div>
+            </div>
+
+            <!-- Mobile Connector Lines -->
+            <div class="md:hidden absolute left-1/2 transform -translate-x-1/2 top-32 bottom-32 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
+          </div>
+        </div>
+      </section> --}}
+
+            <section id="journey" class="section-area bg-body-light-1 dark:bg-body-dark-1">
+        <div class="container">
+          <div class="text-center mb-12">
+            <div class="scroll-revealed">
+              <h6 class="mb-2 block text-lg font-semibold text-primary">
+                Our Journey
+              </h6>
+              <h2 class="mb-6">
+                Milestones & Achievements
+              </h2>
+              <p class="max-w-2xl mx-auto text-body-light-12 dark:text-body-dark-12">
+                Discover the key moments that shaped our company's growth and success over the years.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary/20 h-full hidden lg:block"></div>
+            
+            <!-- Journey items -->
+            <div class="space-y-12 lg:space-y-16">
+              
+              <!-- Journey Item 1 -->
+              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
+                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
+                      <span class="text-2xl font-bold text-primary">2020</span>
+                      <div class="w-3 h-3 bg-primary rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Company Founded</h3>
+                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
+                      Started our journey with a vision to revolutionize digital business engagement and provide innovative technology solutions.
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="relative z-10 order-1 lg:order-2">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <i class="lni lni-rocket text-white text-2xl"></i>
+                  </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
+                  <figure class="max-w-[300px] mx-auto lg:mx-0">
+                    <img
+                      src="./assets/img/journey/founding.jpg"
+                      alt="Company founding"
+                      class="rounded-xl w-full h-48 object-cover"
+                    />
+                  </figure>
+                </div>
+              </div>
+
+              <!-- Journey Item 2 -->
+              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2 lg:pr-12 order-2 lg:order-1">
+                  <figure class="max-w-[300px] mx-auto lg:mx-0 lg:ml-auto">
+                    <img
+                      src="./assets/img/journey/first-client.jpg"
+                      alt="First major client"
+                      class="rounded-xl w-full h-48 object-cover"
+                    />
+                  </figure>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="relative z-10 order-1 lg:order-2">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <i class="lni lni-handshake text-white text-2xl"></i>
+                  </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
+                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-start">
+                      <div class="w-3 h-3 bg-primary rounded-full"></div>
+                      <span class="text-2xl font-bold text-primary">2021</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-left">First Major Client</h3>
+                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-left">
+                      Secured our first major enterprise client, marking a significant milestone in our growth and establishing our reputation in the market.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Journey Item 3 -->
+              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
+                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
+                      <span class="text-2xl font-bold text-primary">2022</span>
+                      <div class="w-3 h-3 bg-primary rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Team Expansion</h3>
+                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
+                      Expanded our team to 25+ talented professionals, bringing diverse expertise in technology, design, and business development.
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="relative z-10 order-1 lg:order-2">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <i class="lni lni-users text-white text-2xl"></i>
+                  </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
+                  <figure class="max-w-[300px] mx-auto lg:mx-0">
+                    <img
+                      src="./assets/img/journey/team-expansion.jpg"
+                      alt="Team expansion"
+                      class="rounded-xl w-full h-48 object-cover"
+                    />
+                  </figure>
+                </div>
+              </div>
+
+              <!-- Journey Item 4 -->
+              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2 lg:pr-12 order-2 lg:order-1">
+                  <figure class="max-w-[300px] mx-auto lg:mx-0 lg:ml-auto">
+                    <img
+                      src="./assets/img/journey/innovation.jpg"
+                      alt="Product innovation"
+                      class="rounded-xl w-full h-48 object-cover"
+                    />
+                  </figure>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="relative z-10 order-1 lg:order-2">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <i class="lni lni-bulb text-white text-2xl"></i>
+                  </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
+                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-start">
+                      <div class="w-3 h-3 bg-primary rounded-full"></div>
+                      <span class="text-2xl font-bold text-primary">2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-left">Product Innovation</h3>
+                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-left">
+                      Launched our flagship AI-powered platform, revolutionizing how businesses engage with their digital ecosystem and customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Journey Item 5 -->
+              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
+                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
+                      <span class="text-2xl font-bold text-primary">2024</span>
+                      <div class="w-3 h-3 bg-primary rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Global Recognition</h3>
+                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
+                      Received international recognition for our innovative solutions and expanded our services to serve clients across multiple countries.
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="relative z-10 order-1 lg:order-2">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <i class="lni lni-world text-white text-2xl"></i>
+                  </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
+                  <figure class="max-w-[300px] mx-auto lg:mx-0">
+                    <img
+                      src="./assets/img/journey/global-recognition.jpg"
+                      alt="Global recognition"
+                      class="rounded-xl w-full h-48 object-cover"
+                    />
+                  </figure>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Certification section -->
       <section id="certification" class="section-area">
         <div class="container">

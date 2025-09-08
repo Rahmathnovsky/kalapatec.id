@@ -29,24 +29,15 @@
                 </div>
                 <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 col-lg-12">
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('title') ? 'has-error has-feedback' : '' }}">
                                     <label for="title" class="fw-bold"><h5 class="mb-1">Title</h5></label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Fill article title here..." value="{{ old('title') }}" required />
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Fill article title here..." value="{{ old('title') }}" required/>
                                     @error('title')
-                                        <small class="text-danger">{{ $message }}</small>
+                                        <small class="text-danger">* {{ $message }}</small>
                                     @enderror
                                 </div>
 
@@ -72,12 +63,15 @@
                                   <input type="hidden" name="hashtags" id="hashtags-hidden" />
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('content') ? 'has-error has-feedback' : '' }}">
                                     <label for="myeditorinstance" class="fw-bold"><h5 class="mb-1">Content</h5></label>
                                     <x-forms.tinymce-editor/>
+                                    @error('content')
+                                        <small class="text-danger">* {{ $message }}</small>
+                                    @enderror
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('image') ? 'has-error has-feedback' : '' }}">
                                     <label for="image" class="fw-bold"><h5 class="mb-1">Cover</h5></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" name="image" id="image"
@@ -87,6 +81,9 @@
                                         />
                                     </div>
                                     <div class="mt-3">
+                                        @error('image')
+                                            <small class="text-danger">* {{ $message }} <br></small>
+                                        @enderror
                                         <label for="myImg" class="text-muted small">*Selected cover image</label>
                                         <p><img width="300" height="170" id="myImg"></p>
                                     </div>

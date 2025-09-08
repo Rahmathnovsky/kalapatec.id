@@ -23,6 +23,7 @@ class Post extends Model
         'category_id', 
         'user_id', 
         'content', 
+        'tags',
         'image', 
         'description'
     ];
@@ -40,6 +41,7 @@ class Post extends Model
         $payload['category_id'] = $request['category_id'];
         $payload['user_id']     = Auth::user()->id;
         $payload['content']     = $request['content'];
+        $payload['tags'] = !empty($request['hashtags']) ? json_encode(explode(',', $request['hashtags'])) : json_encode('');
         $payload['image']       = $request->file('image') ? $request->file('image')->hashName() : '';
         $payload['description'] = 'description';
 
@@ -50,18 +52,27 @@ class Post extends Model
      * validated
      *
      * @param Request $request
-     * @return Request
+     * @return void
      */
     public function validate($request)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'image' => 'nullable|file|mimes:png,jpg,jpeg,webp|max:1024',
+        $request->validate([
+            'title' => 'required|max:255',
+            'image' => 'nullable|file|mimes:png,jpg,jpeg,webp|max:2048',
             'category_id' => 'required',
             'content' => 'required',
+        ], [
+            'title.required' => 'Blog title must be filled',
+            'title.max' => 'Blog title cannot exceed 255 characters',
+            
+            'image.file' => 'Image must be a valid file',
+            'image.mimes' => 'Image must be in PNG, JPG, JPEG, or WebP format',
+            'image.uploaded' => 'Image size cannot exceed 2MB',
+            
+            'category_id.required' => 'Category must be selected',
+            
+            'content.required' => 'Blog content must be filled',
         ]);
-
-        return $validated;
     }
 
 
@@ -86,26 +97,6 @@ class Post extends Model
     }
 
     /**
-     * comments
-     *
-     * @return void
-     */
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-
-    /**
-     * tags
-     *
-     * @return void
-     */
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
-    }
-
-    /**
      * image
      *
      * @return Attribute
@@ -122,12 +113,12 @@ class Post extends Model
      *
      * @return Attribute
      */
-    protected function createdAt(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
-        );
-    }
+    // protected function createdAt(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
+    //     );
+    // }
 
     /**
      * updatedAt

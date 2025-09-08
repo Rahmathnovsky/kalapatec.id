@@ -77,7 +77,7 @@
                               @csrf
                               <div class="row">
                                 <div class="col-sm-12">
-                                  <div class="form-group form-group-default">
+                                  <div class="form-group form-group-default {{ $errors->has('name') ? 'has-error has-feedback' : '' }}">
                                     <label>Name</label>
                                     <input
                                       id="addName"
@@ -86,10 +86,13 @@
                                       placeholder="fill name"
                                       name="name"
                                     />
+                                    @error('name')
+                                        <small class="text-danger">* {{ $message }}</small>
+                                    @enderror
                                   </div>
                                 </div>
                                 <div class="col-md-6 pe-0">
-                                  <div class="form-group form-group-default">
+                                  <div class="form-group form-group-default {{ $errors->has('email') ? 'has-error has-feedback' : ''}}">
                                     <label>Email</label>
                                     <input
                                       id="addEmail"
@@ -98,10 +101,13 @@
                                       placeholder="fill email"
                                       name="email"
                                     />
+                                    @error('email')
+                                        <small class="text-danger">* {{ $message }}</small>
+                                    @enderror
                                   </div>
                                 </div>
                                 <div class="col-md-6">
-                                  <div class="form-group form-group-default">
+                                  <div class="form-group form-group-default {{ $errors->has('password') ? 'has-error has-feedback' : ''}}">
                                     <label>Password</label>
                                     <input
                                       id="addPassword"
@@ -110,6 +116,9 @@
                                       placeholder="fill password"
                                       name="password"
                                     />
+                                    @error('password')
+                                        <small class="text-danger">* {{ $message }}</small>
+                                    @enderror
                                   </div>
                                 </div>
                                 <div class="col-md-">
