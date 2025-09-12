@@ -19,18 +19,19 @@ class RequestService {
 
     public function store($request)
     {
-        // DB::beginTransaction();
-        // try {
+        DB::beginTransaction();
+        try {
             $payload = $this->modelRequest->rawPayload($request);
             $notificationPayload = $this->modelRequest->create($payload);
             
             $recipients = User::pluck('email')->toArray();
+            $recipients[] = $request->email;
             Mail::to($recipients)->send(new RequestNotification($notificationPayload));
             
-        //     DB::commit();
-        // } catch (\Throwable $th) {
-        //     DB::rollBack();
-        // }
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+        }
     }
 
     public function destroy($id)

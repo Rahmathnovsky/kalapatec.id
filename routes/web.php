@@ -2,8 +2,10 @@
 
 use App\Enums\UserRole;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\HomeAdminController;
@@ -15,9 +17,7 @@ use App\Http\Controllers\TrialReqListController;
 use App\Http\Controllers\GetInTouchController;
 use App\Http\Controllers\PostAdminController;
 use App\Http\Controllers\RequestController;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,7 @@ Route::group(['middleware' => ['setLocale']], function () {
     Route::resource('/article', ArticleController::class)->except(['show']);
     Route::get('/article/{id}/{slug}',[ ArticleController::class, 'show'])->name('article.show');
     Route::post('/demo-trial', [RequestController::class, 'store'])->name('demo-trial.store');
+    Route::post('/candidate', [CandidateController::class, 'store'])->name('candidate.store');
 });
 
 Route::get('/lang/{lang}', function($lang){
@@ -67,15 +68,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     // Demo/Trial
     Route::resource('demo-trial', RequestController::class)->except(['store', 'create', 'edit']);
-    Route::get('/demo-trial/overview', [TrialReqOverviewController::class, 'index'])->name('overview');
-    Route::get('/demo-trial/list', [TrialReqListController::class, 'index'])->name('request-list');
 
     // Excel export
-    Route::get('/export', [RequestController::class, 'export'])->name('export');
+    Route::get('/export', [ExcelController::class, 'export'])->name('export');
     
     // Career
     Route::resource('/career', CareerController::class);
-
-    Route::get('/get-in-touch', [GetInTouchController::class, 'index'])->name('get-in-touch');
+    
+    // Candidate
+    Route::get('/candidate', [CandidateController::class, 'index'])->name('candidate.index');
+    Route::delete('/candidate/{id}', [CandidateController::class, 'destroy'])->name('candidate.destroy'); 
+    Route::get('/download/{candidateName}/{fileName}', [CandidateController::class, 'downloadFile'])->name('download');
 });
 

@@ -65,6 +65,7 @@ class PostService {
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
+        Storage::disk('public')->delete('posts/' . $post->getRawOriginal('image'));
 
         $post->delete();
     }

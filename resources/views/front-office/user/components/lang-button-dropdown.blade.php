@@ -4,7 +4,7 @@
     <i class="lni lni-chevron-down ml-2 text-xl"></i>
   </button>
 
-  <div class="dropdown-menu absolute hidden right-0 w-48 mt-2 bg-white shadow-lg rounded-lg py-2 ring-1 ring-black ring-opacity-5 focus:outline-none" aria-labelledby="dropdownLanguageButton">
+  <div class="dropdown-menu absolute hidden right-0 w-48 mt-2 bg-primary shadow-lg rounded-lg py-2 ring-1 ring-black ring-opacity-5 focus:outline-none" aria-labelledby="dropdownLanguageButton">
     <a href="{{ route('change-language','id') }}" class="block px-4 text-sm text-gray-700 mx-8 flex text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70">Indonesia</a>
     <a href="{{ route('change-language','en') }}" class="block px-4 text-sm text-gray-700 mx-8 flex text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70">English</a>
   </div>

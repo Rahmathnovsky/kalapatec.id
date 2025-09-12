@@ -19,12 +19,8 @@ class Career extends Model
      */
     protected $fillable = [
         'title', 
-        'slug', 
-        'category_id', 
+        'slug',
         'user_id', 
-        'content', 
-        'image', 
-        'description'
     ];
 
     /**
@@ -37,13 +33,8 @@ class Career extends Model
     {
         $payload['title']       = $request['title'];
         $payload['slug']        = Str::slug($request->title, '-');
-        $payload['category_id'] = $request['category_id'];
         $payload['user_id']     = Auth::user()->id;
-        $payload['content']     = $request['content'];
-        $payload['location']    = $request['location'];
-        $payload['end_date']    = $request['end_date'];
-        $payload['description'] = 'description';
-
+        
         return $payload;
     }
     
@@ -55,26 +46,11 @@ class Career extends Model
      */
     public function validate($request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'title' => 'required',
-            'category_id' => 'required',
-            'content' => 'required',
-            'location' => 'required',
-            'end_date' => 'required|date|after_or_equal:today'
+        ],[
+            'title.required' => 'Please fill career title'
         ]);
-
-        return $validated;
-    }
-
-
-    /**
-     * category
-     *
-     * @return void
-     */
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
     }
 
     /**
@@ -105,18 +81,6 @@ class Career extends Model
      * @return Attribute
      */
     protected function updatedAt(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
-        );
-    }
-
-    /**
-     * endDate
-     *
-     * @return Attribute
-     */
-    protected function endDate(): Attribute
     {
         return Attribute::make(
             get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),

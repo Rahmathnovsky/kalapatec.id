@@ -120,11 +120,11 @@
                   </li>
 
                   <li class="group relative">
-                    <a
-                      href="#career"
+                    <button
+                      onclick="openModal('careerModal','Outbound Telesystem')"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
                       role="menuitem"
-                      >@lang('home.navbar.career')</a
+                      >@lang('home.navbar.career')</button
                     >
                   </li>
                 </ul>

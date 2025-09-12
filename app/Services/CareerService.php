@@ -16,7 +16,7 @@ class CareerService {
 
     public function store($request)
     {
-        // $validated = $this->modelCareer->validate($request);
+        $this->modelCareer->validate($request);
         DB::beginTransaction();
         try {
             $payload = $this->modelCareer->rawPayload($request);

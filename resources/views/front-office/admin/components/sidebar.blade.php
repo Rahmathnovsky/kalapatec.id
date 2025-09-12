@@ -61,8 +61,6 @@
                   <p>Category Management</p>
                 </a>
               </li>
-
-             
               <!-- End Configuration Section -->
 
               <!-- Start Request Section -->
@@ -82,11 +80,27 @@
               <!-- End Request Section -->
 
               <!-- Start Pages Kalapatec Section -->
-              <li class="nav-item {{ request()->is('admin/career') ? 'active' : '' }}">
-                <a href="{{ route(name: 'career.index') }}">
+              <li class="nav-item {{ request()->is('admin/career') || request()->is('admin/candidate') ? 'active' : '' }}">
+                <a data-bs-toggle="collapse" href="#trial">
                   <i class="fas fa-briefcase"></i>
                   <p>Career</p>
+                  <span class="caret"></span>
                 </a>
+                <div class="collapse" id="trial">
+                  <ul class="nav nav-collapse">
+                    <li class="{{ request()->is('admin/career') ? 'active' : '' }}">
+                      <a href="{{ route(name: 'career.index') }}">
+                        <p>Career Management</p>
+                      </a>
+                    </li> 
+
+                    <li class="{{ request()->is('admin/candidate') ? 'active' : '' }}">
+                      <a href="{{ route(name: 'candidate.index') }}">
+                        <p>Candidate Application</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li> 
 
               <li class="nav-item {{ request()->is('admin/post') ? 'active' : '' }}">

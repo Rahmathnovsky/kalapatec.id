@@ -65,7 +65,7 @@ class PostSeeder extends Seeder
             [
                 'title' => 'MENGENAL CALL CENTER: PENGERTIAN, FUNGSI DAN JENISNYA',
                 'slug' => Str::slug('MENGENAL CALL CENTER: PENGERTIAN, FUNGSI DAN JENISNYA', '-'),
-                'category_id' => '1',
+                'category_id' => '3',
                 'user_id' => '1',
                 'content' => '<p dir="ltr">Saat ini persaingan dalam bisnis semakin ketat, banyak perusahaan yang berusaha untuk memberikan layanan pelanggan terbaik. Komunikasi yang efektif dengan pelanggan sangat penting untuk membangun hubungan yang baik. Salah satu cara efektif untuk mencapainya adalah melalui call center, yang menjadi pusat komunikasi bagi banyak perusahaan untuk berinteraksi dengan pelanggan mereka. Call center meningkatkan efisiensi dalam menangani kebutuhan pelanggan dan memungkinkan perusahaan untuk menawarkan layanan yang lebih cepat dan responsif.</p>
                             <p dir="ltr">Artikel ini akan mengupas tuntas pengertian, fungsi serta jenis call center dalam layanan pelanggan. Yuk, simak terus untuk informasi selengkapnya!</p>
@@ -113,7 +113,7 @@ class PostSeeder extends Seeder
                             <p dir="ltr">Saatnya maksimalkan potensi bisnis Anda bersama Kalapa Technology.<br>Hubungi kami sekarang untuk konsultasi dan temukan solusi outsourcing terbaik bagi perusahaan Anda.</p>
                             <p>WhatsApp : +6281299995925<strong id="docs-internal-guid-c1559691-7fff-3947-eb8c-fb1064c6f1f6"><br></strong>Email : bd.team‬@<span style="text-decoration: underline;"><a href="http://kalapatec.id">k</a>alapatec.id</span></p>',
                 'description' => 'description',
-                'image' => 'VQWtZb0hePHjUEHuwAGEN1W7dG3cb34N4NtwmNMT.png',
+                'image' => 'PmlPLCz83LXU6R2B84Dzxhh4OZBF4v8Ih0e1pBXt.png',
                 'created_at' => Carbon::now(),
             ]
         ];

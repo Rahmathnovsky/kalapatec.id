@@ -139,7 +139,7 @@
         const hiddenInput = document.getElementById('hashtags-hidden');
 
         let hashtags = JSON.parse(@json($post->tags ?? '[]'));
-        console.log(hashtags);
+        console.log(@json($post));
 
         function renderHashtags() {
             list.innerHTML = '';

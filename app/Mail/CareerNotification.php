@@ -2,28 +2,30 @@
 
 namespace App\Mail;
 
-use App\Models\Request;
+use App\Models\Candidate;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Str;
 
-class RequestNotification extends Mailable implements ShouldQueue
+class CareerNotification extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-
-    public $requestDemo;
+    
+    public $candidate;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $requestDemo)
+    public function __construct(Candidate $candidate)
     {
-        $this->requestDemo = $requestDemo;
+        $this->candidate = $candidate;
     }
 
     /**
@@ -34,7 +36,7 @@ class RequestNotification extends Mailable implements ShouldQueue
     public function envelope()
     {
         return new Envelope(
-            subject: 'Notifikasi Request Demo/Trial Baru',
+            subject: 'Notifikasi Career Application Baru',
         );
     }
 
@@ -46,7 +48,7 @@ class RequestNotification extends Mailable implements ShouldQueue
     public function content()
     {
         return new Content(
-            view: 'emails.request-demo-notification',
+            view: 'emails.career-application',
         );
     }
 
@@ -57,6 +59,10 @@ class RequestNotification extends Mailable implements ShouldQueue
      */
     public function attachments()
     {
-        return [];
+        return [
+            Attachment::fromStorageDisk('public', 'cv/'.$this->candidate->cv)
+            ->as(Str::slug($this->candidate->name, '_') . '_cv.pdf')
+            ->withMime('application/pdf'),
+        ];
     }
 }

@@ -18,19 +18,34 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                'name' => 'Telephony',
-                'slug' => Str::slug('telephony', '-'),
+                'name' => 'Career and Culture',
+                'slug' => Str::slug('Career and Culture', '-'),
                 'created_at' => Carbon::now(),
 
             ],
             [
-                'name' => 'Outbound Call',
-                'slug' => Str::slug('Outbound Call', '-'),
+                'name' => 'Event and Community',
+                'slug' => Str::slug('Event and Community', '-'),
                 'created_at' => Carbon::now(),
             ],
             [
-                'name' => 'Inbound Call',
-                'slug' => Str::slug('Inbound Call', '-'),
+                'name' => 'Insight and Knowledge',
+                'slug' => Str::slug('Insight and Knowledge', '-'),
+                'created_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Promo and Special Deal',
+                'slug' => Str::slug('Promo and Special Deal', '-'),
+                'created_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Success Stories',
+                'slug' => Str::slug('Success Stories', '-'),
+                'created_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Tips and Update',
+                'slug' => Str::slug('Tips and Update', '-'),
                 'created_at' => Carbon::now(),
             ]
         ];

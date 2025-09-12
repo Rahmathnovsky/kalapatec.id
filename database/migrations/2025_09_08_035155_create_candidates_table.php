@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('candidates', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->unsignedInteger('category_id');
-            $table->unsignedInteger('user_id');
-            $table->text('content');
-            $table->string('image');
-            $table->text('description');
+            $table->string('name', 255);
+            $table->string('phone', 16);
+            $table->string('email');
+            $table->unsignedInteger('position_id');
+            $table->enum('gender', ['male', 'female'])->default('male');
+            $table->date('dob');
+            $table->text('address');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('candidates');
     }
 };

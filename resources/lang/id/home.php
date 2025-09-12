@@ -32,6 +32,15 @@ return [
                     terkemuka di Indonesia dengan menerapkan kemajuan technology
                     sebagai dukungan utama dalam pengembangan segela aspek.'
     ],
+    'organization' => [
+        'title' => 'Organisasi',
+        'sub_title' => 'Tim Kami',
+        'description' => 'Jajaran tim manajemen yang memungkinkan perusahaan ini berdiri mulai dari CEO sampai tim manajemen dari berbagai divisi',
+        'content' => [
+            'ceo' => 'KALAPA hadir untuk membantu mentransformasikan bisnis konvensional menjadi digital yang lebih cepat, tepat dan efektif dengan dukungan teknologi strategi, perencanaan, desain dan operasi berbasis digital.',
+            'management' => 'Tim kami hadir untuk membantu perusahaan anda dalam membuaat contact center dengan fitur yang mudah disesuaikan untuk otomatisasi seluruh help desk anda dengan sistem end to end.'
+        ]
+    ],
     'certification' => [
         'title' => 'Sertifikat',
         'description' => 'Sebagai bentuk komitmen terhadap standar kualitas dan keamanan, Kalapa Technology
@@ -75,7 +84,7 @@ return [
             ]
         ],
         'omnichannels' => [
-            'description' => 'Satu dashboard untuk semua kanal',
+            'description' => 'Satu sistem terintegrasi untuk mengelola interaksi pelanggan dari berbagai kanal seperti WhatsApp, Instagram, email, dan lainnya.',
             'benefits' => [
                 '1' => 'Satu dashboard untuk semua kanal',
                 '2' => 'Riwayat percakapan tersimpan rapi',

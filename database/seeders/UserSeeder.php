@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Admin',
+                'name' => 'Firyal Riyanti',
                 'email' => 'admin@admin.com',
                 'email_verified_at' => Carbon::now(),
                 'password' => Hash::make('password'),
@@ -38,13 +38,13 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'role' => UserRole::USER
             ],[
-                'name' => 'dm',
-                'email' => 'dm@dm.com',
+                'name' => 'Kalapa 01',
+                'email' => 'kalapa01@kalapa.id',
                 'email_verified_at' => null,
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
                 'created_at' => Carbon::now(),
-                'role' => UserRole::DM
+                'role' => UserRole::USER
             ]
         ];
         User::insert($users);

@@ -17,7 +17,8 @@ class Request extends Model
      */
     protected $fillable = [
         'name', 
-        'phone', 
+        'phone',
+        'email', 
         'company_name', 
         'product_request', 
         'description', 
@@ -32,12 +33,13 @@ class Request extends Model
      */
     public function rawPayload($request): array
     {
-        $payload['name']         = $request['name'];
-        $payload['phone']        = $request['phone'];
-        $payload['company_name'] = $request['company_name'];
+        $payload['name']                = $request['name'];
+        $payload['phone']               = $request['phone'];
+        $payload['email']               = $request['email'];
+        $payload['company_name']        = $request['company_name'];
         $payload['product_request']     = $request['product_request'];
-        $payload['description']  = $request['description'];
-        $payload['request_type'] = $request->file('request_type');
+        $payload['description']         = $request['description'];
+        $payload['request_type']        = $request->file('request_type');
 
         return $payload;
     }

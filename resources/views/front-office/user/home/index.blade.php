@@ -78,7 +78,7 @@
               <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
                 <figure class="mt-16">
                   <img
-                    src="./assets/img/hero-meta-2.png"
+                    src="{{ asset('assets/img/hero-meta-2.png')}}"
                     alt="Hero image"
                     class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                   />
@@ -86,7 +86,7 @@
 
                 <div class="absolute -left-9 bottom-0 z-[-1]">
                   <img
-                    src="./assets/img/dots.svg"
+                    src="{{ asset('assets/img/dots.svg')}}"
                     alt
                     class="w-[120px] opacity-75"
                   />
@@ -94,7 +94,7 @@
 
                 <div class="absolute -right-6 -top-6 z-[-1]">
                   <img
-                    src="./assets/img/dots.svg"
+                    src="{{ asset('assets/img/dots.svg')}}"
                     alt
                     class="w-[120px] opacity-75"
                   />
@@ -112,7 +112,7 @@
             <div class="w-full">
               <figure class="scroll-revealed max-w-[480px] mx-auto">
                 <img
-                  src="./assets/img/about-img.jpg"
+                  src="{{ asset('assets/img/about-img.jpg')}}"
                   alt="About image"
                   class="rounded-xl"
                 />
@@ -225,325 +225,191 @@
         </div>
       </section>
 
-      {{-- <section class="section-area bg-gray-50 dark:bg-gray-900">
+      <!-- Picture section -->
+      {{-- <section id="management-gallery" class="section-area bg-body-light-1">
         <div class="container">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Customer Journey Map
-            </h2>
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-primary">Our Management Team</h2>
+            <p class="text-body-light-11 mt-3">Kenali para pemimpin hebat di balik perusahaan kami</p>
           </div>
-          
-          <div class="relative">
-            <!-- Journey Steps -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
-              
-              <!-- Step 1 -->
-              <div class="flex flex-col items-center text-center group">
-                <!-- Icon -->
-                <div class="mb-4">
-                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                </div>
-                
-                <!-- Circle with Number -->
-                <div class="relative mb-6">
-                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-900 to-red-800 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
-                    01
+
+          <div class="swiper common-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="group relative h-[300px] rounded-xl overflow-hidden shadow-card-2">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-1.jpg') }}"
+                      alt="Manajemen 1"
+                      class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 class="text-lg font-semibold text-white">John Doe</h4>
+                    <p class="text-sm text-gray-200">CEO</p>
                   </div>
                 </div>
-                
-                <!-- Content -->
-                <h3 class="text-xl font-bold text-red-900 mb-2">Discovery</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
-                  Customer discovers our services through various channels and begins their journey with us
-                </p>
               </div>
 
-              <!-- Connector Line -->
-              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
-                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
-              </div>
-
-              <!-- Step 2 -->
-              <div class="flex flex-col items-center text-center group">
-                <!-- Icon -->
-                <div class="mb-4">
-                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                
-                <!-- Circle with Number -->
-                <div class="relative mb-6">
-                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-700 to-red-600 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
-                    02
+              <div class="swiper-slide">
+                <div class="group relative w-full h-[300px] rounded-xl overflow-hidden shadow-card-2">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-2.jpg') }}" alt="Manajemen 2"
+                    class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 class="text-lg font-semibold text-white">Jane Smith</h4>
+                    <p class="text-sm text-gray-200">CTO</p>
                   </div>
                 </div>
-                
-                <!-- Content -->
-                <h3 class="text-xl font-bold text-red-700 mb-2">Evaluation</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
-                  Customer evaluates our offerings and compares with alternatives to make informed decisions
-                </p>
               </div>
 
-              <!-- Connector Line -->
-              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
-                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="flex flex-col items-center text-center group">
-                <!-- Icon -->
-                <div class="mb-4">
-                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H18V0h-2v2H8V0H6v2H3.5C2.67 2 2 2.67 2 3.5v15C2 19.33 2.67 20 3.5 20h17c.83 0 1.5-.67 1.5-1.5v-15C22 2.67 21.33 2 20.5 2z"/>
-                  </svg>
-                </div>
-                
-                <!-- Circle with Number -->
-                <div class="relative mb-6">
-                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-red-500 to-red-400 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
-                    03
+              <div class="swiper-slide">
+                <div class="group relative w-full h-[300px] rounded-xl overflow-hidden shadow-card-2">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-3.jpg') }}" alt="Manajemen 3"
+                    class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 class="text-lg font-semibold text-white">Alex Johnson</h4>
+                    <p class="text-sm text-gray-200">CFO</p>
                   </div>
                 </div>
-                
-                <!-- Content -->
-                <h3 class="text-xl font-bold text-red-500 mb-2">Purchase</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
-                  Customer makes the purchase decision and completes the transaction with our team
-                </p>
               </div>
 
-              <!-- Connector Line -->
-              <div class="hidden md:block flex-1 h-0.5 bg-gray-300 dark:bg-gray-600 mx-4 relative">
-                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-300 dark:border-l-gray-600 border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
-              </div>
-
-              <!-- Step 4 -->
-              <div class="flex flex-col items-center text-center group">
-                <!-- Icon -->
-                <div class="mb-4">
-                  <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                </div>
-                
-                <!-- Circle with Number -->
-                <div class="relative mb-6">
-                  <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-white">
-                    04
+              <div class="swiper-slide">
+                <div class="group relative w-full h-[300px] rounded-xl overflow-hidden shadow-card-2">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-4.jpg') }}" alt="Manajemen 4"
+                    class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 class="text-lg font-semibold text-white">Alex Johnson</h4>
+                    <p class="text-sm text-gray-200">CFO</p>
                   </div>
                 </div>
-                
-                <!-- Content -->
-                <h3 class="text-xl font-bold text-orange-500 mb-2">Support</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">
-                  Ongoing support and relationship building to ensure customer satisfaction and loyalty
-                </p>
               </div>
+
+              <div class="swiper-slide">
+                <div class="group relative w-full h-[300px] rounded-xl overflow-hidden shadow-card-2">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-5.jpg') }}" alt="Manajemen 5"
+                    class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 class="text-lg font-semibold text-white">Alex Johnson</h4>
+                    <p class="text-sm text-gray-200">CFO</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="swiper-slide">
+                  <img src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}" alt="CEO" width="100%" style="height: 40em">
+                   
+              </div>
+
+              <div class="swiper-slide">
+                  <img src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-2.jpg') }}" alt="CEO" width="100%" style="height: 40em">
+              </div> -->
+
             </div>
 
-            <!-- Mobile Connector Lines -->
-            <div class="md:hidden absolute left-1/2 transform -translate-x-1/2 top-32 bottom-32 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
+            <!-- Navigation -->
+            <div class="swiper-button-prev">
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fa fa-chevron-right"></i>
+            </div>
           </div>
         </div>
       </section> --}}
 
-            <section id="journey" class="section-area bg-body-light-1 dark:bg-body-dark-1">
+      <section id="management-gallery" class="section-area bg-body-light-1">
         <div class="container">
-          <div class="text-center mb-12">
-            <div class="scroll-revealed">
-              <h6 class="mb-2 block text-lg font-semibold text-primary">
-                Our Journey
-              </h6>
-              <h2 class="mb-6">
-                Milestones & Achievements
-              </h2>
-              <p class="max-w-2xl mx-auto text-body-light-12 dark:text-body-dark-12">
-                Discover the key moments that shaped our company's growth and success over the years.
-              </p>
+          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+            <h6 class="mb-2 block text-lg font-semibold text-primary">@lang('home.organization.title')</h6>
+            <h2 class="mb-6">@lang('home.organization.sub_title')</h2>
+            <p>
+              @lang('home.organization.description')
+            </p>
+          </div>
+
+          <div id="management-detail" class="mb-8">
+            <div class="row justify-center">
+              <div class="col-4 sm:col-12 w-full md:w-1/2">
+                <img id="management-image"
+                    src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
+                    alt="CEO"
+                    class="h-[500px] sm:h-full object-contain rounded-xl shadow-card-2 scroll-revealed">
+              </div>
+              <div class="col-8 sm:col-12 w-full md:w-1/2 scroll-revealed">
+                <h3 id="management-name" class="text-xl font-bold">CEO - Adi Patriyadi</h3>
+                <p id="management-desc" class="mt-3 text-gray-700 leading-relaxed">
+                  @lang('home.organization.content.ceo')
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="relative">
-            <!-- Timeline line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary/20 h-full hidden lg:block"></div>
-            
-            <!-- Journey items -->
-            <div class="space-y-12 lg:space-y-16">
-              
-              <!-- Journey Item 1 -->
-              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
-                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
-                      <span class="text-2xl font-bold text-primary">2020</span>
-                      <div class="w-3 h-3 bg-primary rounded-full"></div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Company Founded</h3>
-                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
-                      Started our journey with a vision to revolutionize digital business engagement and provide innovative technology solutions.
-                    </p>
-                  </div>
-                </div>
-                
-                <!-- Timeline dot -->
-                <div class="relative z-10 order-1 lg:order-2">
-                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <i class="lni lni-rocket text-white text-2xl"></i>
-                  </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
-                  <figure class="max-w-[300px] mx-auto lg:mx-0">
-                    <img
-                      src="./assets/img/journey/founding.jpg"
-                      alt="Company founding"
-                      class="rounded-xl w-full h-48 object-cover"
-                    />
-                  </figure>
+          <div class="swiper common-carousel scroll-revealed">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="cursor-pointer group relative w-full h-[320px] rounded-xl overflow-hidden shadow-card-2"
+                    onclick="showManagementDetail(
+                      '{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}',
+                      'CEO - Adi Patriyadi',
+                      '@lang('home.organization.content.ceo')'
+                    )">
+                  <img src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
+                      alt="CEO"
+                      class="w-full h-full object-cover">
                 </div>
               </div>
 
-              <!-- Journey Item 2 -->
-              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2 lg:pr-12 order-2 lg:order-1">
-                  <figure class="max-w-[300px] mx-auto lg:mx-0 lg:ml-auto">
-                    <img
-                      src="./assets/img/journey/first-client.jpg"
-                      alt="First major client"
-                      class="rounded-xl w-full h-48 object-cover"
-                    />
-                  </figure>
-                </div>
-                
-                <!-- Timeline dot -->
-                <div class="relative z-10 order-1 lg:order-2">
-                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <i class="lni lni-handshake text-white text-2xl"></i>
-                  </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
-                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-start">
-                      <div class="w-3 h-3 bg-primary rounded-full"></div>
-                      <span class="text-2xl font-bold text-primary">2021</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-left">First Major Client</h3>
-                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-left">
-                      Secured our first major enterprise client, marking a significant milestone in our growth and establishing our reputation in the market.
-                    </p>
-                  </div>
+              <div class="swiper-slide">
+                <div class="cursor-pointer group relative w-full h-[320px] rounded-xl overflow-hidden shadow-card-2"
+                    onclick="showManagementDetail(
+                      '{{ asset('assets/img/manajemen/manajemen-1.jpg') }}',
+                      'Management Team',
+                      '@lang('home.organization.content.management')'
+                    )">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-1.jpg') }}"
+                      alt="CTO"
+                      class="w-full h-full object-cover">
                 </div>
               </div>
 
-              <!-- Journey Item 3 -->
-              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
-                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
-                      <span class="text-2xl font-bold text-primary">2022</span>
-                      <div class="w-3 h-3 bg-primary rounded-full"></div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Team Expansion</h3>
-                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
-                      Expanded our team to 25+ talented professionals, bringing diverse expertise in technology, design, and business development.
-                    </p>
-                  </div>
-                </div>
-                
-                <!-- Timeline dot -->
-                <div class="relative z-10 order-1 lg:order-2">
-                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <i class="lni lni-users text-white text-2xl"></i>
-                  </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
-                  <figure class="max-w-[300px] mx-auto lg:mx-0">
-                    <img
-                      src="./assets/img/journey/team-expansion.jpg"
-                      alt="Team expansion"
-                      class="rounded-xl w-full h-48 object-cover"
-                    />
-                  </figure>
+              <div class="swiper-slide">
+                <div class="cursor-pointer group relative w-full h-[320px] rounded-xl overflow-hidden shadow-card-2"
+                    onclick="showManagementDetail(
+                      '{{ asset('assets/img/manajemen/manajemen-2.jpg') }}',
+                      'Management Team',
+                      '@lang('home.organization.content.management')'
+                    )">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-2.jpg') }}"
+                      alt="CFO"
+                      class="w-full h-full object-cover">
                 </div>
               </div>
 
-              <!-- Journey Item 4 -->
-              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2 lg:pr-12 order-2 lg:order-1">
-                  <figure class="max-w-[300px] mx-auto lg:mx-0 lg:ml-auto">
-                    <img
-                      src="./assets/img/journey/innovation.jpg"
-                      alt="Product innovation"
-                      class="rounded-xl w-full h-48 object-cover"
-                    />
-                  </figure>
-                </div>
-                
-                <!-- Timeline dot -->
-                <div class="relative z-10 order-1 lg:order-2">
-                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <i class="lni lni-bulb text-white text-2xl"></i>
-                  </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
-                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-start">
-                      <div class="w-3 h-3 bg-primary rounded-full"></div>
-                      <span class="text-2xl font-bold text-primary">2023</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-left">Product Innovation</h3>
-                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-left">
-                      Launched our flagship AI-powered platform, revolutionizing how businesses engage with their digital ecosystem and customers.
-                    </p>
-                  </div>
+              <div class="swiper-slide">
+                <div class="cursor-pointer group relative w-full h-[320px] rounded-xl overflow-hidden shadow-card-2"
+                    onclick="showManagementDetail(
+                      '{{ asset('assets/img/manajemen/manajemen-3.jpg') }}',
+                      'Management Team',
+                      '@lang('home.organization.content.management')'
+                    )">
+                  <img src="{{ asset('assets/img/manajemen/manajemen-3.jpg') }}"
+                      alt="CFO"
+                      class="w-full h-full object-cover">
                 </div>
               </div>
+            </div>
 
-              <!-- Journey Item 5 -->
-              <div class="scroll-revealed flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2 lg:pr-12 lg:text-right order-2 lg:order-1">
-                  <div class="bg-white dark:bg-body-dark-2 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center gap-3 mb-4 justify-center lg:justify-end">
-                      <span class="text-2xl font-bold text-primary">2024</span>
-                      <div class="w-3 h-3 bg-primary rounded-full"></div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center lg:text-right">Global Recognition</h3>
-                    <p class="text-body-light-12 dark:text-body-dark-12 text-center lg:text-right">
-                      Received international recognition for our innovative solutions and expanded our services to serve clients across multiple countries.
-                    </p>
-                  </div>
-                </div>
-                
-                <!-- Timeline dot -->
-                <div class="relative z-10 order-1 lg:order-2">
-                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <i class="lni lni-world text-white text-2xl"></i>
-                  </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 lg:pl-12 order-3">
-                  <figure class="max-w-[300px] mx-auto lg:mx-0">
-                    <img
-                      src="./assets/img/journey/global-recognition.jpg"
-                      alt="Global recognition"
-                      class="rounded-xl w-full h-48 object-cover"
-                    />
-                  </figure>
-                </div>
-              </div>
-
+            <div class="swiper-button-prev">
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fa fa-chevron-right"></i>
             </div>
           </div>
         </div>
       </section>
-
+      
       <!-- Certification section -->
       <section id="certification" class="section-area">
         <div class="container">
@@ -922,7 +788,7 @@
                 </div>
                 <div class="pt-8 pb-10">
                 <button
-                  onclick="openModal('Outbound Telesystem')"
+                  onclick="openModal('requestModal', 'Outbound Telesystem')"
                   class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
                     @lang('home.products.buttons.send_request')
                 </button>
@@ -981,7 +847,7 @@
                   </p>
                   <div class="pt-8">
                     <center>
-                      <img src="./assets/img/logo/New-Logo-Kalista-removebg.png" style="width: 150px;" alt="kalista-pulse">
+                      <img src="{{ asset('assets/img/logo/New-Logo-Kalista-removebg.png')}}" style="width: 150px;" alt="kalista-pulse">
                     </center>
                     <!-- <h2
                       class="font-semibold inline-block relative pl-4 text-[55px]"
@@ -998,7 +864,7 @@
                 </div>
                 <div class="pt-8 pb-10">
                 <button
-                  onclick="openModal('Whatsapp Blast')"
+                  onclick="openModal('requestModal', 'Whatsapp Blast')"
                   class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
                     @lang('home.products.buttons.send_request')
                 </button>
@@ -1074,7 +940,7 @@
                 </div>
                 <div class="pt-8 pb-10">
                 <button
-                  onclick="openModal('Omnichannels')"
+                  onclick="openModal('requestModal', 'Omnichannels')"
                   class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
                     @lang('home.products.buttons.send_request')
                 </button>
@@ -1120,45 +986,227 @@
           </div>
         </div>
       </section>
+
       <!-- Modal Request -->
-      <div id="requestModal"
+      <div id="requestModal" class="modal-overlay"
           style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:99999; justify-content:center; align-items:center;">
-        <div style="background:white; padding:20px; border-radius:10px; width:400px; max-width:90%; color:black;">
-          <h2 style="font-size:18px; margin-bottom:15px;">Kirim Pesan</h2>
+        <div style="max-width:90%;" class="form-scope modal-content bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
+          <div class="text-center max-w-[550px] mx-auto mb-12">
+            <h2 class="mb-3">Ketahui Produk Lebih Dalam</h2>
+            <p>
+              Isi semua kolom formulir demo/trial ini untuk melakukan request terkait layanan yang dipilih
+            </p>
+          </div>
 
           <form action="{{ route('demo-trial.store') }}" method="POST">
             @csrf
-            <div style="margin-bottom:10px;">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+            <div class="form-group">
+              <label for="name" class="form-title">Name</label>
+              <div style="position:relative;">
+                <i class="fas fa-user" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required>
+              </div>
             </div>
 
-            <div style="margin-bottom:10px;">
-              <label for="phone">Phone</label>
-              <input type="text" name="phone" id="phone" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+            <div class="form-group">
+              <label for="phone" class="form-title">Phone</label>
+              <div style="position:relative;">
+                <i class="fa fa-phone" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required>
+              </div>
             </div>
 
-            <div style="margin-bottom:10px;">
-              <label for="company_name">Company Name</label>
-              <input type="text" name="company_name" id="company_name" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <div class="form-group">
+              <label for="email" class="form-title">Email</label>
+              <div style="position:relative;">
+                <i class="fa fa-envelope" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required>
+              </div>
             </div>
 
-            <div style="margin-bottom:10px;">
-              <label for="product_request">Product Request</label>
-              <input disable readonly type="text" name="product_request" id="product_request" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <div class="form-group">
+              <label for="company_name" class="form-title">Company Name</label>
+              <div style="position:relative;">
+                <i class="fa fa-building" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="company_name" id="company_name" style="padding-left:2.5rem;">
+              </div>
             </div>
 
-            <div style="margin-bottom:10px;">
-              <label for="description">Description</label>
-              <textarea name="description" id="description" class="px-4 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            <div class="form-group">
+              <label for="product_request" class="form-title">Product Request</label>
+              <div style="position:relative;">
+                <i class="fa fa-box" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="product_request" id="product_request" style="padding-left:2.5rem;">
+              </div>
             </div>
 
-            <input disable readonly type="hidden" name="request_type" id="request_type" value="demo">
-            <div style="text-align:right;">
-              <button type="submit" class="btn bg-primary text-white px-3 py-2 rounded">Kirim</button>
-              <button type="button" onclick="closeModal()" class="btn bg-danger-color text-white px-3 py-2 rounded">Batal</button>
+            <div class="form-group">
+              <label for="description" class="form-title">Description</label>
+              <textarea name="description" id="description"></textarea>
+            </div>
+
+            <input type="hidden" name="request_type" id="request_type" value="demo">
+
+            <div class="form-actions">
+              <button type="submit">Kirim</button>
+              <button type="button" class="cancel" onclick="closeModal('requestModal')">Batal</button>
             </div>
           </form>
+        </div>
+      </div>
+
+      <!-- Modal Career -->
+      <div id="careerModal" class="modal-overlay"
+          style="display:none; position:fixed; inset:0; z-index:99999; justify-content:center; align-items:center;">
+        <div style="max-width:90%;" class="form-scope modal-content bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px;">
+            <div class="text-center max-w-[550px] mx-auto mb-12">
+              <h2 class="mb-3">Mulailah Karir Anda Disini</h2>
+              <p>
+                Isi semua kolom formulir pendaftaran ini untuk mengirim lamaran anda kepada kami
+              </p>
+            </div>
+          </div>
+          <form action="{{ route('candidate.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-group">
+              <label for="name" class="form-title">Name <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-user" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="nama lengkap">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-title">Phone <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-phone" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="nomor telephone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-title">Email <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-envelope" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required placeholder="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-title">Gender</label>
+              <div class="gender-toggle">
+                <input type="radio" id="gender-male" name="gender" value="male" checked>
+                <label for="gender-male">Male</label>
+
+                <input type="radio" id="gender-female" name="gender" value="female">
+                <label for="gender-female">Female</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pob" class="form-title">Place of Birth <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-globe-asia" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="pob" id="pob" style="padding-left:2.5rem;" required placeholder="tempat lahir">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="dob" class="form-title">Date of Birth <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-calendar" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="date" name="dob" id="dob" style="padding-left:2.5rem;" required placeholder="tanggal lahir">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="marital_status" class="form-title">Marital Status <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-heart" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <select id="marital_status" name="marital_status" style="padding-left:2.5rem;" required placeholder="status perkawinan">
+                    <option value="belum menikah">Belum Menikah</option>
+                    <option value="sudah menikah">Sudah Menikah</option>
+                    <option value="bercerai">Bercerai</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="religion" class="form-title">Religion <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-book" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <select id="religion" name="religion" style="padding-left:2.5rem;" required placeholder="agama">
+                  <option value="islam">Islam</option>
+                  <option value="katholik">Katholik</option>
+                  <option value="kristen">Kristen</option>
+                  <option value="budha">Budha</option>
+                  <option value="hindu">Hindu</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="province" class="form-title">Province <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-map" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="province" id="province" style="padding-left:2.5rem;" required placeholder="provinsi">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regency" class="form-title">Regency <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-map" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <input type="text" name="regency" id="regency" style="padding-left:2.5rem;" required placeholder="kabupaten">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="education" class="form-title">Education <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-graduation-cap" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <select id="education" name="education" style="padding-left:2.5rem;" required>
+                  <option value="SMA/K">SMA/K</option>
+                  <option value="D3">D3</option>
+                  <option value="D2">D2</option>
+                  <option value="D1">D1</option>
+                  <option value="S1">S1</option>
+                  <option value="S2">S2</option>
+                  <option value="S3">S3</option>
+                  <option value="lainnya">Lainnya</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="career" class="form-title">Select Position <b style="color: red">*</b></label>
+              <div style="position:relative;">
+                <i class="fa fa-briefcase" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
+                <select id="career" name="position_id" style="padding-left:2.5rem;" required>
+                  @foreach ($careers as $career)
+                    <option value="{{ $career->id }}">{{ $career->title }}</option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="form-title">Address <b style="color: red">*</b></label>
+              <textarea name="address" id="address" style="padding-left:2.5rem;" required placeholder="alamat"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="cv" class="form-title">Curriculum Vitae (CV) <small class="text-muted"> *pdf only</small></label>
+              <input type="file" style="padding-left:2.5rem;" name="cv" id="cv" accept="application/pdf" required>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit">Kirim</button>
+              <button type="button" class="cancel" onclick="closeModal('careerModal')">Batal</button>
+            </div>
+          </form> 
         </div>
       </div>
 
@@ -1250,15 +1298,7 @@
 
         <div>
           <span class="absolute left-5 top-5 -z-[1]">
-            <svg
-              class="w-20 h-auto fill-teal-500"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="1280.000000pt"
-              height="1280.000000pt"
-              viewBox="0 0 1280.000000 1280.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
+            <svg class="w-20 h-auto fill-teal-500" version="1.0" xmlns="http://www.w3.org/2000/svg" width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
               <g
                 transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
                 stroke="none"
@@ -2130,7 +2170,7 @@
                     >
                   </h4>
                   <p>
-                    {!! substr($post->content, 0, 290) . '...' !!}
+                    {!! substr($post->content, 0, 250) . '...' !!}
                   </p>
                 </article>
               </div>
@@ -2166,7 +2206,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-01-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-01-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2175,7 +2215,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-02-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-02-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2184,7 +2224,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-03-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-03-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2193,7 +2233,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-05-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-05-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2202,7 +2242,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-06-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-06-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2211,7 +2251,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-07-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-07-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2220,7 +2260,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-08-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-08-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2229,7 +2269,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-09-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-09-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2238,7 +2278,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-10-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-10-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2247,7 +2287,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-11-hover.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-11-hover.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2256,7 +2296,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-12.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-12.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2265,7 +2305,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-13.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-13.png')}}"
                   alt="Brand Logo Image"
                   class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2274,7 +2314,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-14.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-14.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2283,7 +2323,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/mitech-client-logo-15.png"
+                  src="{{ asset('assets/img/brand/mitech-client-logo-15.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2292,7 +2332,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/grabjoob-logo.png"
+                  src="{{ asset('assets/img/brand/grabjoob-logo.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2301,7 +2341,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/hypermart.png"
+                  src="{{ asset('assets/img/brand/hypermart.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2310,7 +2350,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/logo-almalik.png"
+                  src="{{ asset('assets/img/brand/logo-almalik.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2319,7 +2359,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/logo-enfagrow.png"
+                  src="{{ asset('assets/img/brand/logo-enfagrow.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2328,7 +2368,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/logo-mega-auto-finance.png"
+                  src="{{ asset('assets/img/brand/logo-mega-auto-finance.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2337,7 +2377,7 @@
                 class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
               >
                 <img
-                  src="./assets/img/brand/logo-mega-central-finance.png"
+                  src="{{ asset('assets/img/brand/logo-mega-central-finance.png')}}"
                   alt="Brand Logo Image"
                   class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
                 />
@@ -2419,7 +2459,7 @@
                   </p>
                 </div>
 
-                <form action="#" method="POST" class="flex flex-col gap-6">
+                <form action="mailto:recruitment@kalapatec.id" method="get" enctype="text/plain" class="flex flex-col gap-6 form-consultation" id="form-consultation">
                   <div class="row">
                     <div class="col-12 md:col-6">
                       <input
@@ -2501,14 +2541,72 @@
 
 @push('js')
 <script>
-  function openModal(productName) {
-    console.log(productName)
+  function openModal(modal ,productName) {
     document.getElementById('product_request').value = productName;
-    document.getElementById('requestModal').style.display = 'flex';
+    document.getElementById(modal).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
 
-  function closeModal() {
-    document.getElementById('requestModal').style.display = 'none';
+  function closeModal(modal) {
+    document.getElementById(modal).style.display = 'none';
+    document.body.style.overflow = '';
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".common-carousel", {
+      loop: false,
+      slidesPerView: 4,
+      spaceBetween: 24,
+      centerInsufficientSlides: true,
+      navigation: {
+        nextEl: ".common-carousel .swiper-button-next",
+        prevEl: ".common-carousel .swiper-button-prev",
+      },
+      breakpoints: {
+        1024: { slidesPerView: 4 },
+        768: { slidesPerView: 4 },
+        0: { slidesPerView: 4 },
+      },
+    });
+  });
+
+  function showManagementDetail(image, name, desc) {
+    document.getElementById('management-image').src = image;
+    document.getElementById('management-name').textContent = name;
+    document.getElementById('management-desc').textContent = desc;
+  }
+    const formConsultation = document.querySelector('form#form-consultation');
+    formConsultation.addEventListener("submit", function(evt) {
+      evt.preventDefault();
+      var targetobj = evt.target;
+      var actionUrl = targetobj.action;
+      var message = targetobj.message.value;
+      if (actionUrl && actionUrl != "#" && message) {
+        var newBodyMsg = subject = "";
+        var name = targetobj.name.value;
+        var email = targetobj.email.value;
+
+        if (targetobj.subject.value && targetobj.subject.value.trim().length > 0) {
+          subject = targetobj.subject.value;
+        }
+
+        if (name.trim().length > 0) {
+          newBodyMsg += "Hi! my name is " + name + ".";
+        }
+        if (email.trim().length > 0) {
+          if (newBodyMsg.length > 0) {
+            newBodyMsg += " & ";
+          }
+          newBodyMsg += "my email address is " + email + ".";
+        }
+
+        if (newBodyMsg.length > 0) {
+          newBodyMsg += "\n\n ";
+        }
+        newBodyMsg += message;
+        window.open(actionUrl + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(newBodyMsg));
+      }
+    });
+
 </script>
 @endpush

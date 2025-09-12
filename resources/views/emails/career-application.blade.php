@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Request Demo/Trial Baru - Kalapa Technology</title>
+        <title>Career Application - Kalapa Technology</title>
         <style>
             * {
                 margin: 0;
@@ -235,7 +235,7 @@
                     alt="Kalapa Technology"
                     class="logo"
                 />
-                <h1>Request Demo/Trial Baru</h1>
+                <h1>Career Application</h1>
             </div>
 
             <!-- Content -->
@@ -243,47 +243,66 @@
                 <div class="greeting">
                     Halo Tim Kalapa Technology! 👋
                     <br /><br />
-                    Anda telah menerima request demo/trial baru dari calon
-                    klien. Berikut adalah detail lengkapnya:
+                    Anda telah menerima pendaftaran karir baru dari calon
+                    kandidat. Berikut adalah detail lengkapnya:
                 </div>
 
                 <div class="details-card">
-                    <div class="details-title">Detail Request Demo/Trial</div>
+                    <div class="details-title">Detai Career Application</div>
 
                     <table class="details-table">
                         <tr>
                             <th>Nama Lengkap</th>
-                            <td>{{ $requestDemo->name }}</td>
+                            <td>{{ $candidate->name }}</td>
                         </tr>
                         <tr>
                             <th>Nomor Telepon</th>
-                            <td>{{ $requestDemo->phone }}</td>
+                            <td>{{ $candidate->phone }}</td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td>{{ $requestDemo->email }}</td>
+                            <td>{{ $candidate->email }}</td>
                         </tr>
                         <tr>
-                            <th>Nama Perusahaan</th>
-                            <td>{{ $requestDemo->company_name }}</td>
-                        </tr>
-                        <tr>
-                            <th>Produk yang Diminta</th>
+                            <th>Posisi yang dilamar</th>
                             <td>
-                                {{ $requestDemo->product_request ?? 'Tidak
-                                disebutkan' }}
+                                {{ $candidate->career->title ?? 'Tidak dipilih' }}
                             </td>
                         </tr>
                         <tr>
-                            <th>Deskripsi Kebutuhan</th>
-                            <td>{{ $requestDemo->description }}</td>
+                            <th>Jenis Kelamin</th>
+                            <td>{{ $candidate->gender }}</td>
+                        </tr>
+                        <tr>
+                            <th>Agama</th>
+                            <td>{{ $candidate->religion }}</td>
+                        </tr>
+                        <tr>
+                            <th>Tempat/Tanggal Lahir</th>
+                            <td>{{ $candidate->pob. ', ' .$candidate->dob }}</td>
+                        </tr>
+                        <tr>
+                            <th>Status Pernikahan</th>
+                            <td>{{ $candidate->marital_status }}</td>
+                        </tr>   
+                        <tr>
+                            <th>Pendidikan Terakhir</th>
+                            <td>{{ $candidate->education }}</td>
+                        </tr>
+                        <tr>
+                            <th>Provinsi</th>
+                            <td>{{ $candidate->province }}</td>
+                        </tr>
+                        <tr>
+                            <th>Kota</th>
+                            <td>{{ $candidate->regency }}</td>
                         </tr>
                     </table>
                 </div>
 
                 <div class="divider"></div>
 
-                <div style="text-align: center; margin: 30px 0">
+                {{-- <div style="text-align: center; margin: 30px 0">
                     <a
                         href="{{ url('/admin/demo-trial') }}"
                         style="
@@ -305,11 +324,11 @@
                     >
                         🔍 Lihat Detail di Admin Panel
                     </a>
-                </div>
+                </div> --}}
 
                 <p style="color: #6c757d; font-size: 14px; text-align: center">
-                    Silakan segera follow up dengan calon klien untuk memberikan
-                    demo/trial yang sesuai dengan kebutuhan mereka.
+                    Silakan segera follow up dengan calon kandidate untuk memberikan
+                    kelanjutan dari proses recruitment.
                 </p>
             </div>
 

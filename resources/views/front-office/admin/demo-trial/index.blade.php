@@ -54,6 +54,7 @@
                                 <input type="date" name="end_date" id="end_date" class="form-control">
                                 <small class="text-muted">Select end date</small>
                             </div>
+                            <input type="hidden" name="menu" value="requests">
                             <div class="col-12 mt-3">
                                 <div class="text-danger mb-2">
                                     <small>
