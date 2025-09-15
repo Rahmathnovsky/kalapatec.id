@@ -815,7 +815,7 @@
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
                     >
                       <i
-                        class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
+                        class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
                       <span>@lang('home.products.outbound.benefits.3')</span>
                     </li>
@@ -823,7 +823,7 @@
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
                     >
                       <i
-                        class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
+                        class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
                       <span>@lang('home.products.outbound.benefits.4')</span>
                     </li>
@@ -899,7 +899,7 @@
                       class="text-left relative mb-3 inline-flex gap-3 w-full"
                     >
                       <i
-                        class="lni lni-checkmark-circle text-body-light-11 dark:text-body-dark-11 text-base leading-[24px]"
+                        class="lni lni-checkmark-circle text-primary text-base leading-[24px]"
                       ></i>
                       <span>@lang('home.products.whatsapp_blast.benefits.4')</span>
                     </li>
