@@ -40,7 +40,7 @@
                     >
                   </h4>
                   <p>
-                    {!! substr($post->content, 0, 290) . '...' !!}
+                    {!! substr($post->content, 0, 250) . '...' !!}
                   </p>
                 </article>
               </div>

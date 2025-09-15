@@ -1738,6 +1738,10 @@ p + p {
     justify-content: center;
 }
 
+.justify-item-center {
+    justify-items: center;
+}
+
 .justify-between {
     justify-content: space-between;
 }

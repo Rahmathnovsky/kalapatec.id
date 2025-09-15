@@ -35,6 +35,14 @@
                     {!! $post->content !!}
                   </div>
                 </article>
+                <br>
+                <div class="d-inline-flex align-items-center bg-light border rounded px-2 py-1">
+                  @foreach (json_decode($post->tags) as $tag)
+                  <div class="col-1">
+                    <p style="color: red">#<b style="color: black">{{$tag}}</b></p>
+                  </div>
+                  @endforeach
+                </div>
               </div>
           </div>
         </div>

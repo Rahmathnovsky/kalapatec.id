@@ -81,13 +81,13 @@
             <div class="w-full">
               <h4 class="mb-9 text-lg font-semibold text-inherit">@lang('home.footer.navigation.support.title')</h4>
               <ul>
-                <li>
+                {{-- <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
                     >@lang('home.footer.navigation.support.item.1')</a
                   >
-                </li>
+                </li> --}}
                 <li>
                   <a
                     href="javascript:void(0)"
@@ -107,28 +107,6 @@
           </div>
           <div class="col-12 -order-3 lg:col-4 lg:order-1">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">@lang('home.footer.navigation.subscribe.title')</h4>
-
-              <p class="text-body-dark-11">
-                @lang('home.footer.navigation.subscribe.description')
-              </p>
-
-              <form action="#" method="POST" target="_blank" class="mt-8 flex">
-                <input
-                  type="email"
-                  name="email"
-                  class="inline-block flex-grow px-5 py-3 rounded-md rounded-e-none border border-solid border-alpha-dark text-inherit text-base focus:border-primary"
-                  placeholder="Email address"
-                  required
-                />
-
-                <button
-                  type="submit"
-                  class="inline-block py-3 w-[50px] rounded-md rounded-s-none text-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
-                >
-                  <i class="lni lni-envelope"></i>
-                </button>
-              </form>
             </div>
           </div>
         </div>
