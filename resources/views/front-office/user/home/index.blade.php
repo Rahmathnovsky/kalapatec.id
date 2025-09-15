@@ -643,7 +643,7 @@
                 </div>
                 <div class="w-full">
                   <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Omnichannels
+                    Omni-channels
                   </h4>
                   <p>
                     @lang('home.solutions.omnichannels')
@@ -916,7 +916,7 @@
                   <h6
                     class="inline-block font-medium text-base mb-6 text-primary-color bg-primary rounded-md py-2 px-8 pricing-title"
                   >
-                    Omnichannels
+                    Omni-channels
                   </h6>
                   <p>
                     @lang('home.products.omnichannels.description')
