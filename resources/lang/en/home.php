@@ -14,7 +14,7 @@ return [
         'certification' => 'Certication',
         'services' => 'Services',
         'career' => 'Career',
-        'contact_us' => 'Contact Us'
+        'contact_us' => 'Contact'
     ],
     'founded_since' => 'Established since 2016
                   Kalapa helps transform businesses into digitalization.',
