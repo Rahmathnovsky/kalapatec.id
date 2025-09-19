@@ -10,6 +10,7 @@ return [
     'see_more' => 'See more',
     'navbar' => [
         'home' => 'Home',
+        'management-gallery' => 'Organization',
         'certification' => 'Certication',
         'services' => 'Services',
         'career' => 'Career',

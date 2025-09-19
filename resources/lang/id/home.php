@@ -10,10 +10,11 @@ return [
     'see_more' => 'Lihat lebih banyak',
     'navbar' => [
         'home' => 'Beranda',
+        'management-gallery' => 'Organisasi',
         'certification' => 'Sertifikat',
         'services' => 'Layanan',
         'career' => 'Karir',
-        'contact_us' => 'Hubungi Kami'
+        'contact_us' => 'Hubungi'
     ],
     'founded_since' => 'Didirikan pada tahun 2016
                   Kalapa membantu mengubah

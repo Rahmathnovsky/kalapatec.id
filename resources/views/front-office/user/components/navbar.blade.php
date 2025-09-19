@@ -5,7 +5,7 @@
     >
       <div class="container">
         <div
-          class="ic-navbar-container relative -mx-5 flex items-center justify-between"
+          class="ic-navbar-container relative -mx-5 flex items-center justify-between sm:py-3"
         >
           <div class="w-60 lg:w-56 max-w-full px-5">
             <a
@@ -43,7 +43,7 @@
               </svg> -->
             </a>
           </div>
-          <div class="flex w-full items-center justify-between px-5">
+          <div class="flex w-full items-center justify-between px-5 sm:px-3">
             <div>
               <button
                 type="button"
@@ -71,6 +71,15 @@
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70 active"
                       role="menuitem"
                       >@lang('home.navbar.home')</a
+                    >
+                  </li>
+
+                  <li class="group relative">
+                    <a
+                      href="#management-gallery"
+                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70"
+                      role="menuitem"
+                      >@lang('home.navbar.management-gallery')</a
                     >
                   </li>
 

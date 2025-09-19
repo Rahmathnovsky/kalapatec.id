@@ -239,7 +239,7 @@
                 <img id="management-image"
                     src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
                     alt="CEO"
-                    class="h-[500px] sm:h-full object-contain rounded-xl shadow-card-2 scroll-revealed">
+                    class="h-[500px] object-contain rounded-xl shadow-card-2 scroll-revealed">
               </div>
             </div>
           </div>
@@ -313,7 +313,7 @@
           </div>
 
           <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
+            <div class="scroll-revealed col-12 sm:col-12 md:col-4 lg:col-3">
               <figure
                 class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
               >
@@ -365,7 +365,7 @@
               </figure>
             </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
+            <div class="scroll-revealed col-12 sm:col-12 md:col-4 lg:col-3">
               <figure
                 class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
               >
@@ -417,7 +417,7 @@
               </figure>
             </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
+            <div class="scroll-revealed col-12 sm:col-12 md:col-4 lg:col-3">
               <figure
                 class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
               >
@@ -647,7 +647,7 @@
           </div>
 
           <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+            <div class="scroll-revealed col-12 sm:col-12 lg:col-4">
               <div
                 class="rounded-xl py-12 px-9 bg-body-light-1 dark:bg-body-dark-12/10 text-center shadow-card-1 hover:shadow-lg"
               >
@@ -723,7 +723,7 @@
               </div>
             </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+            <div class="scroll-revealed col-12 sm:col-12 lg:col-4">
               <div
                 class="rounded-xl py-12 px-9 bg-body-light-1 dark:bg-body-dark-12/10 text-center shadow-lg"
               >
@@ -799,7 +799,7 @@
               </div>
             </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+            <div class="scroll-revealed col-12 sm:col-12 lg:col-4">
               <div
                 class="rounded-xl py-12 px-9 bg-body-light-1 dark:bg-body-dark-12/10 text-center shadow-card-1 hover:shadow-lg"
               >
@@ -1118,7 +1118,7 @@
           <!-- Articles section -->
           <div class="row mb-10">
             @foreach ($posts as $post)
-              <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+              <div class="scroll-revealed col-12 sm:col-12 lg:col-4">
                 <article class="group">
                   <div class="relative">
                     <a

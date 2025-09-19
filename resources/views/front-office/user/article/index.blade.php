@@ -14,7 +14,7 @@
 
           <div class="row">
             @foreach ($posts as $post)
-              <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+              <div class="scroll-revealed col-12 sm:col-12 lg:col-4">
                 <article class="group">
                   <div class="relative">
                     <a
