@@ -6,7 +6,7 @@
       <section id="blog" class="section-area">
         <div class="container">
           <div class="row">
-              <div class="scroll-revealed col-7">
+              <div class="scroll-revealed col-7 sm:col-12">
                 <article class="group">
                     <h3 class="mb-6 mt-3 font-semibold text-[1.5rem]">
                         <a
@@ -36,12 +36,13 @@
                   </div>
                 </article>
                 <br>
-                <div class="d-inline-flex align-items-center bg-light border rounded px-2 py-1">
-                  @foreach (json_decode($post->tags) as $tag)
-                  <div class="col-1">
-                    <p style="color: red">#<b style="color: black">{{$tag}}</b></p>
+                <hr>
+                <br>
+                  <div class="font-bold">
+                    @foreach (json_decode($post->tags) as $tag)
+                      # {{$tag}}
+                    @endforeach
                   </div>
-                  @endforeach
                 </div>
               </div>
           </div>
