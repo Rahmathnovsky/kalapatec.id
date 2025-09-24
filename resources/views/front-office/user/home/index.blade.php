@@ -4,8 +4,7 @@
     <!-- Hero section -->
       <section
         id="home"
-        class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
-      >
+        class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
         <div class="container">
           <div class="-mx-5 flex flex-wrap items-center">
             <div class="w-full px-5">
@@ -76,13 +75,23 @@
             </div>
             <div class="w-full px-5">
               <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
-                <figure class="mt-16">
-                  <img
-                    src="{{ asset('assets/img/hero-meta-2.png')}}"
-                    alt="Hero image"
-                    class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
-                  />
-                </figure>
+                <div class="swiper swiper1 mt-16">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <figure>
+                          <img
+                            src="{{ asset('assets/img/hero-meta-2.png')}}"
+                            alt="Hero image"
+                            class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
+                          />
+                        </figure>
+                      </div>
+                      <div class="swiper-slide">
+                        gambar 2
+                      </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
 
                 <div class="absolute -left-9 bottom-0 z-[-1]">
                   <img
@@ -159,17 +168,6 @@
                     Our Vision
                   </button>
 
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-history"
-                    id="tabs-list-history"
-                    role="tab"
-                    aria-controls="tabs-panel-history"
-                  >
-                    Our History
-                  </button>
                 </nav>
 
                 <div
@@ -199,26 +197,6 @@
                   </p>
                 </div>
 
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-history"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-history"
-                >
-                  <!-- <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, look like
-                    readable English.
-                  </p>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have in some form, by injected
-                    humour.
-                  </p> -->
-                </div>
               </div>
             </div>
           </div>
@@ -239,7 +217,7 @@
                 <img id="management-image"
                     src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
                     alt="CEO"
-                    class="h-[500px] object-contain rounded-xl shadow-card-2 scroll-revealed">
+                    class=" object-contain rounded-xl shadow-card-2 scroll-revealed">
               </div>
             </div>
           </div>
@@ -600,6 +578,14 @@
               </div>
             </div>
           </div>
+          <div class="text-center mt-11">
+            <button
+              onclick="openModal('requestModal')"
+              class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary text-base font-medium text-primary-color"
+              role="button"
+              >@lang('home.products.buttons.send_request')
+            </button>
+          </div>
         </div>
       </section>
 
@@ -634,7 +620,7 @@
       </section> -->
 
       <!-- Demo section -->
-      <section id="demo" class="section-area">
+      {{-- <section id="demo" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
             <h6 class="mb-2 block text-lg font-semibold text-primary">
@@ -678,11 +664,6 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                <button
-                  onclick="openModal('requestModal', 'Outbound Telesystem')"
-                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
-                    @lang('home.products.buttons.send_request')
-                </button>
                 </div>
                 <div>
                   <ul>
@@ -754,11 +735,6 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                <button
-                  onclick="openModal('requestModal', 'Whatsapp Blast')"
-                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
-                    @lang('home.products.buttons.send_request')
-                </button>
                 </div>
                 <div>
                   <ul>
@@ -830,11 +806,6 @@
                   </div>
                 </div>
                 <div class="pt-8 pb-10">
-                <button
-                  onclick="openModal('requestModal', 'Omnichannels')"
-                  class="inline-block font-medium px-6 py-3 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-color">
-                    @lang('home.products.buttons.send_request')
-                </button>
                 </div>
                 <div>
                   <ul>
@@ -876,7 +847,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
 
       <!-- Modal Request -->
       <div id="requestModal" class="modal-overlay"
@@ -892,48 +863,56 @@
           <form action="{{ route('demo-trial.store') }}" method="POST">
             @csrf
             <div class="form-group">
-              <label for="name" class="form-title">Name</label>
+              <label for="product_request" class="form-title">Name <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fas fa-user" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required>
+                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="Nama">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="phone" class="form-title">Phone</label>
+              <label for="phone" class="form-title">Phone <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-phone" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required>
+                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="Nomor telefon">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="email" class="form-title">Email</label>
+              <label for="email" class="form-title">Email <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-envelope" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required>
+                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required placeholder="Email">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="company_name" class="form-title">Company Name</label>
+              <label for="company_name" class="form-title">Company Name <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-building" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="company_name" id="company_name" style="padding-left:2.5rem;">
+                <input type="text" name="company_name" id="company_name" style="padding-left:2.5rem;" required placeholder="Nama perusahaan">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="product_request" class="form-title">Product Request</label>
+              <label for="product_request" class="form-title">Product Request <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-box" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="product_request" id="product_request" style="padding-left:2.5rem;">
+                <select id="product_request" name="product_request" style="padding-left:2.5rem;" required placeholder="nama product yang ingin dimintai demo">
+                    <option disabled selected>Pilih produk yang diminati</option>
+                    <option value="BPO & MPO Manage Services">BPO & MPO Manage Services</option>
+                    <option value="Telesystem">Telesystem</option>
+                    <option value="Omni-channels">Omni-channels</option>
+                    <option value="WABA API Services">WABA API Services</option>
+                    <option value="Chatbot & Voice AI">Chatbot & Voice AI</option>
+                    <option value="Premise & Infrastructure">Premise & Infrastructure</option>
+                </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="description" class="form-title">Description</label>
-              <textarea name="description" id="description"></textarea>
+              <label for="description" class="form-title">Description <b style="color: red">*</b></label>
+              <textarea name="description" id="description" required placeholder="Nama"></textarea>
             </div>
 
             <input type="hidden" name="request_type" id="request_type" value="demo">
@@ -1174,188 +1153,110 @@
             </p>
           </div>
 
-          <div class="">
-            <div class="row">
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-01-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
+          <div class="client-marquee">
+            <div class="scroll-revealed client-row animate-left">
+              @foreach ([
+                'mitech-client-logo-01-hover.png',
+                'mitech-client-logo-02-hover.png',
+                'mitech-client-logo-03-hover.png',
+                'mitech-client-logo-05-hover.png',
+                'mitech-client-logo-06-hover.png',
+                'mitech-client-logo-07-hover.png',
+                'mitech-client-logo-08-hover.png',
+                'mitech-client-logo-09-hover.png',
+                'airbnb.svg',
+                'mandiri.svg',
+                'shopware.svg',
+                'walmart.svg'
+              ] as $logo)
+              <div class="client-logo-wrapper">
+                <img src="{{ asset('assets/img/brand/' . $logo) }}" alt="Brand Logo" class="client-logo-img" />
               </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-02-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
+              @endforeach
+            </div>
+
+            <div class="scroll-revealed client-row animate-right">
+              @foreach ([
+                'mitech-client-logo-10-hover.png',
+                'mitech-client-logo-11-hover.png',
+                'mitech-client-logo-12.png',
+                'mitech-client-logo-13.png',
+                'mitech-client-logo-14.png',
+                'mitech-client-logo-15.png',
+                'grabjoob-logo.png',
+                'hypermart.png',
+                'logo-almalik.png',
+                'logo-enfagrow.png',
+                'logo-mega-auto-finance.png',
+                'logo-mega-central-finance.png'
+              ] as $logo)
+              <div class="client-logo-wrapper">
+                <img src="{{ asset('assets/img/brand/' . $logo) }}" alt="Brand Logo" class="client-logo-img" />
               </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-03-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
+              @endforeach
+            </div>
+
+            <div class="scroll-revealed client-row animate-left">
+              @foreach ([
+                'Bank BJB Syariah.png',
+                'Bank_Neo_Commerce.png',
+                'Broadway.png',
+                'Bukalapak.png',
+                'Buku Warung.png',
+                'Carro.png',
+                'CBN.png',
+                'Celebrity_Fitness_Official_New_Logo.png',
+                'Danata.png',
+                'Ecoroam.png',
+                'Edukita.png',
+                'GIP.jpeg'
+              ] as $logo)
+              <div class="client-logo-wrapper">
+                <img src="{{ asset('assets/img/brand/' . $logo) }}" alt="Brand Logo" class="client-logo-img" />
               </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-05-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
+              @endforeach
+            </div>
+
+            <div class="scroll-revealed client-row animate-right">
+              @foreach ([
+                'Gofood_logo.svg.png',
+                'gopay7196.jpg',
+                'Hello Sehat.png',
+                'Ilmubox.png',
+                'images.png',
+                'Immobi.png',
+                'Indosat Ooredo.png',
+                'LingoAce.png',
+                'PayFazz.png',
+                'PICT.png',
+                'PLN NP.png',
+                'princetondg_logo.jpeg'
+              ] as $logo)
+              <div class="client-logo-wrapper">
+                <img src="{{ asset('assets/img/brand/' . $logo) }}" alt="Brand Logo" class="client-logo-img" />
               </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-06-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
+              @endforeach
+            </div>
+
+            <div class="scroll-revealed client-row animate-left">
+              @foreach ([
+                'Salesworks.png',
+                'SAP.png',
+                'Sayurbox.jpeg',
+                'senyum-yatim.png',
+                'SKF-Logo.png',
+                'swa-bhuwana-paksa.png',
+                'Telexindo.png',
+                'Telmark.png',
+                'Trimble.png',
+                'Upperclift.png',
+                'Wine Cartel.png',
+                'XL Axiata.png'
+              ] as $logo)
+              <div class="client-logo-wrapper">
+                <img src="{{ asset('assets/img/brand/' . $logo) }}" alt="Brand Logo" class="client-logo-img" />
               </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-07-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-08-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-09-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-10-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-11-hover.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-12.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-13.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-14.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/mitech-client-logo-15.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/grabjoob-logo.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/hypermart.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/logo-almalik.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/logo-enfagrow.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/logo-mega-auto-finance.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="{{ asset('assets/img/brand/logo-mega-central-finance.png')}}"
-                  alt="Brand Logo Image"
-                  class="h-[80px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -1411,7 +1312,6 @@
                     </div>
                     <div>
                       <h4 class="text-[1.25rem] text-primary mb-3">@lang('home.contacts.schedule.title')</h4>
-                      <p class="m-0">@lang('home.contacts.schedule.description.day')</p>
                       <p class="m-0">@lang('home.contacts.schedule.description.hour')</p>
                     </div>
                   </div>
@@ -1515,8 +1415,7 @@
 
 @push('js')
 <script>
-  function openModal(modal ,productName) {
-    document.getElementById('product_request').value = productName;
+  function openModal(modal) {
     document.getElementById(modal).style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
@@ -1541,6 +1440,15 @@
         768: { slidesPerView: 4 },
         0: { slidesPerView: 4 },
       },
+    });
+    
+    const swiper1 = new Swiper('.swiper1', {
+        pagination: {
+            el: '.swiper1 .swiper-pagination',
+            clickable: true,
+        },
+        loop: true,
+        speed: 500,
     });
   });
 

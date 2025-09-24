@@ -39,9 +39,11 @@
                 <hr>
                 <br>
                   <div class="font-bold">
-                    @foreach (json_decode($post->tags) as $tag)
-                      # {{$tag}}
-                    @endforeach
+                    @if (json_decode($post->tags))
+                      @foreach (json_decode($post->tags) as $tag)
+                        # {{$tag}}
+                      @endforeach                
+                    @endif
                   </div>
                 </div>
               </div>

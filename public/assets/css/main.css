@@ -1686,6 +1686,65 @@ p + p {
     flex-grow: 1;
 }
 
+.client-marquee {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.client-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    min-width: 100%;
+}
+
+.client-logo-wrapper {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.client-logo-img {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+    filter: grayscale(100%);
+}
+.client-logo-img:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-left {
+    animation: scroll-left 60s linear infinite;
+}
+.animate-right {
+    animation: scroll-right 60s linear infinite;
+}
+
 .-translate-x-1\/2 {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))

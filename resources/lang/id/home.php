@@ -99,7 +99,7 @@ return [
     ],
     'faq' => [
         'title' => 'Pertanyaan Umum',
-        'description' => 'Kalapa merupakan perusahaan teknologi yang fokus pada pengembangan solusi digital,khususnya layanan contact center modern yang terintegrasi dan dapat disesuaikan dengan kebutuhan bisnis masa kini.',
+        'description' => 'Kalapa merupakan perusahaan teknologi yang fokus pada pengembangan solusi digital, khususnya layanan contact center modern yang terintegrasi dan dapat disesuaikan dengan kebutuhan bisnis masa kini.',
         'questions' => [
             '1' => [
                 'question' => 'Apa yang bisa kami bantu dalam bisnis anda?',
