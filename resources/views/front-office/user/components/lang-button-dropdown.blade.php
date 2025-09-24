@@ -1,6 +1,6 @@
 <div class="relative inline-block text-left">
   <button type="button" class="inline-flex items-center bg-white text-body-dark-12 font-medium py-2 px-4 sm:px-1 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-color ic-page-scroll flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:inline-flex lg:{{ $text_color ?? 'text-primary-color'}} lg:dark:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:{{ $text_color ?? 'text-primary-color'}} lg:group-hover:opacity-70" id="dropdownLanguageButton" aria-expanded="false" aria-haspopup="true">
-    {{ session('locale') === 'id' ? 'Indonesia' : 'English' }}
+    {{ session('locale') === 'id' ? 'ID' : 'EN' }}
     <i class="lni lni-chevron-down ml-2 text-xl"></i>
   </button>
 

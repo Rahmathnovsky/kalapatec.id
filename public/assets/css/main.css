@@ -1312,8 +1312,16 @@ p + p {
     bottom: 1.25rem;
 }
 
-.bottom-\[117px\] {
-    bottom: 117px;
+.bottom-\[25px\] {
+    bottom: 25px;
+}
+
+.bottom-\[120px\] {
+    bottom: 120px;
+}
+
+.bottom-\[105px\] {
+    bottom: 105px;
 }
 
 .left-0 {
@@ -1714,7 +1722,7 @@ p + p {
     max-width: 100%;
     object-fit: contain;
     transition: filter 0.3s ease;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 .client-logo-img:hover {
     filter: grayscale(0%);
@@ -2782,6 +2790,10 @@ p + p {
 @media (min-width: 1024px) {
     .lg\:static {
         position: static;
+    }
+
+    .lg\:h-\[500px\] {
+        height: 500px;
     }
 
     .lg\:order-1 {

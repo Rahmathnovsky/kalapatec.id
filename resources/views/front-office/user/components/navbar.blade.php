@@ -147,9 +147,10 @@
                 aria-label="Switch theme"
                 data-web-trigger="web-theme"
               ></button>
-              <div class="hidden sm:flex">
+              <div class="sm:flex">
                 <a
-                  href="javascript:void(0)"
+                  href="http://wa.me/6285168647348"
+                  target="_blank"
                   class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary bg-opacity-70 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
                   role="button"
                   >@lang('home.navbar.contact_us')</a

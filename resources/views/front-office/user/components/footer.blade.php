@@ -13,6 +13,7 @@
 
               <div class="-mx-3 flex items-center">
                 <a
+                target="_blank"
                   href="https://facebook.com/kalapatec.id"
                   class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
                 >
@@ -20,6 +21,7 @@
                 </a>
 
                 <a
+                target="_blank"
                   href="https://www.instagram.com/kalapatech.id/"
                   class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
                 >
@@ -27,6 +29,7 @@
                 </a>
 
                 <a
+                target="_blank"
                   href="https://www.linkedin.com/company/palapamitrasolusi"
                   class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
                 >
@@ -34,6 +37,7 @@
                 </a>
 
                 <a
+                target="_blank"
                   href="https://www.tiktok.com/@kalapatech"
                   class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
                 >

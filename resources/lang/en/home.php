@@ -8,6 +8,7 @@ return [
     'powered_by' => 'Powered by',
     'our_company' => 'OUR COMPANY',
     'see_more' => 'See more',
+    'registered' => 'Registered',
     'navbar' => [
         'home' => 'Home',
         'management-gallery' => 'Organization',
@@ -16,14 +17,17 @@ return [
         'career' => 'Career',
         'contact_us' => 'Contact'
     ],
-    'founded_since' => 'Established since 2016
-                  Kalapa helps transform businesses into digitalization.',
-    'our_profile' => 'Kalapa Technology came as a digital transformation partner, helping conventional 
+    'founded_since' => 'Established Since 2016
+                  Kalapa Helps Transform Businesses Into Digitalization',
+    'our_profile' => [
+        'title' => 'OUR PROFILE',
+        'description' => 'Kalapa Technology came as a digital transformation partner, helping conventional 
                      businesses transition into digital systems that is faster, precise, and more effective 
                      through strategic technology support, digital-based planning, design, and operations.',
+    ],
     'our_mission' => [
         'title' => 'OUR MISSION',
-        'description' => 'providing excellent, easy and fast services through standarized method with clients satisfaction as our goal'
+        'description' => 'Providing excellent, easy and fast services through standarized method with clients satisfaction as our goal'
     ],
     'our_vision' => [
         'title' => 'OUR VISION',
@@ -47,12 +51,12 @@ return [
     'services' => [
         'title' => 'Services',
         'sub_title' => 'Our Best Solutions',
-        'description' => 'Our top services is here to helps your bussinesses growth and eficiency in this digital era'
+        'description' => 'Our top services is here to helps your bussinesses growth and eficiency in this digital era.'
     ],
     'solutions' => [
         'bpo_&_mpo' => 'Professional workforce-based operations to enhance your business efficiency, covering everything from back-office processes to project management.',
         'telesystem' => 'An integrated communication solution that supports customer service through phone, call center, and other system integrations.',
-        'omnichannels' => 'Seamlessly integrated services across platforms—such as social media, email, and chat—to deliver a consistent and optimal customer experience.',
+        'omnichannels' => 'Seamlessly integrated services across platforms such as social media, email, chat to deliver a consistent and optimal customer experience.',
         'waba' => 'WhatsApp Business API integration for fast, secure, and automated customer communication tailored to your business needs.',
         'chatbot' => 'Automated customer service with intelligent chatbot and voice AI technology—responsive, reliable, and available 24/7.',
         'premise_&_infrastructure' => 'Reliable IT infrastructure support, from installation to system maintenance, ensuring smooth operations for your business needs.'
@@ -120,7 +124,7 @@ return [
     ],
     'blog' => [
         'title' => 'Latest News & Blog',
-        'description' => 'All kind of news covering our products update'
+        'description' => 'All kind of news covering our products update.'
     ],
     'clients' => [
         'title' => 'Client',

@@ -8,6 +8,7 @@ return [
     'powered_by' => 'Didukung oleh',
     'our_company' => 'PERUSAHAAN KAMI',
     'see_more' => 'Lihat lebih banyak',
+    'registered' => 'Terdaftar',
     'navbar' => [
         'home' => 'Beranda',
         'management-gallery' => 'Organisasi',
@@ -16,20 +17,23 @@ return [
         'career' => 'Karir',
         'contact_us' => 'Hubungi'
     ],
-    'founded_since' => 'Didirikan pada tahun 2016
-                  Kalapa membantu mengubah
-                  bisnis menjadi digital.',
-    'our_profile' => 'Kalapa Technology hadir sebagai mitra transformasi digital, membantu bisnis konvensional
+    'founded_since' => 'Didirikan Pada Tahun 2016
+                  Kalapa Membantu Mengubah
+                  Bisnis Menjadi Digital',
+    'our_profile' => [
+        'title' => 'PROFILE KAMI',
+        'description' => 'Kalapa Technology hadir sebagai mitra transformasi digital, membantu bisnis konvensional
                     beralih ke sistem digital yang lebih cepat, tepat, dan efektif melalui dukungan teknologi
-                    strategis, perencanaan, desain, dan operasional berbasis digital.',
+                    strategis, perencanaan, desain, dan operasional berbasis digital.'
+    ],
     'our_mission' => [
         'title' => 'MISI KAMI',
-        'description' => 'Memberikan service yang Prima, Mudah dan Cepat, dengan cara yang sudah
-                    terstandarisasi dengan tujuan kepada kepuasan pelanggan dan Klien.'
+        'description' => 'Memberikan service yang prima, mudah dan cepat, dengan cara yang sudah
+                    terstandarisasi dengan tujuan kepada kepuasan pelanggan dan klien.'
     ],
     'our_vision' => [
         'title' => 'VISI KAMI',
-        'description' => 'Menjadi perusahaan yang bergerak di bidang Service pelayanan
+        'description' => 'Menjadi perusahaan yang bergerak di bidang service pelayanan
                     terkemuka di Indonesia dengan menerapkan kemajuan technology
                     sebagai dukungan utama dalam pengembangan segela aspek.'
     ],
@@ -107,7 +111,7 @@ return [
             ],
             '2' => [
                 'question' => 'Apa kelebihan Kalapa dengan yang lain?',
-                'answer' => 'Kalapa memiliki keunggulan pada infrastruktur dan sistem yang dikembangkan secara mandiri, tanpa ketergantungan vendor eksternal. 
+                'answer' => 'Kalapa memiliki keunggulan pada infrastruktur dan sistem yang dikembangkan secara mandiri, tanpa ketergantungan pada pihak ketiga. 
                              Ini menjamin keamanan data dan kontrol penuh atas sistem. Kami juga menyediakan CRM yang dapat dikustomisasi, WhatsApp Business 
                              resmi dengan centang biru, Dukungan multi-agent, Laporan dan analisis yang detail, Fleksibilitas jumlah seat, Sistem chatbot terintegrasi'
             ],
@@ -123,7 +127,7 @@ return [
     ],
     'blog' => [
         'title' => 'Berita & Blog Terkini',
-        'description' => 'Berbagai informasi mengenai produk - produk dari kalapa terkini'
+        'description' => 'Berbagai informasi mengenai produk - produk dari kalapa terkini.'
     ],
     'clients' => [
         'title' => 'Klien',

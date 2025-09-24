@@ -33,14 +33,14 @@
                     >
                   </li>
 
-                  <li>
+                  {{-- <li>
                     <a
                       href="javascript:boid(0)"
                       class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
                       role="button"
                       ><i class="lni lni-play text-lg/none"></i> @lang('home.watch_intro')</a
                     >
-                  </li>
+                  </li> --}}
                 </ul>
 
                 <div>
@@ -54,7 +54,7 @@
                       target="_blank"
                       class="text-primary-color/60 hover:text-primary-color"
                     >
-                    <img src="https://www.victoryxr.com/wp-content/uploads/2023/04/Meta-Logo-1024x576.png.webp" style="width: 200px;" alt="">
+                    <img src="{{ asset('assets/img/logo/Logo-Meta-No-BG.png') }}" style="width: 300px;" alt="">
                       <!-- <svg
                         class="fill-current"
                         height="26"
@@ -87,7 +87,13 @@
                         </figure>
                       </div>
                       <div class="swiper-slide">
-                        gambar 2
+                        <figure>
+                          <img
+                            src="{{ asset('assets/img/hero-meta-2.png')}}"
+                            alt="Hero image"
+                            class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
+                          />
+                        </figure>
                       </div>
                   </div>
                   <div class="swiper-pagination"></div>
@@ -153,7 +159,7 @@
                     role="tab"
                     aria-controls="tabs-panel-profile"
                   >
-                    Our Profile
+                    @lang('home.our_profile.title')
                   </button>
 
                   <button
@@ -165,7 +171,7 @@
                     role="tab"
                     aria-controls="tabs-panel-vision"
                   >
-                    Our Vision
+                    @lang('home.our_vision.title')
                   </button>
 
                 </nav>
@@ -178,7 +184,7 @@
                   aria-labelledby="tabs-list-profile"
                 >
                   <p>
-                    @lang('home.our_profile')
+                    @lang('home.our_profile.description')
                   </p>
                 </div>
 
@@ -217,7 +223,7 @@
                 <img id="management-image"
                     src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
                     alt="CEO"
-                    class=" object-contain rounded-xl shadow-card-2 scroll-revealed">
+                    class="lg:h-[500px] object-contain rounded-xl shadow-card-2 scroll-revealed">
               </div>
             </div>
           </div>
@@ -317,7 +323,7 @@
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
                   >
-                    Registered
+                    @lang('home.registered')
                   </p>
                   <!-- <div class="flex items-center justify-center gap-5">
                     <a
@@ -369,7 +375,7 @@
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
                   >
-                    Registered
+                    @lang('home.registered')
                   </p>
                   <!-- <div class="flex items-center justify-center gap-5">
                     <a
@@ -421,7 +427,7 @@
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
                   >
-                    Registered
+                    @lang('home.registered')
                   </p>
                   <!-- <div class="flex items-center justify-center gap-5">
                     <a
@@ -1279,7 +1285,7 @@
                     </div>
                     <div>
                       <h4 class="text-[1.25rem] text-primary mb-3">@lang('home.contacts.contact')</h4>
-                      <p class="m-0">+62 812-9999-5925</p>
+                      <p class="m-0">+62 851-6864-7348</p>
                       <p class="m-0">bd.team@kalapatec.id</p>
                     </div>
                   </div>
