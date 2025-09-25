@@ -80,7 +80,7 @@
                       <div class="swiper-slide">
                         <figure>
                           <img
-                            src="{{ asset('assets/img/hero-meta-2.png')}}"
+                            src="{{ asset('assets/img/Headline-BPO.jpeg')}}"
                             alt="Hero image"
                             class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                           />
@@ -89,7 +89,7 @@
                       <div class="swiper-slide">
                         <figure>
                           <img
-                            src="{{ asset('assets/img/hero-meta-2.png')}}"
+                            src="{{ asset('assets/img/Headline-Bluetick.jpeg')}}"
                             alt="Hero image"
                             class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                           />
@@ -97,7 +97,7 @@
                       </div>
                   </div>
                   <div class="swiper-pagination"></div>
-              </div>
+                </div>
 
                 <div class="absolute -left-9 bottom-0 z-[-1]">
                   <img
@@ -1455,6 +1455,10 @@
         },
         loop: true,
         speed: 500,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
     });
   });
 
