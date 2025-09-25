@@ -1456,7 +1456,7 @@
         loop: true,
         speed: 500,
         autoplay: {
-          delay: 1500,
+          delay: 1750,
           disableOnInteraction: false,
         },
     });
