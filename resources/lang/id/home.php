@@ -17,6 +17,111 @@ return [
         'career' => 'Karir',
         'contact_us' => 'Hubungi'
     ],
+    'form' => [
+        'career' => [
+            'title' => 'Mulailah Karir Anda Disini',
+            'sub_title' => 'Isi semua kolom formulir pendaftaran ini untuk mengirim lamaran anda kepada kami',
+            'column' => [
+                'name' => [
+                    'label' => 'Nama',
+                    'placeholder' => 'Nama lengkap'
+                ],
+                'phone' => [
+                    'label' => 'Nomor Telepon',
+                    'placeholder' => 'Nomor telepon'
+                ],
+                'gender' => [
+                    'label' => 'Jenis Kelamin',
+                    'placeholder' => 'Jenis kelamin',
+                    'male' => 'Laki-laki',
+                    'female' => 'Peremupuan'
+                ],
+                'pob' => [
+                    'label' => 'Tempat Lahir',
+                    'placeholder' => 'Tempat lahir'
+                ],
+                'dob' => [
+                    'label' => 'Tanggal Lahir',
+                    'placeholder' => 'Tanggal lahir'
+                ],
+                'marital_status' => [
+                    'label' => 'Status Pernikahan',
+                    'placeholder' => 'Status pernikahan',
+                    'married' => 'Sudah Menikah',
+                    'single' => 'Belum Menikah',
+                    'divorced' => 'Bercerai'
+                ],
+                'religion' => [
+                    'label' => 'Agama',
+                    'placeholder' => 'Agama',
+                    'muslim' => 'Islam',
+                    'catholic' => 'Katholik',
+                    'christian' => 'Kristen',
+                    'buddhist' => 'Budha',
+                    'hindu' => 'Hindu'
+                ],
+                'province' => [
+                    'label' => 'Provinsi',
+                    'placeholder' => 'Provinsi'
+                ],
+                'regency' => [
+                    'label' => 'Kabupaten',
+                    'placeholder' => 'Kabupaten'
+                ],
+                'education' => [
+                    'label' => 'Pendidikan Terakhir',
+                    'placeholder' => 'Pendidikan terakhir',
+                    'senior_highscool' => 'SMA/K',
+                    'd3' => 'D3',
+                    'd2' => 'D2',
+                    'd1' => 'D1',
+                    's1' => "S1",
+                    's2' => "S2",
+                    's3' => "S3",
+                    'other' => 'Lainnya'
+                ],
+                'position' => [
+                    'label' => 'Pilih Posisi',
+                    'placeholder' => 'Pilih posisi'
+                ],
+                'address' => [
+                    'label' => 'Alamat',
+                    'placeholder' => 'Alamat'
+                ],
+                'cv' => [
+                    'label' => 'Curriculum Vitae',
+                    'placeholder' => 'pdf saja'
+                ],
+            ]
+        ],
+        'demo' => [
+            'title' => 'Ketahui Produk Lebih Dalam',
+            'sub_title' => 'Isi semua kolom formulir demo/trial ini untuk melakukan request terkait layanan yang dipilih',
+            'column' => [
+                'name' => [
+                    'label' => 'Nama',
+                    'placeholder' => 'Nama lengkap'
+                ],
+                'phone' => [
+                    'label' => 'Nomor Telepon',
+                    'placeholder' => 'Nomor telepon'
+                ],
+                'company_name' => [
+                    'label' => 'Nama Perusahaan',
+                    'placeholder' => 'Nama perusahaan anda'
+                ],
+                'product_request' => [
+                    'label' => 'Produk Pilihan',
+                    'placeholder' => 'Pilih produk untuk melakukan permintaan demo',
+                    'default' => 'Pilih produk yang diminati'
+                ],
+                'description' => [
+                    'label' => 'Deskripsi Permintaan',
+                    'placeholder' => 'Tulis deskripsi terkait permintaan demo'
+                ]
+            ]
+        ]
+    ],
     'founded_since' => 'Didirikan Pada Tahun 2016
                   Kalapa Membantu Mengubah
                   Bisnis Menjadi Digital',
@@ -98,7 +203,9 @@ return [
             ]
         ],
         'buttons' => [
-            'send_request' => 'Kirim Permintaan'
+            'send_request' => 'Kirim Permintaan',
+            'send' => 'Kirim',
+            'cancel' => 'Batal'
         ]
     ],
     'faq' => [
@@ -127,7 +234,7 @@ return [
     ],
     'blog' => [
         'title' => 'Berita & Blog Terkini',
-        'description' => 'Berbagai informasi mengenai produk - produk dari kalapa terkini.'
+        'description' => 'Berbagai informasi mengenai produk-produk dari Kalapa terkini.'
     ],
     'clients' => [
         'title' => 'Klien',

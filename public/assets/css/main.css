@@ -1426,6 +1426,10 @@ p + p {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+.mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
 
 .mx-auto {
     margin-left: auto;

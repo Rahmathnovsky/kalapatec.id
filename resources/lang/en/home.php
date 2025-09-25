@@ -17,6 +17,111 @@ return [
         'career' => 'Career',
         'contact_us' => 'Contact'
     ],
+        'form' => [
+        'career' => [
+            'title' => 'Start your career here',
+            'sub_title' => 'Fill in all the fields of this registration form to send your application to us.',
+            'column' => [
+                'name' => [
+                    'label' => 'Name',
+                    'placeholder' => 'Fullname'
+                ],
+                'phone' => [
+                    'label' => 'Phone',
+                    'placeholder' => 'Phone'
+                ],
+                'gender' => [
+                    'label' => 'Gender',
+                    'placeholder' => 'Gender',
+                    'male' => 'Male',
+                    'female' => 'Female'
+                ],
+                'pob' => [
+                    'label' => 'Place of Birth',
+                    'placeholder' => 'Place of birth'
+                ],
+                'dob' => [
+                    'label' => 'Date of Birth',
+                    'placeholder' => 'Date of birth'
+                ],
+                'marital_status' => [
+                    'label' => 'Marital Status',
+                    'placeholder' => 'Marital status',
+                    'married' => 'Married',
+                    'single' => 'Single',
+                    'divorced' => 'Divorced'
+                ],
+                'religion' => [
+                    'label' => 'Religion',
+                    'placeholder' => 'Religion',
+                    'muslim' => 'Muslim',
+                    'catholic' => 'Catholic',
+                    'christian' => 'Christian',
+                    'buddhist' => 'Buddhist',
+                    'hindu' => 'Hindu'
+                ],
+                'province' => [
+                    'label' => 'Province',
+                    'placeholder' => 'Province'
+                ],
+                'regency' => [
+                    'label' => 'Regency',
+                    'placeholder' => 'Regency'
+                ],
+                'education' => [
+                    'label' => 'Education',
+                    'placeholder' => 'Education',
+                    'senior_highscool' => 'Senior High School',
+                    'd3' => 'Diploma 3',
+                    'd2' => 'Diploma 2',
+                    'd1' => 'Diploma 1',
+                    's1' => "Bachelor's Degree",
+                    's2' => "Master's Degree",
+                    's3' => "Doctoral Degree",
+                    'other' => 'Others'
+                ],
+                'position' => [
+                    'label' => 'Select Position',
+                    'placeholder' => 'Select position'
+                ],
+                'address' => [
+                    'label' => 'Address',
+                    'placeholder' => 'Address'
+                ],
+                'cv' => [
+                    'label' => 'Curriculum Vitae',
+                    'placeholder' => 'pdf only'
+                ],
+            ]
+        ],
+        'demo' => [
+            'title' => 'Learn more about the product',
+            'sub_title' => 'Fill in all the fields of this demo/trial form to make a request regarding the selected service.',
+            'column' => [
+                'name' => [
+                    'label' => 'Name',
+                    'placeholder' => 'Fullname'
+                ],
+                'phone' => [
+                    'label' => 'Phone',
+                    'placeholder' => 'Phone'
+                ],
+                'company_name' => [
+                    'label' => 'Company Name',
+                    'placeholder' => 'Your company name'
+                ],
+                'product_request' => [
+                    'label' => 'Product Request',
+                    'placeholder' => 'Select a product to make a demo request',
+                    'default' => 'Select the product you are interested in'
+                ],
+                'description' => [
+                    'label' => 'Request Description',
+                    'placeholder' => 'Write a description regarding the demo request.'
+                ]
+            ]
+        ]
+    ],
     'founded_since' => 'Established Since 2016
                   Kalapa Helps Transform Businesses Into Digitalization',
     'our_profile' => [
@@ -95,7 +200,9 @@ return [
             ]
         ],
         'buttons' => [
-            'send_request' => 'Send Request'
+            'send_request' => 'Send Request',
+            'send' => 'Send',
+            'cancel' => 'Cancel'
         ]
     ],
     'faq' => [

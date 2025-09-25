@@ -860,27 +860,27 @@
           style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:99999; justify-content:center; align-items:center;">
         <div style="max-width:90%;" class="form-scope modal-content bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
           <div class="text-center max-w-[550px] mx-auto mb-12">
-            <h2 class="mb-3">Ketahui Produk Lebih Dalam</h2>
+            <h2 class="mb-3">@lang('home.form.demo.title')</h2>
             <p>
-              Isi semua kolom formulir demo/trial ini untuk melakukan request terkait layanan yang dipilih
+              @lang('home.form.demo.sub_title')
             </p>
           </div>
 
           <form action="{{ route('demo-trial.store') }}" method="POST">
             @csrf
             <div class="form-group">
-              <label for="product_request" class="form-title">Name <b style="color: red">*</b></label>
+              <label for="product_request" class="form-title">@lang('home.form.demo.column.name.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fas fa-user" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="Nama">
+                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="@lang('home.form.demo.column.name.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="phone" class="form-title">Phone <b style="color: red">*</b></label>
+              <label for="phone" class="form-title">@lang('home.form.demo.column.phone.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-phone" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="Nomor telefon">
+                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="@lang('home.form.demo.column.phone.placeholder')">
               </div>
             </div>
 
@@ -893,19 +893,19 @@
             </div>
 
             <div class="form-group">
-              <label for="company_name" class="form-title">Company Name <b style="color: red">*</b></label>
+              <label for="company_name" class="form-title">@lang('home.form.demo.column.company_name.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-building" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="company_name" id="company_name" style="padding-left:2.5rem;" required placeholder="Nama perusahaan">
+                <input type="text" name="company_name" id="company_name" style="padding-left:2.5rem;" required placeholder="@lang('home.form.demo.column.company_name.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="product_request" class="form-title">Product Request <b style="color: red">*</b></label>
+              <label for="product_request" class="form-title">@lang('home.form.demo.column.product_request.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-box" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <select id="product_request" name="product_request" style="padding-left:2.5rem;" required placeholder="nama product yang ingin dimintai demo">
-                    <option disabled selected>Pilih produk yang diminati</option>
+                <select id="product_request" name="product_request" style="padding-left:2.5rem;" required placeholder="@lang('home.form.demo.column.company_name.placeholder')">
+                    <option disabled selected>@lang('home.form.demo.column.product_request.default')</option>
                     <option value="BPO & MPO Manage Services">BPO & MPO Manage Services</option>
                     <option value="Telesystem">Telesystem</option>
                     <option value="Omni-channels">Omni-channels</option>
@@ -917,15 +917,15 @@
             </div>
 
             <div class="form-group">
-              <label for="description" class="form-title">Description <b style="color: red">*</b></label>
-              <textarea name="description" id="description" required placeholder="Nama"></textarea>
+              <label for="description" class="form-title">@lang('home.form.demo.column.description.label') <b style="color: red">*</b></label>
+              <textarea name="description" id="description" required placeholder="@lang('home.form.demo.column.description.placeholder')"></textarea>
             </div>
 
             <input type="hidden" name="request_type" id="request_type" value="demo">
 
             <div class="form-actions">
-              <button type="submit">Kirim</button>
-              <button type="button" class="cancel" onclick="closeModal('requestModal')">Batal</button>
+              <button type="submit">@lang('home.products.buttons.send')</button>
+              <button type="button" class="cancel" onclick="closeModal('requestModal')">@lang('home.products.buttons.cancel')</button>
             </div>
           </form>
         </div>
@@ -937,9 +937,9 @@
         <div style="max-width:90%;" class="form-scope modal-content bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:15px;">
             <div class="text-center max-w-[550px] mx-auto mb-12">
-              <h2 class="mb-3">Mulailah Karir Anda Disini</h2>
+              <h2 class="mb-3">@lang('home.form.career.title')</h2>
               <p>
-                Isi semua kolom formulir pendaftaran ini untuk mengirim lamaran anda kepada kami
+                @lang('home.form.career.sub_title')
               </p>
             </div>
           </div>
@@ -947,18 +947,18 @@
             @csrf
 
             <div class="form-group">
-              <label for="name" class="form-title">Name <b style="color: red">*</b></label>
+              <label for="name" class="form-title">@lang('home.form.career.column.name.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-user" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="nama lengkap">
+                <input type="text" name="name" id="name" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.name.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="phone" class="form-title">Phone <b style="color: red">*</b></label>
+              <label for="phone" class="form-title">@lang('home.form.career.column.phone.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-phone" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="nomor telephone">
+                <input type="text" name="phone" id="phone" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.phone.placeholder')">
               </div>
             </div>
 
@@ -966,98 +966,98 @@
               <label for="email" class="form-title">Email <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-envelope" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required placeholder="email">
+                <input type="text" name="email" id="email" style="padding-left:2.5rem;" required placeholder="Email">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-title">Gender</label>
+              <label class="form-title">@lang('home.form.career.column.gender.label')</label>
               <div class="gender-toggle">
                 <input type="radio" id="gender-male" name="gender" value="male" checked>
-                <label for="gender-male">Male</label>
+                <label for="gender-male">@lang('home.form.career.column.gender.male')</label>
 
                 <input type="radio" id="gender-female" name="gender" value="female">
-                <label for="gender-female">Female</label>
+                <label for="gender-female">@lang('home.form.career.column.gender.female')</label>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="pob" class="form-title">Place of Birth <b style="color: red">*</b></label>
+              <label for="pob" class="form-title">@lang('home.form.career.column.pob.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-globe-asia" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="pob" id="pob" style="padding-left:2.5rem;" required placeholder="tempat lahir">
+                <input type="text" name="pob" id="pob" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.pob.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="dob" class="form-title">Date of Birth <b style="color: red">*</b></label>
+              <label for="dob" class="form-title">@lang('home.form.career.column.dob.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-calendar" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="date" name="dob" id="dob" style="padding-left:2.5rem;" required placeholder="tanggal lahir">
+                <input type="date" name="dob" id="dob" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.dob.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="marital_status" class="form-title">Marital Status <b style="color: red">*</b></label>
+              <label for="marital_status" class="form-title">@lang('home.form.career.column.marital_status.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-heart" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <select id="marital_status" name="marital_status" style="padding-left:2.5rem;" required placeholder="status perkawinan">
-                    <option value="belum menikah">Belum Menikah</option>
-                    <option value="sudah menikah">Sudah Menikah</option>
-                    <option value="bercerai">Bercerai</option>
+                <select id="marital_status" name="marital_status" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.marital_status.placeholder')">
+                    <option value="belum menikah">@lang('home.form.career.column.marital_status.single')</option>
+                    <option value="sudah menikah">@lang('home.form.career.column.marital_status.married')</option>
+                    <option value="bercerai">@lang('home.form.career.column.marital_status.divorced')</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="religion" class="form-title">Religion <b style="color: red">*</b></label>
+              <label for="religion" class="form-title">@lang('home.form.career.column.religion.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-book" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <select id="religion" name="religion" style="padding-left:2.5rem;" required placeholder="agama">
-                  <option value="islam">Islam</option>
-                  <option value="katholik">Katholik</option>
-                  <option value="kristen">Kristen</option>
-                  <option value="budha">Budha</option>
-                  <option value="hindu">Hindu</option>
+                <select id="religion" name="religion" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.religion.placeholder')">
+                  <option value="islam">@lang('home.form.career.column.religion.muslim')</option>
+                  <option value="katholik">@lang('home.form.career.column.religion.catholic')</option>
+                  <option value="kristen">@lang('home.form.career.column.religion.christian')</option>
+                  <option value="budha">@lang('home.form.career.column.religion.buddhist')</option>
+                  <option value="hindu">@lang('home.form.career.column.religion.hindu')</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="province" class="form-title">Province <b style="color: red">*</b></label>
+              <label for="province" class="form-title">@lang('home.form.career.column.province.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-map" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="province" id="province" style="padding-left:2.5rem;" required placeholder="provinsi">
+                <input type="text" name="province" id="province" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.province.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="regency" class="form-title">Regency <b style="color: red">*</b></label>
+              <label for="regency" class="form-title">@lang('home.form.career.column.regency.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-map" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
-                <input type="text" name="regency" id="regency" style="padding-left:2.5rem;" required placeholder="kabupaten">
+                <input type="text" name="regency" id="regency" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.regency.placeholder')">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="education" class="form-title">Education <b style="color: red">*</b></label>
+              <label for="education" class="form-title">@lang('home.form.career.column.education.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-graduation-cap" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
                 <select id="education" name="education" style="padding-left:2.5rem;" required>
-                  <option value="SMA/K">SMA/K</option>
-                  <option value="D3">D3</option>
-                  <option value="D2">D2</option>
-                  <option value="D1">D1</option>
-                  <option value="S1">S1</option>
-                  <option value="S2">S2</option>
-                  <option value="S3">S3</option>
-                  <option value="lainnya">Lainnya</option>
+                  <option value="SMA/K">@lang('home.form.career.column.education.senior_highscool')</option>
+                  <option value="D3">@lang('home.form.career.column.education.d3')</option>
+                  <option value="D2">@lang('home.form.career.column.education.d2')</option>
+                  <option value="D1">@lang('home.form.career.column.education.d1')</option>
+                  <option value="S1">@lang('home.form.career.column.education.s1')</option>
+                  <option value="S2">@lang('home.form.career.column.education.s2')</option>
+                  <option value="S3">@lang('home.form.career.column.education.s3')</option>
+                  <option value="lainnya">@lang('home.form.career.column.education.other')</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="career" class="form-title">Select Position <b style="color: red">*</b></label>
+              <label for="career" class="form-title">@lang('home.form.career.column.position.label') <b style="color: red">*</b></label>
               <div style="position:relative;">
                 <i class="fa fa-briefcase" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;"></i>
                 <select id="career" name="position_id" style="padding-left:2.5rem;" required>
@@ -1069,18 +1069,18 @@
             </div>
 
             <div class="form-group">
-              <label for="address" class="form-title">Address <b style="color: red">*</b></label>
-              <textarea name="address" id="address" style="padding-left:2.5rem;" required placeholder="alamat"></textarea>
+              <label for="address" class="form-title">@lang('home.form.career.column.address.label') <b style="color: red">*</b></label>
+              <textarea name="address" id="address" style="padding-left:2.5rem;" required placeholder="@lang('home.form.career.column.address.placeholder')"></textarea>
             </div>
 
             <div class="form-group">
-              <label for="cv" class="form-title">Curriculum Vitae (CV) <small class="text-muted"> *pdf only</small></label>
+              <label for="cv" class="form-title">Curriculum Vitae (CV) <small class="text-muted"> <b style="color: red">*</b>@lang('home.form.career.column.cv.placeholder') (2MB)</small></label>
               <input type="file" style="padding-left:2.5rem;" name="cv" id="cv" accept="application/pdf" required>
             </div>
 
             <div class="form-actions">
-              <button type="submit">Kirim</button>
-              <button type="button" class="cancel" onclick="closeModal('careerModal')">Batal</button>
+              <button type="submit">@lang('home.products.buttons.send')</button>
+              <button type="button" class="cancel" onclick="closeModal('careerModal')">@lang('home.products.buttons.cancel')</button>
             </div>
           </form> 
         </div>
