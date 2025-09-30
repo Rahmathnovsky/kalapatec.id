@@ -200,7 +200,7 @@ return [
             ]
         ],
         'buttons' => [
-            'send_request' => 'Send Request',
+            'send_request' => 'Request Trial Demo',
             'send' => 'Send',
             'cancel' => 'Cancel'
         ]

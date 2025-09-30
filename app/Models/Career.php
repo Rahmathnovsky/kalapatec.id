@@ -68,22 +68,22 @@ class Career extends Model
      *
      * @return Attribute
      */
-    protected function createdAt(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
-        );
-    }
+    // protected function createdAt(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
+    //     );
+    // }
 
     /**
      * updatedAt
      *
      * @return Attribute
      */
-    protected function updatedAt(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
-        );
-    }
+    // protected function updatedAt(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
+    //     );
+    // }
 }

@@ -203,7 +203,7 @@ return [
             ]
         ],
         'buttons' => [
-            'send_request' => 'Kirim Permintaan',
+            'send_request' => 'Kirim Permintaan Demo',
             'send' => 'Kirim',
             'cancel' => 'Batal'
         ]

@@ -125,10 +125,10 @@ class Post extends Model
      *
      * @return Attribute
      */
-    protected function updatedAt(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
-        );
-    }
+    // protected function updatedAt(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => \Carbon\Carbon::parse($value)->locale(session('locale'))->translatedFormat('l, d F Y'),
+    //     );
+    // }
 }

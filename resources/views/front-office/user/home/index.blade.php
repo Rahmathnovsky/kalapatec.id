@@ -219,7 +219,7 @@
 
           <div id="management-detail" class="mb-8">
             <div class="row justify-center">
-              <div class="col-4 sm:col-12 w-full md:w-1/2 justify-item-center">
+              <div class="col-4 sm:col-12 w-full justify-item-center">
                 <img id="management-image"
                     src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
                     alt="CEO"
