@@ -923,6 +923,10 @@
 
             <input type="hidden" name="request_type" id="request_type" value="demo">
 
+              <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site') }}"></div>
+              </div>
+
             <div class="form-actions">
               <button type="submit">@lang('home.products.buttons.send')</button>
               <button type="button" class="cancel" onclick="closeModal('requestModal')">@lang('home.products.buttons.cancel')</button>
@@ -1076,6 +1080,10 @@
             <div class="form-group">
               <label for="cv" class="form-title">Curriculum Vitae (CV) <small class="text-muted"> <b style="color: red">*</b>@lang('home.form.career.column.cv.placeholder') (2MB)</small></label>
               <input type="file" style="padding-left:2.5rem;" name="cv" id="cv" accept="application/pdf" required>
+            </div>
+
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site') }}"></div>
             </div>
 
             <div class="form-actions">

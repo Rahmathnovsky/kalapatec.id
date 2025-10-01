@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Helpers\RecaptchaHelper;
 use App\Mail\RequestNotification;
 use App\Models\Request;
 use App\Models\User;
@@ -21,6 +22,7 @@ class RequestService {
     {
         DB::beginTransaction();
         try {
+            RecaptchaHelper::verify($request);
             $payload = $this->modelRequest->rawPayload($request);
             $notificationPayload = $this->modelRequest->create($payload);
             

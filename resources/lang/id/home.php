@@ -34,7 +34,7 @@ return [
                     'label' => 'Jenis Kelamin',
                     'placeholder' => 'Jenis kelamin',
                     'male' => 'Laki-laki',
-                    'female' => 'Peremupuan'
+                    'female' => 'Perempuan'
                 ],
                 'pob' => [
                     'label' => 'Tempat Lahir',

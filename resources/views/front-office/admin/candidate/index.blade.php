@@ -109,7 +109,7 @@
                             <td>{{ $candidate->email }}</td>
                             <td>{{ $candidate->gender }}</td>
                             <td>{{ $candidate->dob }}</td>
-                            <td>{{ $candidate->career->title }}</td>
+                            <td>{{ $candidate->career->title ?? 'Career might be deleted or not available'}}</td>
                             <td>{{ substr($candidate->address, 0, 50) . '...' }}</td>
                             <td>{{ $candidate->created_at}}</td>
                             <td><a href="{{ route('download', [$candidate->name, $candidate->cv]) }}">{{ preg_replace('/\\s+/', '_', $candidate->name) . '_cv' }}</a></td>

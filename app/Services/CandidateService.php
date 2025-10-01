@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\Emails;
+use App\Helpers\RecaptchaHelper;
 use App\Mail\CareerNotification;
 use App\Models\Candidate;
 use Illuminate\Support\Facades\DB;
@@ -23,6 +24,7 @@ class CandidateService {
         $this->modelCandidate->validate($request);
         DB::beginTransaction();
         try {
+            RecaptchaHelper::verify($request);
             $payload = $this->modelCandidate->rawPayload($request);
             if ($request->file('cv')) {
                 $cv = $request->file('cv');
