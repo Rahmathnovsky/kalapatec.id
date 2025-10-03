@@ -127,7 +127,7 @@
             <div class="w-full">
               <figure class="scroll-revealed max-w-[480px] mx-auto">
                 <img
-                  src="{{ asset('assets/img/about-img.jpg')}}"
+                  src="{{ asset('assets/img/portfolio/portfolio-5.jpg')}}"
                   alt="About image"
                   class="rounded-xl"
                 />
@@ -1103,12 +1103,12 @@
           <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
             <div class="w-full">
               <div class="scroll-revealed">
-                <h6 class="mb-2 block text-lg font-semibold text-primary">
+                {{-- <h6 class="mb-2 block text-lg font-semibold text-primary">
                   LIFE @ KALAPA
-                </h6>
-                <h2 class="mb-6">
+                </h6> --}}
+                <h1 class="mb-6">
                   @lang('home.life.sub_title') <span style="color: #e2bb3a">Life @ Kalapa</span>
-                </h2>
+                </h1>
               </div>
 
               <div class="scroll-revealed">
@@ -1120,7 +1120,7 @@
             <div class="w-full">
               <figure class="scroll-revealed max-w-[480px] mx-auto">
                 <img
-                  src="{{ asset('assets/img/about-img.jpg')}}"
+                  src="{{ asset('assets/img/portfolio/portfolio-4.jpg')}}"
                   alt="About image"
                   class="rounded-xl"
                 />

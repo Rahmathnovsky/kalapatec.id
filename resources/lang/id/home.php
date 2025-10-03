@@ -161,7 +161,7 @@ return [
     'life' => [
         'title' => 'LIFE @ KALAPA',
         'sub_title' => 'Lebih dari Sekadar Tempat Kerja, Inilah',
-        'description' => 'Kami percaya produktivitas tumbuh dari keseimbangan. Di antara kesibukan menyelesaikan tugas, kami merayakan momen-momen kecil, percakapan, tawa, dan semangat yang menjaga budaya kami tetap hidup.',
+        'description' => 'Kami percaya produktivitas tumbuh dari keseimbangan. Di antara kesibukan <br> menyelesaikan tugas, kami merayakan momen-momen kecil, percakapan, tawa, <br> dan semangat yang menjaga budaya kami tetap hidup.',
         'fundamental' => "7 Fundamental Kalapa"
     ],
     'services' => [
