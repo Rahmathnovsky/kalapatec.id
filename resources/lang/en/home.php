@@ -14,6 +14,7 @@ return [
         'management-gallery' => 'Organization',
         'certification' => 'Certication',
         'services' => 'Services',
+        'life' => 'Life @ Kalapa',
         'career' => 'Career',
         'contact_us' => 'Contact'
     ],
@@ -152,6 +153,12 @@ return [
         'title' => 'Certification',
         'description' => 'As a commitment towards quality and security standards, Kalapa Technology has been internationally certified to ensure the 
                          services we provide are always professional, reliable, and tailored to your business needs.'
+    ],
+    'life' => [
+        'title' => 'LIFE @ KALAPA',
+        'sub_title' => 'More Than A Workplace, This Is',
+        'description' => 'We believe productivity thrives on balance. Between tackling tasks, we celebrate the small moments, conversations, laughter, and encouragement that keep our culture alive.',
+        'fundamental' => "7 Kalapa's Fundametal"
     ],
     'services' => [
         'title' => 'Services',

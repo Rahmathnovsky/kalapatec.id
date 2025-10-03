@@ -223,7 +223,7 @@
                 <img id="management-image"
                     src="{{ asset('assets/img/manajemen/Bapak-Adi-Patriyadi-1.jpg') }}"
                     alt="CEO"
-                    class="lg:h-[500px] object-contain rounded-xl shadow-card-2 scroll-revealed">
+                    class=" object-contain rounded-xl shadow-card-2 scroll-revealed">
               </div>
             </div>
           </div>
@@ -451,6 +451,113 @@
                   </div> -->
                 </figcaption>
               </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Life section -->
+      <section id="life" class="section-area">
+        <div class="container">
+          <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
+            <div class="w-full">
+              <div class="scroll-revealed">
+                <h6 class="mb-2 block text-lg font-semibold text-primary">
+                  LIFE @ KALAPA
+                </h6>
+                <h2 class="mb-6">
+                  @lang('home.life.sub_title') <span style="color: #e2bb3a">Life @ Kalapa</span>
+                </h2>
+              </div>
+
+              <div class="scroll-revealed">
+                <p>
+                  @lang('home.life.description')
+                </p>
+              </div>
+            </div>
+            <div class="w-full">
+              <figure class="scroll-revealed max-w-[480px] mx-auto">
+                <img
+                  src="{{ asset('assets/img/about-img.jpg')}}"
+                  alt="About image"
+                  class="rounded-xl"
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="w-full">
+            <h2 class="scroll-revealed my-16 text-center font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl xl:text-2xl">
+              @lang('home.life.fundamental')
+            </h2>
+            <div class="timeline-horizontal">
+              <div class="scroll-revealed timeline-line"></div>
+  
+              <div class="scroll-revealed timeline-item top">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-trophy"></i></div>
+                <div class="scroll-revealed timeline-card blue">Be The Best</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item bottom">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-book-open"></i></div>
+                <div class="scroll-revealed timeline-card white">Learning Everyday</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item top">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-bullseye"></i></div>
+                <div class="scroll-revealed timeline-card blue">The Result Depend On You</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item bottom">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-users"></i></div>
+                <div class="scroll-revealed timeline-card white">Responsible and No Blame</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item top">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-ban"></i></div>
+                <div class="scroll-revealed timeline-card blue">No Excuse</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item bottom">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-sync-alt"></i></div>
+                <div class="scroll-revealed timeline-card white">Continuous Improvement</div>
+              </div>
+  
+              <div class="scroll-revealed timeline-item top">
+                <div class="scroll-revealed timeline-dot"><i class="fas fa-hands-helping"></i></div>
+                <div class="scroll-revealed timeline-card blue">Support Each Other</div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="scroll-revealed swiper fundamental-slider mt-16" style="margin-top: 10%">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="gallery-item sm:gallery-item">
+                      <img src="{{ asset('assets/img/manajemen/manajemen-1.jpg') }}" alt="Gallery 1">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-item sm:gallery-item">
+                      <img src="{{ asset('assets/img/manajemen/manajemen-2.jpg') }}" alt="Gallery 2">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-item sm:gallery-item">
+                      <img src="{{ asset('assets/img/manajemen/manajemen-3.jpg') }}" alt="Gallery 3">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-item sm:gallery-item">
+                      <img src="{{ asset('assets/img/manajemen/manajemen-4.jpg') }}" alt="Gallery 4">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-item sm:gallery-item">
+                      <img src="{{ asset('assets/img/manajemen/manajemen-5.jpg') }}" alt="Gallery 4">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1154,7 +1261,7 @@
         </div>
       </section>
 
-      <!-- Clients section -->
+      <!-- Clients section --> 
       <section id="clients" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
@@ -1467,6 +1574,17 @@
           delay: 1750,
           disableOnInteraction: false,
         },
+    });
+    const fundamentalSwiper = new Swiper(".fundamental-slider", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      loop: true,
+      freeMode: true,
+      speed: 20000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
     });
   });
 

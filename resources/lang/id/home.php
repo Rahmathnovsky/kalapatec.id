@@ -13,6 +13,7 @@ return [
         'home' => 'Beranda',
         'management-gallery' => 'Organisasi',
         'certification' => 'Sertifikat',
+        'life' => 'Kegiatan',
         'services' => 'Layanan',
         'career' => 'Karir',
         'contact_us' => 'Hubungi'
@@ -157,6 +158,12 @@ return [
               telah tersertifikasi secara internasional untuk memastikan layanan yang kami berikan
               selalu profesional, terpercaya, dan sesuai dengan kebutuhan bisnis Anda.'
     ],
+    'life' => [
+        'title' => 'LIFE @ KALAPA',
+        'sub_title' => 'Lebih dari Sekadar Tempat Kerja, Inilah',
+        'description' => 'Kami percaya produktivitas tumbuh dari keseimbangan. Di antara kesibukan menyelesaikan tugas, kami merayakan momen-momen kecil, percakapan, tawa, dan semangat yang menjaga budaya kami tetap hidup.',
+        'fundamental' => "7 Fundamental Kalapa"
+    ],
     'services' => [
         'title' => 'Layanan Kami',
         'sub_title' => 'Solusi Terbaik Kami',
@@ -213,7 +220,7 @@ return [
         'description' => 'Kalapa merupakan perusahaan teknologi yang fokus pada pengembangan solusi digital, khususnya layanan contact center modern yang terintegrasi dan dapat disesuaikan dengan kebutuhan bisnis masa kini.',
         'questions' => [
             '1' => [
-                'question' => 'Apa yang bisa kami bantu dalam bisnis anda?',
+                'question' => 'Apa yang bisa kami bantu dalam bisnis Anda?',
                 'answer' => 'Kami membantu perusahaan Anda membangun sistem contact center yang fleksibel dan dapat disesuaikan, untuk mendukung otomatisasi proses layanan pelanggan secara menyeluruh melalui sistem end-to-end.'
             ],
             '2' => [
