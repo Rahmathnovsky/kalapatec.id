@@ -1112,9 +1112,9 @@
               </div>
 
               <div class="scroll-revealed">
-                <p>
+                <h5>
                   @lang('home.life.description')
-                </p>
+                </h5>
               </div>
             </div>
             <div class="w-full">
@@ -1128,9 +1128,16 @@
             </div>
           </div>
           <div class="w-full">
-            <h2 class="scroll-revealed my-16 text-center font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl xl:text-2xl">
-              @lang('home.life.fundamental')
-            </h2>
+
+            <br><br><br>
+            <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+              <h6 class="mb-2 block text-lg font-semibold text-primary">
+                @lang('home.organization.title')
+              </h6>
+              <h2 class="mb-6">@lang('home.life.fundamental')</h2>
+              <br>
+            </div>
+
             <div class="timeline-horizontal">
               <div class="scroll-revealed timeline-line"></div>
   

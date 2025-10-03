@@ -156,7 +156,7 @@ return [
     ],
     'life' => [
         'title' => 'LIFE @ KALAPA',
-        'sub_title' => 'More Than A Workplace, This Is',
+        'sub_title' => 'More Than A Workplace,<br> This Is',
         'description' => 'We believe productivity thrives on balance. Between tackling tasks, we celebrate the small moments, conversations, laughter, and encouragement that keep our culture alive.',
         'fundamental' => "7 Kalapa's Fundamental"
     ],
